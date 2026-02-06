@@ -49,13 +49,28 @@ Apple Silicon (M2 Pro) đủ mạnh để chạy inference offline, đặc biệ
 
 HeySeen is configured to run as a persistent service on macOS.
 
-### 1. Operations
-We provide helper scripts in the `deploy/` folder to manage the service:
+### Quick Start
 
-- **Start Services**: `./deploy/start_services.sh` (Starts Backend API + Web UI)
-- **Stop Services**: `./deploy/stop_services.sh` (Safely stops all processes)
-- **Check Health**: `./deploy/health_check.sh` (View PIDs, ports, and logs)
-- **Restart Tunnel**: `./deploy/start_tunnel_bg.sh` (Restarts only the Cloudflare Tunnel)
+Use the management scripts in the project root:
+
+```bash
+./start.sh     # Start all services (Backend + Cloudflare Tunnel)
+./stop.sh      # Stop all services
+./status.sh    # Check service status
+./restart.sh   # Restart all services
+```
+
+### 1. Operations
+
+**Main Management Scripts** (recommended):
+- `./start.sh` - Starts Backend API + Cloudflare Tunnel
+- `./stop.sh` - Safely stops all processes
+- `./status.sh` - View detailed service status
+- `./restart.sh` - Restart all services
+
+**Additional Scripts** in `deploy/` folder:
+- `./deploy/health_check.sh` - Extended health diagnostics
+- `./deploy/start_tunnel_bg.sh` - Restart only the Cloudflare Tunnel
 
 ### 2. Monitoring
 - **Backend Log**: `server_data/server.log`
