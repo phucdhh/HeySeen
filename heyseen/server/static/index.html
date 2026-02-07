@@ -7,15 +7,90 @@
     <link href="tailwind.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 min-h-screen font-sans">
-    <div class="container mx-auto px-4 py-8 max-w-3xl">
-        <!-- Header -->
-        <header class="mb-10 text-center">
-            <h1 class="text-4xl font-bold text-gray-800 mb-2">
-                <i class="fa-solid fa-magic text-blue-600 mr-2"></i>HeySeen
-            </h1>
-            <p class="text-gray-600">High-Precision PDF to LaTeX Converter with Math AI</p>
-        </header>
+<body class="bg-gray-50 min-h-screen font-sans flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-eye text-blue-600 text-2xl"></i>
+                    <span class="text-xl font-bold text-gray-800">HeySeen</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="text-gray-700 hover:text-blue-600 transition font-medium">
+                        <i class="fa-solid fa-home mr-1"></i>Home
+                    </a>
+                    <a href="https://github.com/phucdhh/HeySeen" target="_blank" class="text-gray-700 hover:text-blue-600 transition font-medium">
+                        <i class="fa-brands fa-github mr-1"></i>GitHub
+                    </a>
+                    <a href="https://github.com/phucdhh/HeySeen/blob/main/TECHNICAL.md" target="_blank" class="text-gray-700 hover:text-blue-600 transition font-medium">
+                        <i class="fa-solid fa-book mr-1"></i>Docs
+                    </a>
+                    
+                    <!-- Dropdown for Related Apps -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-blue-600 transition font-medium flex items-center">
+                            <i class="fa-solid fa-grid-2 mr-1"></i>More Apps
+                            <i class="fa-solid fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <a href="https://truyenthong.edu.vn/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-home-heart mr-2"></i>TruyenThong
+                            </a>
+                            <a href="https://heysym.truyenthong.edu.vn/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-square-root-variable mr-2"></i>HeySym
+                            </a>
+                            <a href="https://heytex.truyenthong.edu.vn/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-file-code mr-2"></i>HeyTeX
+                            </a>
+                            <a href="https://aithink.truyenthong.edu.vn/" target="_blank" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-brain mr-2"></i>AIThink
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-200">
+                <a href="/" class="block py-2 text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="https://github.com/phucdhh/HeySeen" target="_blank" class="block py-2 text-gray-700 hover:text-blue-600 transition">GitHub</a>
+                <a href="https://github.com/phucdhh/HeySeen/blob/main/TECHNICAL.md" target="_blank" class="block py-2 text-gray-700 hover:text-blue-600 transition">Docs</a>
+                <a href="https://heysym.truyenthong.edu.vn/" target="_blank" class="block py-2 text-gray-700 hover:text-blue-600 transition">HeySym</a>
+                <a href="https://heytex.truyenthong.edu.vn/" target="_blank" class="block py-2 text-gray-700 hover:text-blue-600 transition">HeyTeX</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-grow">
+        <div class="container mx-auto px-4 py-8 max-w-3xl">
+            <!-- Header -->
+            <header class="mb-10 text-center">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">
+                    <i class="fa-solid fa-eye text-blue-600 mr-2"></i>HeySeen
+                </h1>
+                <p class="text-gray-600">Offline PDF to LaTeX Converter with AI-Powered Math Recognition</p>
+                <div class="mt-3 flex justify-center items-center space-x-4 text-sm text-gray-500">
+                    <span class="flex items-center">
+                        <i class="fa-solid fa-lock mr-1"></i>100% Offline
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fa-brands fa-apple mr-1"></i>Apple Silicon
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fa-solid fa-code mr-1"></i>Open Source
+                    </span>
+                </div>
+            </header>
 
         <!-- Upload Card -->
         <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
@@ -218,6 +293,97 @@
             convertBtn.disabled = false;
             convertBtn.classList.remove('opacity-50', 'cursor-not-allowed');
         }
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
+    
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
+                <!-- About -->
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fa-solid fa-eye text-blue-600 mr-2"></i>HeySeen
+                    </h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Offline-first PDF to LaTeX converter optimized for Apple Silicon. 
+                        Convert academic papers, textbooks, and documents without cloud dependency.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-3">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="https://github.com/phucdhh/HeySeen" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-brands fa-github mr-1"></i>GitHub Repository
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/phucdhh/HeySeen/blob/main/README.md" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-book-open mr-1"></i>Documentation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/phucdhh/HeySeen/blob/main/TECHNICAL.md" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-code mr-1"></i>Technical Guide
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/phucdhh/HeySeen/issues" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-bug mr-1"></i>Report Issues
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Related Projects -->
+                <div>
+                    <h3 class="font-bold text-gray-800 mb-3">Related Projects</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="https://truyenthong.edu.vn/" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-home-heart mr-1"></i>TruyenThong Platform
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://heysym.truyenthong.edu.vn/" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-square-root-variable mr-1"></i>HeySym (Math Learning)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://heytex.truyenthong.edu.vn/" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-file-code mr-1"></i>HeyTeX (LaTeX Editor)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://aithink.truyenthong.edu.vn/" target="_blank" class="text-gray-600 hover:text-blue-600 transition">
+                                <i class="fa-solid fa-brain mr-1"></i>AIThink (AI Assistant)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+                <div class="mb-4 md:mb-0">
+                    <p>© 2026 <a href="https://truyenthong.edu.vn/" target="_blank" class="text-blue-600 hover:underline">truyenthong.edu.vn</a> | Built with ❤️ for education</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span>Developed by <a href="https://github.com/phucdhh" target="_blank" class="text-blue-600 hover:underline font-medium">Nguyễn Đăng Minh Phúc</a></span>
+                    <a href="https://github.com/phucdhh/HeySeen" target="_blank" class="text-gray-500 hover:text-gray-700 transition">
+                        <i class="fa-brands fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
