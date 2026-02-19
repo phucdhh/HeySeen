@@ -69,6 +69,9 @@ pdf_examples/
 comparison_final.txt
 mathpix_results/
 
-# Deploy sensitive data
+# Deploy sensitive data (credentials, tokens, tunnel config)
 deploy/*.json
 deploy/config.yml
+deploy/tunnel.log
+deploy/setup_cloudflare_api.py
+deploy/add_pedu_dns.py

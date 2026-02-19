@@ -42,8 +42,8 @@ TUNNEL_PID=$(ps aux | grep "cloudflared tunnel" | grep -v grep | awk '{print $2}
 if [ -n "$TUNNEL_PID" ]; then
     echo "  Status: ✅ Running"
     echo "  PID:    $TUNNEL_PID"
-    echo "  Domain: heyseen.truyenthong.edu.vn"
-    echo "  URL:    https://heyseen.truyenthong.edu.vn"
+    echo "  Domain: heyseen.pedu.vn"
+    echo "  URL:    https://heyseen.pedu.vn"
     
     # Show tunnel connections
     CONN_COUNT=$(ps aux | grep cloudflared | grep -v grep | wc -l)
