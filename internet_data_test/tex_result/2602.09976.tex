@@ -1,0 +1,623 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{proof_custom}{Proof}
+\renewcommand{\abstractname}{\Large\bfseries Abstract}
+
+
+\begin{document}
+
+
+% Page 1
+\section*{Journal Title Here, 2025, 1–0}
+
+
+\paragraph{doi:} DOI HERE
+
+
+\paragraph{Advance Access Publication Date:} Day Month Year
+
+Paper
+
+Corrigendum to "Higher Lorentzian polynomials, higher Hessians, and the Hodge-Riemann relations for graded oriented Artinian Gorenstein algebras in codimension two", [International Mathematics Research Notices, Volume 2025, Issue 13, July 2025] Pedro Macias Marques,\textsuperscript{1} Chris McDaniel,\textsuperscript{2,*} Alexandra Seceleanu,\textsuperscript{3} \textsuperscript{1}Departamento de Matemática, ECT, CIMA, IIFA, Universidade de Évora, Rua Romão Ramalho, 59, P-7000-671 Évora, Portugal, pmm@uevora.pt, Department of Mathematics, Endicott College, 376 Hale St Beverly, MA 01915, USA, cmcdanie@endicott.edu, Department of Mathematics, University of Nebraska-Lincoln, 210 Avery Hall, 1144 T St, Lincoln, NE 68588, USA, aseceleanu@unl.edu, $^*$Corresponding author. cmcdanie@endicott.edu \textbf{Abstract} A homogeneous bivariate d-form defines an $(i + 1)$-rowed Toeplitz matrix for each $i$ between $0$ and $d$. We use Hodge theory and Schur polynomials to prove that if the $(i + 1)$-rowed Toeplitz matrix of a form is totally nonnegative, then so is the $i$-rowed one. This fixes a gap in the main result of paper above. Key words: Hodge-Riemann relation, Lorentzian polynomial, Schur polynomial, Toeplitz matrix, totally nonnegative matrix, totally positive matrix
+
+
+\paragraph{MSC 2020 classification:} Primary: 05E05, 15B05, 15B35 Introduction Shortly after its publication, we realized there was gap in our proof of Theorem 2 (or Theorem 4.21) in ?; in this corrigendum, we fix that gap and give a few other minor corrections. We shall adhere to the same terminology as in? for the most part, although to properly explain and repair our gap, we shall need the following notation. Fix positive integers $m, n$ satisfying $1 \le m \le n$, and set $i = m - 1$ and $n = d - i + 1$. We say that an $m \times n$ Toeplitz matrix $A = \phi_d^i(F) \in \mathcal{T}(m,n)$ is strongly totally positive, respectively strongly totally nonnegative, if, for each j with $0 \le j \le i$, the Toeplitz matrix $\phi_d^j(F)$ is totally positive, respectively totally nonnegative. It is relatively straightforward to see that strongly totally positive and totally positive are actually equivalent, so that in the positive case, the adjective strongly is redundant (Lemma ??). The gap in our original proof of (?, Theorem 4.21), is that we had assumed that the same thing is true in the nonnegative case; it is, as it turns out, but this is far from obvious. The proof given here relies on the theory of Schur polynomials, and in particular the Littlewood-Richardson rule. In this corrigendum, we prove the following results, which together, constitute a complete proof of (?, Theorem 4.21). © The Author 2025. Published by Oxford University Press. All rights reserved. For permissions, please e-mail: journals.permissions@oup.com
+
+
+\newpage
+
+% Page 2
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+\subsection*{\textbf{Theorem 1.1.} Let $F \in Q_d$ be a homogeneous d-form, and fix $0 \le i \le \lfloor \frac{d}{2} \rfloor$. The following are equivalent.}
+
+\section{F is i-Lorentzian}
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+2. $\phi_d^i(F)$ is strongly totally nonnegative. 3. $A_F$ satisfies mixed $HRR_i$ on the standard open convex cone of linear forms
+
+$U = \{ax + by \mid (a, b) \in \mathbb{R}^2_{>0}\}.$
+
+\textbf{Theorem 1.2.} With notation as in Theorem ??: If $\phi_d^i(F)$ is totally nonnegative, then $A_F$ satisfies the $mixed\ HRR_i\ on\ U$. Note that Theorem ?? together with Theorem ?? imply that strongly totally nonnegative and totally nonnegative are equivalent, and hence we recover (?, Theorem 4.21). This corrigendum is organized as follows. In Section ?? we establish some fundamental properties of Toeplitz matrices and prove that totally positive Toeplitz matrices are always strongly totally positive. In Section ?? we review the prerequisite theory of Schur polynomials and their relation to Toeplitz minors. In Section ??, we give a Plücker expansion formula for the mixed Hessian determinant, and identify a certain specialization of it. In Section ?? we prove Theorem ??, and in Section ?? we prove Theorem ??. In Section ??, we give other minor, mostly typographical, corrections to our paper?. Notation: We shall adhere to the notational conventions of? for the most part, but we shall adopt the following notation here: Since most of our indexing will start with 0, we shall use the notation $[n]_0$ $\{0,1,\ldots,n\}$, and occasionally we shall use the notation $\binom{[n]_0}{k}$ for the set of k-subsets of the set $[n]_0$. For an $(m+1)\times (n+1)$ matrix A, a fixed integer k satisfying $1\leq k\leq \min\{m,n\}+1$, and k-subsets $I\in \binom{[m]_0}{k}$ and $J \in \binom{[n]_0}{k}$, we shall write $A_{IJ}$ for the submatrix of A whose rows and columns are indexed by I and J, respectively, and write $\Delta_{IJ}(A)$ for the corresponding minor determinant $\det(A_{IJ})$. We say that the submatrix or the minor is consecutive if both $I$ and $J$ consist of consecutive integers, and we say the submatrix or minor is initial if it is consecutive and either $0 \in I$ or $0 \in J$. As in ?, $\mathcal{M}(m,n)$ denotes the Euclidean space of $m \times n$ matrices, $Q = \mathbb{R}[X,Y]$ the standard graded polynomial ring in two variables, $R = \mathbb{R}[x, y]$ the polynomial ring of partial differential operators on $Q$, i.e. $x \circ$ $F = \frac{\partial F}{\partial X}$ and $y \circ F = \frac{\partial F}{\partial Y}$, and for $F \in Q_d$ a homogeneous d-form $A_F = R/\operatorname{Ann}(F)$ the corresponding graded oriented Artinian Gorenstein algebra. For $F \in Q_d$, $s(F) = s(A_F)$, the Sperner number of F is the number $s(F) = \max\{\dim_{\mathbb{R}} A_i \mid 0 \le i \le d\}$. For $0 \le i \le s-1$, $\mathrm{MHess}_i(F,\mathcal{E})|_{(X,Y)}$ is the $i^{th}$ mixed Hessian matrix of F with respect to the fixed monomial basis $\mathcal{E} = \{e_p^i = x^p y^{i-p} \mid 0 \le p \le i\}$, whose entries are polynomials of degree $d-2i$ in the $2(d-2i)$-variables $(\underline{X},\underline{Y})=(X_1,\ldots,X_{d-2i},Y_1,\ldots,Y_{d-2i})$. The standard open cone is $U = \{ax + by \mid a, b > 0\} \subset R_1$ and the standard closed cone is $\overline{U} = \{ax + by \mid a, b \geq 0, (a, b) \neq (0, 0)\}$; we shall abuse notation slightly and also refer to the standard open and closed cones in the quotient algebra $A_F$ by the same notation, when it is clear from the context what we mean. For integers $i, d$ satisfying $0 \le i \le \lfloor \frac{d}{2} \rfloor$, and $F \in Q_d$, we write $F = \sum_{k=0}^d {d \choose k} c_k X^k Y^{d-k}$, we call $(c_0, \ldots, c_d) \in \mathbb{R}^{d+1}$ normalized coefficient sequence of $F$, and define its $i^{th}$ Toeplitz matrix by
+
+
+\[ \phi_d^i(F) = \begin{pmatrix} c_i & \cdots & c_d \\ \vdots & \ddots & \vdots \\ c_0 & \cdots & c_d \end{pmatrix} = (c_{i+q-p})_{\substack{0 \le p \le i \\ 0 \le q \le d-i}}. \]
+
+
+\textbf{Toeplitz Fundamentals} The following result expounds upon (?, Remark 4.17). \textbf{Lemma 2.1.} Let $F \in Q_d$ be any homogeneous d-form and fix i, with $1 \le i \le \lfloor \frac{d}{2} \rfloor$. Every consecutive submatrix of the Toeplitz matrix $\phi_d^i(F)$ is also an initial submatrix.
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+The set of distinct consecutive submatrices of $\phi_d^{i-1}(F)$ is equal to the set of distinct consecutive 2. submatrices of $\phi_d^i(F)$ of size $\leq i$.
+
+
+\newpage
+
+% Page 3
+\section*{\textit{Proof} For (1), fix k, with $1 \le k \le i + 1$, and fix consecutive k-subsets}
+
+Corrigendum
+
+$A = \{0 < a_0, a_0 + 1, \dots, a_0 + (k-1) < i\}$ $B = \{0 < b_0, b_0 + 1, \dots, b_0 + (k-1) < d - i + 1\}$
+
+If either $a_0 = 0$ or $b_0 = 0$, they define an initial submatrix. Otherwise, we may assume that $a_0, b_0 > 0$. Let $t = \min\{a_0, b_0\} > 0$, and define the shifted sets
+
+$A' = A - t = \{0 < a_0 - t, a_0 - t + 1, \dots, a_0 - t + (k - 1) < i\}$ $B' = B - t = \{0 < b_0 - t, b_0 - t + 1, \dots, b_0 - t + (k - 1) < d - i + 1\}$
+
+(note either $A$ or $B$ must contain an initial index). Then we have 
+\[ \phi_d^i(F)_{AB} = \left(c_{(b_0+s)-(a_0+r)+i}\right)_{0 \le r,s \le k-1} = \left(c_{(b_0-t+s)-(a_0-t+r)+i}\right)_{0 \le r,s \le k-1} = \phi_d^i(F)_{A'B'} \]
+ and since $\phi_d^i(F)_{A'B'}$ is initial, (1) is proved. For (2), we first show that every consecutive submatrix of $\phi_d^{i-1}(F)$ is a consecutive submatrix of $\phi_d^i(F)$. To this end, fix $k$, $1 \le k \le i$, and fix two consecutive $k$-subsets $A \subset \{0, \ldots, i-1\}$ and $B \subseteq \{0, \ldots, d-i+1\}$; by $(1)$, we may assume one of them, say $A$, is initial. Write
+
+$A = \{0, 1, \dots, k-1\} \subseteq \{0, \dots, i-1\}$ $B = \{0 < b_0, b_0 + 1, \dots, b_0 + (k-1) < d-i+1\}$
+
+There are two cases to consider: \textbf{Case 1:} $d-i+1 \notin B$. In this case $B \subset \{0, ..., d-i\}$ and since $A \subset \{0, ..., i-1\}$, $A' = A+1 \subset \{0, ..., i\}$, and we have 
+\[ \phi_d^{i-1}(F)_{AB} = \left(c_{(b_0+s)-(r)+i-1}\right)_{0 < r, s < k-1} = \left(c_{(b_0+s)-(r+1)+i}\right)_{0 < r, s < k-1} = \phi_d^i(F)_{A'B}. \]
+ Case 2: $d-i+1 \in B$. In this case, $B'=B-1 \subset \{0,\ldots,d-i\}$ and, of course $A \subset \{0,\ldots,i-1,i\}$, hence 
+\[ \phi_d^{i-1}(F)_{AB} = \left(c_{(b_0+s)-(r)+i-1}\right)_{0 \le r,s \le k-1} = \left(c_{(b_0+s-1)-(r)+i}\right)_{0 \le r,s \le k-1} = \phi_d^i(F)_{AB'}. \]
+ For the converse, we want to show that every consecutive submatrix of $\phi_d^i(F)$ of size $\leq i$ is also a consecutive submatrix of $\phi_d^{i-1}(F)$. As above, fix k, with $1 \leq k \leq i$, and fix k-subsets $A \subset \{0,\ldots,i\}$ and $B \subset \{0,\ldots,d-i\}$ with A initial. Then $A \subset \{0,\ldots,i-1\}$ and $B \subset \{0,\ldots,d-i\}$, and thus $B' = B+1=$ $\{0,\ldots,d-i+1\}$, and we have 
+\[ \phi_d^i(F)_{AB} = \left(c_{(b_0+s)-(r)+i}\right)_{0 \le r,s \le k-1} = \left(c_{(b_0+s+1)-(r)+i-1}\right)_{1 \le r,s \le k-1} = \phi_d^{i-1}(F)_{AB'}, \]
+ as desired. Intuitively, we can imagine the two Toeplitz matrices, superimposed and justified by their lower left corners, then any square submatrix of the shorter $\phi_d^{i-1}(F)$ is either already a submatrix of the taller $\phi_d^i(F)$ or else it can be translated along the constant diagonals to an identical submatrix of the taller one; see Figure ??. Using Lemma ??, we show that the notion of strongly totally positive is redundant. \textbf{Lemma 2.2.} Let $F \in Q_d$ be any homogeneous d-form. The Toeplitz matrix $\phi_d^i(F)$ is totally positive if and only if $\phi_d^j(F)$ is also totally positive for all $0 \le j \le i$. Proof Applying Lemma ?? inductively, we see that the consecutive minors of $\phi_d^i(F)$ of size $\leq j+1$ are exactly the consecutive minors of $\phi_d^j(F)$, for each $0 \le j \le i$. In particular, if $\phi_d^i(F)$ is totally positive, then,
+
+
+\newpage
+
+% Page 4
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+\subsection*{$\phi_d^i(F)$}
+
+$\phi_d^{i-1}(F)$
+
+Fig. 1: Translating a consecutive submatrix of $\phi_d^{i-1}(F)$ into an initial submatrix of $\phi_d^i(F)$
+
+for each $0 \le j \le i$ all consecutive minors of $\phi_d^j(F)$ must be positive. By Fekete's theorem ((?, Fact 4.6) or (?, Corollary 3.1.5)), which states that a matrix whose consecutive minors are all positive must be totally positive, it follows that $\phi_d^j(F)$ is totally positive. Conversely if $\phi_d^j(F)$ is totally positive for all $0 \le j \le i$, it follows that every consecutive minor of $\phi_d^i(F)$ must be positive and hence, again by Fekete's theorem, $\phi_d^i(F)$ must be totally positive too. $\square$ \textbf{Remark 2.3.} The result (?, Theorem 2, Theorem 4.21) implies that every totally nonnegative Toeplitz matrix, say $\phi_d^i(F)$, must be the limit of a sequence of totally positive Toeplitz matrices, say $\phi_d^i(F_n) \to \phi_d^i(F)$. Since $\phi_d^i(F_n)$ are all strongly totally positive, by Lemma ??, it follows then that the limiting Toeplitz matrix $\phi_d^i(F)$ must be strongly totally nonnegative. In particular, we seem to have deduced the fact that totally nonnegative Toeplitz are always strongly totally nonnegative. The problem here is that the proof of the result (?, Theorem 2, Theorem 4.21) given there uses that fact a priori, and thus creates an unfortunate circle in this argument. There is one more property of totally positive Toeplitz matrices that we need. Recall that a matrix $A \in \mathcal{M}(m,n)$ is called totally positive of order k, or $\mathrm{TP}_k$, if all of its $j \times j$ minors are positive for all j, with $1 \leq j \leq k$. \textbf{Lemma 2.4.} Let $F \in Q_d$ be any homogeneous d-form with Sperner number $s = s(F)$. The Toeplitz matrix $\phi_d^{s-1}(F)$ is totally positive if and only if $\phi_d^j(F)$ is $TP_s$ and totally nonnegative for all $j$, with $s \leq j \leq \lfloor \frac{d}{2} \rfloor$.
+
+Proof We appeal to (?, Corollary 3.1.7), which implies $A \in \mathcal{M}(m,n)$ is $\mathrm{TP}_k$, $1 \leq k \leq \min\{m,n\}$ if and only if every consecutive minor of A of size $\leq k$ is positive. If $\phi_d^{s-1}(F)$ is totally positive and j satisfies $s \leq j \leq \lfloor \frac{d}{2} \rfloor$, then inductively, by Lemma ??, every consecutive minor of $\phi_d^j(F)$ of size $\leq s$ must be positive, and hence, by the above cited result, $\phi_d^j(F)$ must be $TP_s$. Moreover, since rank$(\phi_d^j(F)) = \min\{j+1,s\}$ ((?, Lemma 4.5)), it follows that every minor of $\phi_d^j(F)$ of size $\geq s+1$ is zero, and hence $\phi_d^j(F)$ must be totally nonnegative. Conversely suppose that $\phi_d^j(F)$ is $TP_s$ and totally nonnegative for all $j, s \leq j \leq \lfloor \frac{d}{2} \rfloor$. Then all consecutive minors of $\phi_d^j(F)$ of size $\leq s$ must be positive, and hence by Lemma ??, all consecutive minors of $\phi_d^{s-1}(F)$ must also be positive, which implies, by Fekete's theorem (?, Fact 4.6), that $\phi_d^{s-1}(F)$ must be totally positive.
+
+
+\newpage
+
+% Page 5
+\section*{Schur polynomials and totally nonnegative Toeplitz matrices}
+
+Corrigendum
+
+A Primer on Schur Polynomials Our main reference for this section is Fulton's book ?; other references are ?, ? and ?. For any integer partition $\lambda = (\lambda_0, \dots, \lambda_r)$, define its Young diagram to be the left justified weakly decreasing array of boxes with $\lambda_i$ boxes in row i (note we start our indexing at $i=0$), and a tableau T of shape $\lambda$ is any filling of those boxes with the numbers $[n-1]_0 = \{0, \ldots, n-1\}$. We shall say that T is semi-standard if the entries of T are strictly increasing down the columns and weakly increasing left to right along the rows. The set of semi-standard Young tableaux of shape $\lambda$ is denoted by $SSYT(\lambda)$, and for each $T \in SSYT(\lambda)$, define its T-monomial
+
+\subsection*{
+\[ \mathbf{x}^T = \prod_{i=1}^n x_i^{T(i-1)} \]
+}
+
+where $T(i-1)$ is the number of times $i-1$ appears in T. Then the Schur polynomial corresponding to the partition $\lambda$ is the sum of all T-monomials where T ranges over the set of semi-standard Young tableaux, i.e.
+
+$s_{\lambda} = s_{\lambda}(x_1, \dots, x_n) = \sum_{T \in SOVT(\lambda)} \mathbf{x}^T.$
+
+$T \in SSYT(\lambda)$
+
+A fundamental fact about Schur polynomials is that that they form a vector space basis for the subring of symmetric functions $\mathbb{C}[x_1,\ldots,x_n]^{\mathfrak{S}_n}$ in the polynomial ring $\mathbb{C}[x_1,\ldots,x_n]$; for a proof, see (?, Proposition $6.1$). Next, given another partition $\mu = (\mu_0, \dots, \mu_r)$ satisfying $\mu_p \leq \lambda_p$ for all $0 \leq p \leq r$, define the skew Young diagram of shape $\lambda/\mu$ by removing the boxes in the Young diagram of $\mu$ from the Young diagram of $\lambda$. Then a skew tableau, a semi-standard skew tableau, and the skew Schur polynomials are defined analogously. On the other hand, since the (non-skew) Schur polynomials form a basis for the symmetric functions, and since skew Schur polynomials are also symmetric, it follows that we have
+
+
+\[ s_{\lambda/\mu} = \sum_{\nu} c_{\mu\nu}^{\lambda} \cdot s_{\nu} \]
+
+
+(1)
+
+for some coefficients $c_{\mu\nu}^{\lambda} \in \mathbb{R}$. It turns out that the numbers $c_{\mu\nu}^{\lambda}$ are actually nonnegative integers, called the Littlewood-Richardson coefficients for the triple $(\lambda, \mu, \nu)$. To characterize them combinatorially, we need some more terminology. For any tableau $T \in SSYT(\lambda/\mu)$ define its row word $w_{row}(T)$ to be the word obtained by writing the entries of T in a single row, starting from the bottom row, reading from left to right, then bottom to top. A word $w = w_1, w_2, \dots, w_s$ is called a reverse lattice word if when read backwards to any letter, say $w_s, w_{s-1}, \ldots, w_r$, the resulting sequence contains at least as many 0's as 1's, at least as many 1's as 2's and so on. A tableau $T \in SSYT(\lambda/\mu)$ is called a Littlewood-Richardson tableau of shape $\lambda/\mu$ if besides being semi-standard, its row word is a reverse lattice word; denote the set of Littlewood-Richardson tableaux LRT$(\lambda/\mu)$. Note that the content of $T \in LRT(\lambda/\mu)$, i.e. the integer sequence $\nu(T) = (\nu_0, \dots, \nu_m)$ where $\nu_i$ is the number of i's in T, is a partition; in this case we call $\nu(T)$ a Littlewood-Richardson partition for the skew shape $\lambda/\mu$, and we denote the set of all Littlewood-Richardson partitions by LRP($\lambda/\mu$), and let $LRT_{\nu}(\lambda/\mu)$ denote the set of Littlewood-Richardson tableaux of shape $\lambda/\mu$ and content $\nu$. The following is (?, Proposition 3, page 64), and we refer the reader there for a proof. \textbf{Fact 3.1} (Littlewood-Richardson rule). The Littlewood-Richardson coefficient $c_{\mu,\nu}^{\lambda}$ equals the number of Littlewood-Richardson tableaux of shape $\lambda/\mu$ and of content $\nu$, i.e.
+
+$c_{\mu,\nu}^{\lambda} = \# \operatorname{LRT}_{\nu}(\lambda/\mu).$
+
+In particular, the Littlewood-Richardson coefficient $c_{\mu,\nu}^{\lambda}$ is nonzero if and only if $LRT_{\nu}(\lambda/\mu) \neq \emptyset$ if and only if $\nu \in LRP(\lambda/\mu)$. Note that by Equation ?? and Fact ??, it follows that if, for some fixed $(a_1,\ldots,a_n)\in\mathbb{C}^n$, $s_{\nu}(a_1,\ldots,a_n)\geq$ 0 for all partitions $\nu \in LRP(\lambda/\mu)$, then $s_{\lambda/\mu}(a_1,\ldots,a_n) \geq 0$ too.
+
+
+\newpage
+
+% Page 6
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+\subsection*{For any fixed positive integers $n, i$, denote by $h_i = h_i(z_1, \dots, z_n)$ the $i^{th}$ complete symmetric polynomial}
+
+in n variables. One version of the fundamental theorem of invariant theory, c.f. (?, Proposition 1, page 73) or (?, Corollary 7.6.2), states that the subring of symmetric functions $\mathbb{C}[x_1,\ldots,x_n]^{\mathfrak{S}_n}$ is generated as an algebra by the complete symmetric polynomials, i.e.
+
+$\mathbb{C}[x_1,\ldots,x_n]^{\mathfrak{S}_n}=\mathbb{C}[h_1,\ldots,h_n]$
+
+Since the skew Schur functions are symmetric, it follows that they should be expressible as polynomials in the complete symmetric polynomials. This is the (generalized) Jacobi-Trudi identity, c.f. (?, Exercise 7, page 77) or (?, Theorem 7.16.1).
+
+\textbf{Fact 3.2} (Generalized Jacobi-Trudi Identity). For any partitions $\mu = (\mu_0, \dots, \mu_r) \subset \lambda = (\lambda_0, \dots, \lambda_r)$, we have
+
+$s_{\lambda/\mu} = \det\left(\left(h_{\lambda_p - \mu_q + p - q}\right)_{0 \le p, q \le r}\right).$
+
+We will need the following result, which is (?, Theorem 3.15); it also appears as a remark in (?, page 122). We omit the proof for the sake of brevity. \textbf{Fact 3.3.} With $h_1, \ldots, h_n \in \mathbb{C}[x_1, \ldots, x_n]$ the complete symmetric polynomials as above, the polynomial map
+
+
+\paragraph{$<math>H$:} \textbackslash\{\}mathbb\{C\}\textasciicircum{}n\textbackslash\{\}to\textbackslash\{\}mathbb\{C\}\textasciicircum{}n, $H(x_1,\ldots,x_n)=(h_1(x_1,\ldots,x_n),\ldots,h_n(x_1,\ldots,x_n))$
+
+(2)
+
+is surjective. From Toeplitz minors to Schur polynomials Fix $F \in Q_d$, with normalized coefficient sequence $(c_0, \ldots, c_d) \in \mathbb{R}^{d+1}$, and let $a = a(F)$ be the smallest index $0 \le a \le d$, for which $c_a \ne 0$. Then, by Lemma ??, there exists complex numbers $(z_1, \ldots, z_{d-a}) \in \mathbb{C}^{d-a}$ for which
+
+
+\[ h_{b-a}(z_1,\ldots,z_{d-a}) = \frac{c_b}{c_a}, \ \forall a \le b \le d; \]
+
+
+note that we can extend this rule to all $b \leq d$ since $h_{b-a} \equiv 0$ for $b-a < 0$. It follows then that for any fixed r, with $0 \le a \le r \le \lfloor \frac{d}{2} \rfloor$ and for any $r+1$-column indexing subset
+
+$K = \{0 \le k_0 \le \cdots \le k_r \le d - r\}$
+
+the maximal minor of $\phi_d^r(F)$ corresponding to K satisfies 
+\[ \Delta_K(\phi_d^r(F)) = \det\left(\left(c_{r+k_q-p}\right)_{0 \le p, q \le r}\right) = c_a^{r+1} \cdot \det\left(\left(h_{\nu_p-p+q}\right)_{0 \le p, q \le r}\right) = c_a^{r+1} \cdot s_{\nu} \]
+
+
+(3)
+
+by Fact ??, where $\nu = (\nu_0, \dots, \nu_r)$ is the partition defined from K by
+
+$\nu_{r-q} = (k_q - q) + (r - a), \quad 0 < q < r.$
+
+(4)
+
+To see the second equality in Equation (??), we should apply the determinant-preserving transformation
+
+
+\[ (a_{pq})_{0 \le p, q \le r} \mapsto (a_{(r-q)(r-p)})_{0 < p, q < r}. \]
+
+
+More generally, for any fixed $i \ge r \ge a \ge 0$, and any fixed row and column indexing sets for $\phi_d^i(F)$,
+
+$I = \{0 \le i_0 < \dots < i_r \le i\}$ $J = \{0 < j_0 < \dots < j_r < d - i\}$
+
+
+\newpage
+
+% Page 7
+
+\newpage
+
+% Page 8
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+so that
+
+\subsection*{
+\[ \Delta_{IJ} \left( \phi_9^3(F) \right) = \det \begin{pmatrix} c_3 & c_7 & c_9 \\ c_2 & c_6 & c_8 \\ c_0 & c_4 & c_6 \end{pmatrix}. \]
+}
+
+Then according to Equations (??) and (??) above, we have
+
+$\lambda = (7,7,6), \quad \mu = (4,1,0) \implies \mu + a = (5,2,1).$
+
+The Young diagram for the skew shape $\lambda/(\mu+a)=(7,7,6)/(5,2,1)$ is
+
+The set of Littlewood-Richardson tableaux on $\lambda/(\mu+a)$ are given by
+
+
+\[ \begin{array}{c|ccccccccccccccccccccccccccccccccccc \]
+
+
+corresponding respectively to Littlewood-Richardson partitions
+
+$\nu_1 = (6, 5, 1), \nu_2 = (6, 4, 2), \nu_3 = (5, 5, 2);$
+
+note that the Littlewood-Richardson coefficients all equal one here. These partitions, in turn correspond to the column indexing sets
+
+$K_1 = \{0, 5, 7\}, K_2 = \{1, 4, 7\}, K_3 = \{1, 5, 6\}$
+
+according to Equation (??), which define maximal minors of the shorter Toeplitz matrix
+
+
+\[ \phi_9^2(F) = \begin{pmatrix} c_2 & c_3 & c_4 & c_5 & c_6 & c_7 & c_8 & c_9 \\ c_1 & c_2 & c_3 & c_4 & c_5 & c_6 & c_7 & c_8 \\ c_0 & c_1 & c_2 & c_3 & c_4 & c_5 & c_6 & c_7 \end{pmatrix} \]
+
+
+Then Lemma ?? tells us that 
+\[ \Delta_{IJ}(\phi_9^3(F)) = c_1^3 \cdot s_{\lambda/(\mu+a)} = c_1^3 \cdot \sum_{\nu} c_{(\mu+a),\nu}^{\lambda} \cdot s_{\nu} = \Delta_{K_1}(\phi_9^2(F)) + \Delta_{K_2}(\phi_9^2(F)) + \Delta_{K_3}(\phi_9^2(F)) \]
+ or 
+\[ \det \begin{pmatrix} c_3 & c_7 & c_9 \\ c_2 & c_6 & c_8 \end{pmatrix} = \det \begin{pmatrix} c_2 & c_7 & c_9 \\ c_1 & c_6 & c_8 \end{pmatrix} + \det \begin{pmatrix} c_3 & c_6 & c_9 \\ c_2 & c_5 & c_8 \end{pmatrix} + \det \begin{pmatrix} c_3 & c_7 & c_8 \\ c_2 & c_6 & c_7 \end{pmatrix}. \]
+ We can also reverse this construction for certain maximal minors of $\phi_d^r(F)$. Specifically, given a partition $\nu = (\nu_0, \dots, \nu_r)$ satisfying $i - a \le \nu_0 \le d - r - a$ and $\nu_r \ge r - a$, define two new partitions $\lambda = (\lambda_0, \dots, \lambda_r)$ and $\mu = (\mu_0, \dots, \mu_r)$ by
+
+$\lambda_p = \nu_0 + a - \max\{(i - a) - \nu_p, 0\}$
+
+(8)
+
+$\mu_a = \nu_0 + a - i - \max\{\nu_{r-a} - (i-a), 0\}.$
+
+(9)
+
+Then it is straightforward to check that $\lambda$ and $\mu$ are both partitions, and that $\lambda_p - \mu_0 - a \geq r - a$ for all $0 \le p \le r$. Note that the condition $i - a \le \nu_0$ is needed so that $\mu_q \ge 0$ for all $0 \le q \le r$. We identify row
+
+
+\newpage
+
+% Page 9
+Corrigendum and column indexing sets
+
+$I = \{0 < i_0 < \dots < i_r < i\}$ $J = \{0 < j_0 < \dots < j_r < d - i\}$
+
+by the formulas
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{internet_data_test/tex_result/2602.09976/images/page_000_table_06.png}
+  \caption{Figure from page 9}
+\end{figure}
+
+One can check that with these definitions, $\lambda$, $\mu$, $I$ and $J$ satisfy Equations (??) and (??). As above, we define the column indexing subset $K = \{0 \le k_0 < \cdots, k_r = d - r\}$ by the formula
+
+$k_a = \nu_{r-a} - (r-a) + q$
+
+$0 < q < r$.
+
+(12)
+
+Note that by our assumption, $i - a \le \nu_0 \le d - r - a$, it follows that $i \le k_r \le d - r$. Let us define the $\alpha^i$-statistic on the partition $\nu$ (or on the set K) by the formula 
+\[ \alpha^{i}(\nu) = \alpha^{i}(K) = \sum_{r=1}^{r} \max\{(i-a) - \nu_{q}, 0\} = \sum_{r=1}^{r} \max\{(i-r) - (k_{q} - q), 0\}. \]
+
+
+(13)
+
+$q=0$
+
+$q=0$
+
+Note that for partitions $\nu = (\nu_0, \dots, \nu_r)$ satisfying $\nu_0 \ge (i - a)$, if t, satisfying $0 \le t \le r$, is the largest index for which $\nu_t \geq (i-a)$, then
+
+$\alpha^{i}(\nu) = \sum_{q=t+1}^{r} ((i-a) - \nu_{q}).$
+
+(14)
+
+Alternatively, $\alpha^{i}(\nu)$ is the size of the complimentary partition to $\lambda$ inside the $(r+1) \times (\nu_0 + a)$ rectangle; see Figure ??. Then we can prove the following: \textbf{Lemma 3.7.} Fix integers $a, d, i, r$ satisfying $0 \le a \le r \le i \le \lfloor \frac{d}{2} \rfloor$, and fix $r + 1$-subsets $I, J$ and $K$ defined by Equations (??), (??), and (??) above, with $i \leq k_r \leq d-r$. Then in the Littlewood-Richardson expansion of the minor $\Delta_{IJ}(\phi_d^i(F))$, as in Lemma ??, the minor $\Delta_K(\phi_d^r(F))$ occurs with Littlewood-Richardson coefficient 1 and maximal $\alpha^{i}(K)$, i.e.
+
+
+\[ \Delta_{IJ}\left(\phi_d^i(F)\right) = \Delta_K\left(\phi_d^r(F)\right) + \sum_{\nu' \in LRP(\lambda/(\mu+a))} c_{(\mu+a),\nu'}^{\lambda} \cdot \Delta_{K'}\left(\phi_d^r(F)\right). \]
+
+
+$\alpha^{i}(K') < \alpha^{i}(K)$
+
+\textit{Proof} For concreteness, let us introduce coordinates for the boxes of the Young diagram of $\lambda/(\mu+a)$ so that the lower left corner is at the origin. Define the critical line to be the vertical line $x = \lambda_0 - (i - a)$. Our first observation is that for any Littlewood-Richardson tableau $T \in LRT(\lambda/(\mu+a))$, the reverse lattice word condition as well as the column-strict condition implies that entries of T lying to the right of the critical line are fixed, i.e. the $p^{th}$ row must contain only p's for $0 \le p \le r$. Moreover, if $t, 0 \le t \le r$ is the largest index for which $\nu_t \geq (i-a)$, then we claim that there is exactly one Littlewood-Richardson tableau T whose entries to the left of the critical line all lie in $\{0,\ldots,t\}$. To see this, start filling in the boxes to the left of the critical line, column by column moving top to bottom and from right to left. Note that the righter-most column to the left of the critical line has $t_1 = \#\{p \mid \nu_p \geq (i-a)+1\}$ boxes where $t_1 \leq t$. Hence, by the reverse lattice and column-strict properties, the entries in that column must be exactly $\{0, \ldots, t_1 - 1\}$. Inductively, the $q^{th}$ righter-most column to the left of the critical line has $t_q = \#\{p \mid \nu_p \geq (i-a) + q\}$ boxes where $t_q \leq t_{q-1} \leq \cdots \leq t_1 \leq t$. Moreover the entries in those boxes can only be $\{0, \ldots, t_{q-1} - 1\}$ by the weakly increasing row property. Again by the reverse lattice word property, it follows that the boxes in the $q^{th}$
+
+
+\newpage
+
+% Page 10
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+\textbf{10}
+
+critical line
+
+$r+1$
+
+0 0
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ & | | | | | | | | | | | | | | | | | | | | &  &  &  &  & ____ & ____ & ____ & _____ & ____ & 0 & 1 & L t+1 & \multirow{2}{*}{+1 t+1} & \multirow{2}{*}{+1 t+1} & +1 • & • | \\
+\hline
+ & | & ____ & ____ & ____ & 0 & 0 0 & 0 & 0 ( & 0 & 0 & : & : &  &   &   & · · & • ! \\
+\hline
+ & 0 & 0 & 0 & 0 0 & : & : : & : &  &  &  & t_2 & \frac{\cdot}{2} t_1 & r & r r & r • & • • & • | \\
+\hline
+\end{tabular}
+\end{center}
+
+Fig. 2: The unique $\nu$-filling of the skew shape $\lambda/(\mu+a)$. The dots in the lower right corner count the $\alpha^i$ statistic.
+
+righter-most column to the left of the critical line must be filled with the numbers $\{0, \ldots, t_q - 1\}$. This shows that the entries of $T \in LRT_{\nu}(\lambda/(\mu+a))$ are uniquely determined, and hence $c_{(\mu+a),\nu}^{\lambda} = 1$.
+
+Finally, if $\nu'$ is any other Littlewood-Richardson partition for $\lambda/(\mu+a)$ distinct from $\nu$, then it must differ in the entries $\{t+1,\ldots,r\}$ and hence we must have $\nu'_j \geq \nu_j$ for each $j \in \{t+1,\ldots,r\}$ with strict inequality for at least one j. Therefore, it follows from Equation (??) that we must have $\alpha^i(K') = \alpha^i(\nu') < \alpha^i(\nu) = \alpha^i(K)$, and the second statement follows from Lemma ??. See Figure ??. In the next section we will see the significance of the $\alpha^i$-statistic of a partition; it represents the order of vanishing of a certain specialization of the mixed Hessian determinant. Mixed Hessian determinants and weighted NE lattice paths According to (?, Lemma 4.19), for any $F \in Q_d$ and for any $0 \le r \le s(F) - 1$, the permuted $r^{th}$ mixed Hessian satisfies the following factorization formula
+
+$P_r \cdot \mathrm{MHess}_r(F, \mathcal{E})|_{(X,Y)} = d! \cdot (\phi_d(F) \cdot W_{d-2r}(\underline{X}, \underline{Y}))_{I,I}$
+
+(15)
+
+where $\phi_d(F) = (c_{q-p})_{0 < p,q}$ is the bi-infinite Toeplitz matrix of $F$,
+
+$W_{d-2r}(\underline{X},\underline{Y}) = W_{d-2r}(X_1,\ldots,X_{d-2r},Y_1,\ldots,Y_{d-2r})$
+
+is the bi-infinite weighted path matrix corresponding to the NE lattice paths from the infinite vertex set $\mathcal{A} = \{(-p, p) \mid 0 \leq p\}$ to the infinite vertex set $\mathcal{B} = \{(-q, d - 2r + q) \mid 0 \leq q\}$ where the North, respectively East edges emanating from the diagonal line $x + y = p$ are weighted by the variables $Y_{p+1}$, respectively $X_{p+1}$, for $0 \le p \le d-2r-1$, and where $I = \{0, ..., r\}$ and $J = \{r, ..., 2r\}$, and $P_r$ is the $(r+1) \times (r+1)$ permutation matrix for the order-reversing permutation $p \mapsto r - p$, $0 \le p \le r$. The following so-called Plücker expansion formula for the permuted mixed Hessian determinant follows from Equation (??) and is implicit in (?, Theorem 4.21). We carefully state and prove it here as a lemma for future reference.
+
+
+\newpage
+
+% Page 11
+\section*{\textbf{Lemma 4.1.} For any $F \in Q_d$ with Sperner number $s = s(F)$, and for any $0 \le r \le s - 1$, we have}
+
+Corrigendum
+
+
+\[ \det \left( P_r \cdot \mathrm{MHess}_r(F, \mathcal{E})|_{(\underline{X}, \underline{Y})} \right) = (d!)^{r+1} \cdot \sum \Delta_K \left( \phi_d^r(F) \right) \cdot \Delta_{(K+r)J} \left( W_{d-2r} \left( \underline{X}, \underline{Y} \right) \right). \]
+
+
+(16)
+
+$K \in \binom{[d-r]_0}{r-1}$
+
+Moreover the determinant
+
+
+\[ \Delta_{(K+r)J}(W_{d-2r}(\underline{X},\underline{Y})) = \sum_{z \in \mathcal{X}} \prod_{z=1}^{d-2r} X_z^{a_z(\mathcal{P})} Y_z^{b_z(\mathcal{P})} \]
+
+
+(17)
+
+
+\paragraph{$<math>\mathcal{P}$:} \textbackslash\{\}mathcal\{A\}\_\{K+r\} \textbackslash\{\}rightarrow \textbackslash\{\}mathcal\{B\}\_\{J\} z = 1
+
+is the sum of monomials indexed by vertex disjoint NE lattice path systems from $A_{K+r}$ = $\{A_{k_q} = (-k_q - r, k_q + r) \mid 0 \le q \le r\}$ to $\mathcal{B}_J = \{B_{r+q} = (-q - r, d - r + q) \mid 0 \le q \le r\}$, where $a_z(\mathcal{P})$, respectively $b_z(\mathcal{P})$, is the number of East, respectively North, edges of $\mathcal{P}$ emanating from the diagonal $x + y = z - 1$, for $1 \le z \le d - 2r$.
+
+\textit{Proof} It follows from the factorization formula in Equation (??) and from the generalized Cauchy-Binet theorem that the determinant of the permuted $r^{th}$ mixed Hessian matrix satisfies 
+\[ \det \left( P_r \cdot \mathrm{MHess}_r(F, \mathcal{E})|_{(\underline{X}, \underline{Y})} \right) = (d!)^{r+1} \cdot \sum_{K \in \mathbb{C}^{\mathbb{N}_0}} \Delta_{IK} \left( \phi_d(F) \right) \cdot \Delta_{KJ} \left( W_{d-2r} \left( \underline{X}, \underline{Y} \right) \right). \]
+
+
+(18)
+
+$K \in \binom{\mathbb{N}_0}{n+1}$
+
+where the sum is over all $r+1$-subsets $K=\{0 \leq k_0 < \cdots < k_r\} \subset \mathbb{N}_0$ of natural numbers, including 0. Since $W_{d-2r}(\underline{X},\underline{Y})$ is a weighted path matrix, it follows from the Lindstöm-Gessel-Viennot theorem (?, Fact 4.17) that its KJ-minor is the sum, overall all vertex disjoint NE lattice path systems from $A_K = \{(-k_q, k_q) \mid 0 \le 1\}$ $q \leq r$ to $\mathcal{B}_J = \{(-q-r, d-r+q) \mid 0 \leq q \leq r\}$, of the product of edge weights in the path system, which is Equation (??). For $(r+1)$-subsets $K \not\subset \{r,\ldots,d\}$ (i.e. $k_0 < r$), $\Delta_{KJ}(W_{d-2r}(\underline{X},\underline{Y})) \equiv 0$, since there are no vertex disjoint NE lattice path systems from $A_K$ to $B_J$ in that case, cf. (?, Lemma 4.18). On the other hand, for $K \subset \{r, \ldots, d\}$ (i.e. $r \leq k_0$), we have an equality of minors
+
+
+\[ \Delta_{IK}(\phi_d(F)) = \Delta_{K-r}(\phi_d^r(F)) \]
+
+
+where $K - r \subset \{0, \ldots, d - r\}$ is the subset K shifted down by r, indexing columns of the finite Toeplitz matrix $\phi_d^r(F)$. Putting these two observations together, Equation (??) follows.
+
+
+\newpage
+
+% Page 12
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+\subsection*{$X_2$ $B_4$}
+
+$X_1$ $A_6$
+
+$B_3$ $X_2$ $A_5$ $Y_1$
+
+$B_2$
+
+$A_4$
+
+$Y_2$ $X_1$ $A_3$ $A_2$
+
+$\rightarrow x$
+
+(0,0)
+
+Fig. 3: vertex disjoint path system for the monomial term $X_1^2X_2^2Y_1Y_2$ of $\Delta_{(K+r)J}(W_2(X_1,X_2,Y_1,Y_2))$ for $K + r = \{3, 4, 6\}$ and $J = \{2, 3, 4\}$
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+_____________________________________ & K & K+r & \Delta_{(K+r)J}(W_2(X_1, X_2, Y_1, Y_2)) & \alpha^i(K) \\
+\hline
+{ & {0,1,2} & {2,3,4} & Y_1^3Y_2^3 & 3 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+ &  &  &  &  &  &  &  &  &  \\
+\hline
+1 9 91 & 0 9 9 & [2 4 5] & \mathbf{v}^{2}\mathbf{v}^{2}\mathbf{v}^{3} & V2V V3 + V V & V V V^2V & V^2V^2 . & 2 + V2V3V & 2V3V &  \\
+\hline
+[0, 2, 3] & 0, 2, 3 & \{2,4,5\} & \{ X_1^2 Y_1 Y_2^3 \} & X_1^2 Y_1 Y_2^3 + X_1 X_1 & -X_1X_2Y_1^2Y_2 & x_2Y_1^2Y_2^2 + 1 & x_{1}^{2} + X_{2}^{2}Y_{1}^{3}Y_{2} & _{0}^{2}Y_{1}^{3}Y_{2} &  \\
+\hline
+0, 2, 3\} & 0, 2, 3\} & \{2,4,5\} & X_1^2 Y_1 Y_2^3 & X_1^2 Y_1 Y_2^3 + X_1 X & -X_1X_2Y_1^2Y_2 & (2Y_1^2Y_2^2 + 1) & X_2^2 + X_2^2 Y_1^3 Y_2 & \frac{1}{2}Y_1^3Y_2 &  \\
+\hline
+[0,2,3] & 0, 2, 3\} & \{2,4,5\} & \left\{\begin{array}{c}X_1^2Y_1Y_2^3\\\end{array}\right. & X_1^2 Y_1 Y_2^3 + X_1 X_1 & -X_1X_2Y_1^2Y_2 & _{2}Y_{1}^{2}Y_{2}^{2} + . & \frac{1}{2} + X_{2}^{2}Y_{1}^{3}Y_{2} & \frac{1}{2}Y_{1}^{3}Y_{2} &  \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\lfloor,2,3\} & | \{3,4,5\} & X_1^3 Y_2^3 + X_1^2 X_1^3 & X_1^2 X_2 Y_1 Y_2^2 + X_1 X_2^2 & X_1 X_2^2 Y_1^2 Y_2 + X_2^3 Y_1^3 \\
+\hline
+1,2,3} & \{3,4,5\} & X_{1}^{3}Y_{2}^{3} + X_{1}^{2}X & X_1^2 X_2 Y_1 Y_2^2 + X_1 X_2^2 + X_2 Y_2 Y_2 Y_3 + Y_4 Y_4 Y_5 + Y_5 Y_5 + Y_6 Y_6 Y_6 Y_6 + Y_6 Y_6 Y_6 Y_6 Y_6 Y_6 Y_6 Y_6 Y_6 Y_6 & X_1X_2Y_1Y_2 + X_2Y_1 \\
+\hline
+. 2. 4} & \left| \{3, 4, 6\} \right| & X_1^3 X_2 Y_2^2 + X_3^2 X_3 Y_3^2 + X_3^2 X_3 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 + X_3^2 Y_3^2 & +X_1^2X_2^2Y_1Y_2+X_1 & 0 + X_1 X_0^3 Y_1^2 \\
+\hline
+\{1, 2, 4\} & | \{3,4,6\} | & X_1^3 X_2 Y_2^2 + X_1^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 X_2^2 + X_2^2 & +X_1^2 X_2^2 Y_1 Y_2 + X_1 & 2 + X_1 X_2^3 Y_1^2 \\
+\hline
+\end{tabular}
+\end{center}
+
+$\{2,3,4\} \mid \{4,5,6\} \mid X_1^3 X_2^3$
+
+0
+
+Figure ?? shows the vertex disjoint path system corresponding to the monomial term $X_1^2 X_2^2 Y_1 Y_2$ of $\Delta_{(K+r)J}(W_2(X_1, X_2, Y_1, Y_2))$ for $K+r=\{3,4,6\}$, with d, r, and J as above. Note that if we take $i=3>r=2$ so that $i-r=1$, then specializing the variables to $Y_1=t$ and $X_1,X_2,Y_2=1$ yields polynomials $\Delta_{(K+r)J}(W_2(1,1,t,1))$ whose order of vanishing at $t=0$ is the $\alpha^i$ statistic of $K$.
+
+
+\newpage
+
+% Page 13
+\section*{We can generalize the last statement of Example ??.}
+
+Corrigendum
+
+\textbf{Lemma 4.3.} Fix $a, d, i, r$ as in Lemma ??, with $J = \{r, \ldots, 2r\}$ and $K \in {[d-r]_0 \choose r+1}$ as in Lemma ??. Let $\Delta^{i}_{(K+r)J}(t)$ be the specialization of $\Delta_{(K+r)J}(W_{d-2r}(\underline{X},\underline{Y}))$ at the point where $Y_1 = \cdots = Y_{i-r} = t$, and the remaining variables are equal to $X_i = 1 = Y_j$. Then the order of vanishing of univariate polynomial $\Delta^{i}_{(K+r)J}(t)$ at $t=0$ is equal to the $\alpha^{i}$-statistic of $K$, $\alpha^{i}(K)$. Proof First note that we can realize our specialization $\Delta^i_{(K+r)J}(t)$ as the determinant of the weighted path matrix from $A_{K+r}$ to $B_J$ by specializing the weights of our edges in our NE lattice path graph so that the first $(i-r)$ North steps, i.e. the North steps emanating from the diagonal lines $x+y=p$ for $0 \le p \le i-r-1$, are weighted with t, and the remaining edges are weighted with 1. Then we must identify a vertex disjoint NE lattice path system from $A_{K+r}$ to $B_J$ that minimizes the number of t-weighted North edges. One such minimizing vertex disjoint path system is the one in which all East steps precede all North steps in every path. Since the number of East steps from $A_{k_q+r}=(-k_q-r,k_q+r)$ to $B_{r+q}=(-r-q,d-r+q)$ is $k_q-q$, it follows that the power of t coming from this path is equal to $\max\{(i-r)-(k_q-q),0\}$, and hence summing over q yields the minimal power of t in the polynomial $\Delta^i_{(K+r)J}(t)$, and the result follows from Equation (??). \textbf{Proof of Theorem ??} We are now in a position to prove Theorem ??. We restate it here for the convenience of the reader. \textbf{Theorem 5.1.} Let $F \in Q_d$ be a homogeneous d-form, and fix $0 \le i \le \lfloor \frac{d}{2} \rfloor$. The following are equivalent.
+
+\begin{itemize}
+  \item $F$ is $i$-Lorentzian
+\end{itemize}
+
+2. $\phi_d^i(F)$ is strongly totally nonnegative. $A_F$ satisfies mixed $HRR_i$ on the standard open convex cone of linear forms 3.
+
+$U = \{ax + by \mid (a, b) \in \mathbb{R}^2_{\leq 0}\}.$
+
+$Proof(1) \Rightarrow (2)$. Assume that $F \in L(i)_d$ is i-Lorentzian. Then, by definition, there exists a sequence $\{F_n\}\subset \overset{\circ}L(i)_d$ of strictly i-Lorentzian polynomials such that $\lim_{n\to\infty}F_n=F$. By (?, Theorem 1) (or more specifically, (?, Proposition 4.8)), the Toeplitz matrices $\phi_d^i(F_n)$ must be totally positive for all $n$, and hence by Lemma ??, so then are the matrices $\phi_d^j(F_n)$ for all $n$ and for all $j$, $0 \le j \le i$. By continuity we have $\lim_{n\to\infty} \phi_d^j(F_n) = \phi_d^j(F)$, and hence it follows that $\phi_d^j(F)$ must be totally nonnegative for every $0 \le j \le i$, which is $(2)$. (2) $\Rightarrow$ (3). Assume that $\phi_d^i(F)$ is strongly totally nonnegative. Then, in particular, for each j, with $0 \le j \le i$, every maximal minor of $\phi_d^j(F)$ is totally nonnegative, and hence it follows from Lemma ?? that 
+\[ \det\left(P_{j}\cdot \mathrm{MHess}_{j}(F,\mathcal{E})|_{(\underline{X},\underline{Y})}\right) = \sum_{K\in\binom{[d-j]_{0}}{j+1}} \Delta_{K}(\phi_{d}^{j}(F)) \cdot \left(\sum_{\mathcal{P}:\ \mathcal{A}_{K+j}\to\mathcal{B}_{J}} \prod_{z=1}^{d-2j} X_{z}^{a_{z}(\mathcal{P})} \cdot Y_{z}^{b_{z}(\mathcal{P})}\right) > 0, \]
+ for all $(\underline{X},\underline{Y})=(X_1,\ldots,X_{d-2j},Y_1,\ldots,Y_{d-2j})>0$, and for each j with $0\leq j\leq \min\{i,s-1\}$. Therefore it follows from (?, Lemma 3.13) that the algebra $A_F$ must satisfy mixed $HRR_i$ on $U$, which is (3). $(3) \Rightarrow (1)$. Fix i with $0 \le i \le \lfloor \frac{d}{2} \rfloor$. We will show that if $A_F$ satisfies the mixed HRR\textsubscript{i} on U, then $F \in L(i)_d$, by downward induction on the Sperner number $s = s(F)$. For the base case, assume that $i+1 \le s(F)$, so that rank of $\phi_d^i(F)$ is $i+1$, by (?, Lemma 4.5). Then note that $\ell_1 = x+ty$ and $\ell_2 = tx+y$ are linearly independent and in U for all t, with $0 < t < 1$. It follows from (?, Corollary 4.13) that $G_t(X, Y) = F(X + tY, tX + Y)$ is strictly i-Lorentzian. Since $\lim_{t\to 0} G_t = F$, it follows that $F \in L(i)_d$ which completes the base case.
+
+
+\newpage
+
+% Page 14
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+\subsection*{For the inductive step, assume the result holds for all homogeneous $d$-forms $H$ with Sperner number}
+
+satisfying $i+1 \geq s(H) > s$, and let $F \in Q_d$ be a homogeneous d-form with Sperner number $s(F) = s$, and such that $A_F$ satisfies the mixed HRR\textsubscript{i} on U. Note that $G_t = F(X + tY, tX + Y)$ from above cannot be strictly i-Lorentzian because $s(G_t) - 1 = s - 1 < i$. On the other hand, since the algebra $A_F$ satisfies the mixed HRR\textsubscript{i} on U, it follows that the isomorphic algebra $A_{G_t}$ satisfies mixed HRR\textsubscript{i} (and hence also mixed $HRR_{s-1}$) on the standard closed cone $\overline{U}$; this argument is implicit in the proof of (?, Corollary 4.13). It therefore follows from (?, Theorem 1) that $\phi_d^{s-1}(G_t)$ is totally positive, and hence by Lemma ?? as well as Lemma ??, that $\phi_d^j(G_t)$ is either totally positive if $0 \le j \le s-1$ or $TP_s$ and totally nonnegative if $s \le j \le i$. In order to invoke our induction hypothesis, we will find another family of polynomials converging to $G_t$ with similar positivity properties. To this end, let u be another parameter and define the two-parameter family of polynomials by
+
+$H_{t,u} = G_t + (-1)^s u Y^d$.
+
+Then for all j, with $0 \le j \le \left| \frac{d}{2} \right|$, we have
+
+$\phi_d^j(H_{t,u}) = \phi_d^j(G_t) + (-1)^s u E_{0,d-2j}$
+
+where $E_{0,d-j}$ is the $(j+1)\times(d-j+1)$ elementary matrix with 1 in the $(0,d-j)$ entry (upper right corner) and zeros elsewhere. It follows that for any $k$, with $1 \leq k \leq j+1$, and for any $k$-subsets $A \subset \{0,\ldots,j\}$ and $B \subset \{0, \ldots, d-j\}$, we have 
+\[ \Delta_{AB}\left(\phi_d^j(H_{t,u})\right) = \begin{cases} \Delta_{AB}\left(\phi_d^j(G_t)\right) & \text{if } 0 \notin A \text{ or } d-j \notin B \\ \Delta_{AB}\left(\phi_d^j(G_t)\right) + (-1)^{s+k-1}u\Delta_{(A\setminus 0)(B\setminus d-j)}\left(\phi^j(G_t)\right) & \text{if } 0 \in A \text{ and } d-j \in B \end{cases} \]
+ In particular it is clear that for all $0 < t < 1$ and $u > 0$ sufficiently small (possibly depending on t), $\phi_d^j(H_{t,u})$ is totally positive for $0 \le j \le s-1$, and $TP_s$ and totally nonnegative for $s \le j \le i$, since $\phi_d^j(G_t)$ is. For j satisfying $s \leq j \leq i$, and $k = s + 1$, the $k \times k$ minor $\Delta_{AB}(\phi_d^j(H_{t,u}))$ is either zero, corresponding to the $(s+1) \times (s+1)$ minor $\Delta_{AB}(\phi_d^j(G_t))$ or else it is positive, being a \textit{u}-multiple of the $s \times s$ minor $\Delta_{(A\setminus 0)(B\setminus d-j)}(\phi_d^j(G_t))$. In particular, the matrix $\phi_d^s(H_{t,u})$ is totally nonnegative of rank $s+1$. Moreover, since for $k > s+1$, all $k \times k$ minors $\Delta_{AB}(\phi_d^j(H_{t,u}))$ vanish, it follows that the matrix $\phi_d^{s+1}(H_{t,u})$ does not have maximal rank, and hence by (?, Lemma 4.5), the Sperner number of $H_{t,u}$ is $s(H_{t,u}) = s + 1$. In order to invoke our induction hypothesis, it remains show that the algebra $A_{H_{t,u}}$ satisfies mixed HRR\textsubscript{i} on $U$. We proceed as above: fix j, with $0 \le j \le \min\{i, s(H_{t,u}) - 1\} = s$. Then since $\phi_d^j(H_{t,u})$ is either totally positive, if $0 \le j < s$, or totally nonnegative with at least one nonvanishing maximal minor, if $j = s$, it follows from Lemma ?? that 
+\[ \det\left(P_{j}\cdot \mathrm{MHess}_{j}(H_{t,u},\mathcal{E})|_{(\underline{X},\underline{Y})}\right) = \sum_{K\in\binom{[d-j]_{0}}{j+1}} \Delta_{K}(\phi_{d}^{j}(H_{t,u})) \cdot \left(\sum_{\mathcal{P}:\ \mathcal{A}_{K+j}\to\mathcal{B}_{J}} \prod_{z=1}^{d-2j} X_{z}^{a_{z}(\mathcal{P})} \cdot Y_{z}^{b_{z}(\mathcal{P})}\right) > 0, \]
+ for all $(\underline{X},\underline{Y}) > 0$. Therefore it follows from (?, Lemma 3.13) that the algebra $A_{H_{t,u}}$ satisfies mixed HRR\textsubscript{i} on U. Therefore by our induction hypothesis, $H_{t,u}$ is i-Lorentzian for all $0 < t < 1$ and $u = u(t) > 0$ sufficiently small. Finally, since $\lim_{(t,u)\to(0,0)} H_{t,u} = F$ it follows that $F$ is $i$-Lorentzian as well, which is (1). $\square$ \textbf{Proof of Theorem ??} We are now in a position to prove Theorem ??. We shall appeal to Theorem ??, in particular the equivalence: $\phi_d^i(F)$ is strongly totally nonnegative $\Leftrightarrow A_F$ satisfies mixed HRR\textsubscript{i} on $U$.
+
+For convenience of the reader, we state Theorem ?? again:
+
+
+\newpage
+
+% Page 15
+\section*{\textbf{Theorem 6.1.} If $\phi_d^i(F)$ is totally nonnegative then $A_F$ satisfies mixed $HRR_i$ on $U$. In particular, $\phi_d^i(F)$}
+
+Corrigendum
+
+\textbf{15}
+
+is totally nonnegative if and only if $\phi_d^i(F)$ is strongly totally nonnegative.
+
+\textit{Proof} The second statement follows from the first statement and Theorem ??. To prove the first statement, we use induction on $d = \deg(F)$, the base case being clear. Assume that $\phi_d^i(F)$ is totally nonnegative. Then so are the submatrices $\frac{1}{d}\phi_{d-1}^i(x\circ F)$ and $\frac{1}{d}\phi_{d-1}^i(y\circ F)$. By induction, it follows that the algebras $A_{x\circ F}$ and $A_{y \circ F}$ both satisfy mixed HRR\textsubscript{i} on U. We claim that this implies that the algebra $A_F$ must satisfy mixed $\mathrm{SL}_i$ on $U$. Indeed, fix a sequence of linear forms in $U$, say $\mathcal{L} = (\ell_0, \ell_1, \dots, \ell_d) \in U^{d+1}$, and suppose that for some j satisfying $0 \le j \le \min\{i, s(F) - 1\}$, there exists $\alpha \in R_j$ satisfying
+
+
+\[ \ell_1 \cdots \ell_{d-2j} \cdot \alpha \circ F \equiv 0. \]
+
+
+(19)
+
+We shall abuse notation slightly and let $\alpha$ also denote its image in the quotient ring $A_F$, or $A_{x \circ F}$ or $A_{y \circ F}$, when it is clear from the context what we mean. Then multiplying both sides of Equation (??) by either x or y then yields
+
+$\ell_1 \cdots \ell_{d-2i} \cdot \alpha \circ (x \circ F) = 0 = \ell_1 \cdots \ell_{d-2i} \cdot \alpha \circ (y \circ F)$.
+
+On the other hand, taking
+
+
+\[ \mathcal{L}' = (\ell'_0 = \ell_1, \dots, \ell'_{d-1-2j} = \ell_{d-2j}, \ell'_{d-2j} = \ell_{d-2j+1}, \dots, \ell'_{d-1} = \ell_d) \]
+
+
+we see that $\alpha$ must be primitive in the algebras $A_{x \circ F}$ and $A_{y \circ F}$ with respect to $\mathcal{L}' \in U^{(d-1)+1}$. Since these algebras satisfy HRR\textsubscript{i} on U, it follows that if $\alpha \neq 0$ in $A_{x \circ F}$ then
+
+
+\[ (-1)^{j} \cdot \ell_{2} \cdots \ell_{d-2j} \cdot \alpha \circ (x \circ F) = (-1)^{j} \cdot \ell'_{1} \cdots \ell_{d-1-2j} \cdot \alpha \circ (x \circ F) > 0 \]
+
+
+and similarly, if $\alpha \neq 0$ in $A_{y \circ F}$. Therefore, writing $\ell_1 = ax + by$ for some $a, b > 0$, we have
+
+
+\[ 0 = (-1)^{j} \cdot (\ell_1 \cdots \ell_{d-2j} \cdot \alpha \circ F) \]
+ 
+\[ = (-1)^{j} (a \cdot \ell_{2} \cdots \ell_{d-2j} \cdot \alpha \circ (x \circ F)) \]
+ $+(-1)^{j}(b \cdot \ell_{2} \cdots \ell_{d-2j} \cdot \alpha \circ (y \circ F)).$
+
+In particular, $\alpha$ must be zero in both algebras $A_{x \circ F}$ and $A_{y \circ F}$. This implies that $x \cdot \alpha = 0$ and $y \cdot \alpha = 0$ are both zero in the algebra $A_F$ and hence $\alpha \in (A_F)_i$ must either be zero in $A_F$ or it must be in the socle. Since $j < d$ by our assumption, it follows that $\alpha$ must be zero in $A_F$, and hence the map $\times \ell_1 \cdots \ell_{d-2j} : (A_F)_i \to 0$ $(A_F)_{d-j}$ must be injective. Since $\mathcal{L} \in U^{d+1}$ and $j, 0 \leq j \leq \min\{i, s(F) - 1\}$ were chosen arbitrarily, it follows that $A_F$ must satisfy mixed $SL_i$ on $U$, as claimed. It follows that for each $j$, $0 \le j \le \min\{i, s(F) - 1\}$, the permuted $j^{th}$ mixed Hessian determinant must be nonzero everywhere on the positive cone, i.e.
+
+$\det (P_j \cdot \mathrm{MHess}_j(F, \mathcal{E})|_{(X,Y)}) \neq 0,$
+
+for all $(\underline{X},\underline{Y}) > 0$. Therefore, in order to conclude the induction, it will suffice to find, for each $0 \le j \le$ $\min\{i, s(F) - 1\}$, some point $(\underline{X}, \underline{Y}) = (X_1, \dots, X_{d-2j}, Y_1, \dots, Y_{d-2j}) > 0$ in the positive cone at which the permuted $j^{th}$ mixed Hessian determinant is positive. To find such a point, fix j satisfying $0 \le j \le \min\{i, s(F) - 1\}$, and assume for the moment that $j < i$. Then in this case we can specialize the variables $Y_1, \ldots, Y_{i-j} = t$ and the remaining variables to $X_1 = \cdots = t$ $X_{d-2j} = Y_{i-j+1} = \cdots = Y_{d-2j} = 1$, as in Lemma ??; in particular note that for any fixed $t > 0$, this defines
+
+
+\newpage
+
+% Page 16
+\section*{Macias Marques, McDaniel, Seceleanu}
+
+a point in the positive cone. Then according to Lemma ?? and Lemma ??, we can write the specialized permuted $j^{th}$ mixed Hessian determinant as the univariate polynomial 
+\[ M_j^F(t) = \sum_{K \in \binom{[d-j]_0}{j+1}} \Delta_K \left( \phi_d^j(F) \right) \cdot \Delta_{(K+j)J}^i(t) = \sum_{K \in \binom{[d-j]_0}{j+1}} \Delta_K \left( \phi_d^j(F) \right) \cdot t^{\alpha^i(K)} \cdot \hat{\Delta}_{(K+j)J}^i(t) \]
+ where $\hat{\Delta}^i_{(K+j)J}(0) \neq 0$. Let $K = \{0 \leq k_0 < \dots < k_j \leq d-j\}$ be any subset where $\Delta_K(\phi_d^j(F))$ is nonzero and $\alpha^i(K)$ is minimal. If $i \leq k_j \leq d-j$, then according to Lemma ??, there exists row and column index sets $I \subset \{0, \dots, i\}$ and $J \subset \{0, \dots, d-i\}$ such that
+
+$\Delta_{IJ}\left(\phi_d^i(F)\right) = \Delta_K\left(\phi_d^j(F)\right);$
+
+of course in general, other terms may appear, but, according to Lemma?? and our minimality assumptions on $\alpha^i(K)$, those other terms must vanish. Since $\phi_d^i(F)$ is totally nonnegative, it follows that $\Delta_K(\phi_d^j(F))$ must be strictly positive. On the other hand, if $j \leq k_j \leq i-1$, then we can write
+
+
+\[ \Delta_K(\phi_d^j(F)) = \frac{1}{d^{j+1}} \cdot \Delta_K\left(\phi_{d-1}^j(y \circ F)\right). \]
+
+
+Since $A_{y \circ F}$ satisfies mixed HRR\textsubscript{i} on $U$, it follows from Theorem ?? that $\phi_{d-1}^i(y \circ F)$ is strongly totally nonnegative and hence $\phi_{d-1}^{j}\left(y\circ F\right)$ is totally nonnegative, and hence again, we must have that $\Delta_K\left(\phi_d^j(F)\right) > 0$ is strictly positive. This shows that if $j < i$ and $0 \le j \le \min\{i, s(F) - 1\}$, then the univariate polynomial $M_j^F(t)$ has a positive coefficient on its lowest degree term, and hence $M_j^F(t) > 0$ for $t>0$ sufficiently small. If $j=i$, then we must have $\min\{i,s(F)-1\}=i$, and $\phi_d^i(F)$ is a full rank Toeplitz matrix, by (?, Lemma 4.5). It then follows directly from the Plücker expansion formula in Lemma ?? that, since we are assuming $\phi_d^i(F)$ is totally nonnegative and of full rank, the permuted $i^{th}$ mixed Hessian determinant must be strictly positive on the positive cone, i.e.
+
+
+\[ \det\left(P_i \cdot \mathrm{MHess}_i(F, \mathcal{E})|_{(\underline{X}, \underline{Y})}\right) = \sum_{K \in \binom{[d-i]_0}{1-2}} \Delta_K(\phi_d^i(F)) \cdot \left(\sum_{\mathcal{P}: \mathcal{A}_{K+i} \to \mathcal{B}_J} \prod_{z=1}^{d-2i} X_z^{a_z(\mathcal{P})} \cdot Y_z^{b_z(\mathcal{P})}\right) > 0, \]
+ for all $(X, Y) > 0$. In all cases, we must therefore conclude that permuted mixed Hessian polynomials are strictly positive on the positive cone up through degree $i$, and hence $A_F$ must therefore satisfy the mixed $HRR_i$ on U by (?, Lemma 3.13), completing the induction and the proof. $\square$ \textbf{Remark 6.2.} 1. Theorem ?? together with Theorem ?? implies that for each $i, 0 \le i < \lfloor \frac{d}{2} \rfloor$, there is a descending inclusion
+
+$L(i+1)_d \subset L(i)_d$;
+
+indeed if $\phi_d^{i+1}(F)$ is totally nonnegative then it must be strongly totally nonnegative and hence $\phi_d^i(F)$ is totally nonnegative too. In particular, $L\left(\left\lfloor \frac{d}{2} \right\rfloor\right)_d$ consists of polynomials that are \textit{i}-Lorentzian for all $0 \le i \le \left| \frac{d}{2} \right|$, i.e.
+
+
+\[ L\left(\left\lfloor \frac{d}{2} \right\rfloor\right)_d = \bigcap_{0 \le i \le \left\lfloor \frac{d}{2} \right\rfloor} L(i)_d. \]
+
+
+One subfamily of $\lfloor \frac{d}{2} \rfloor$-Lorentzian polynomials are those d-forms $F = \sum_{k=0}^{d} {d \choose k} c_k X^k Y^{d-k}$ that are called normally stable (?, Definition 4.25), characterized as those having totally nonnegative bi-infinite Toeplitz matrices $\phi_d(F) = (c_{q-p})_{0 \le p,q}$, or alternatively, as those having dehomogenized normalizations $\tilde{F}(1,t) = \sum_{k=0}^{d} c_k t^{d-k}$ that have only real non-positive roots; this is (?, Theorem 4.30).
+
+2. If $F \in L(s-1)_d$ where $s = s(F)$ is the Sperner number of $F$, then $F \in L\left(\left\lfloor \frac{d}{2} \right\rfloor\right)_d$. To see this, note that since the algebra $A_F$ satisfies mixed $HRR_{s-1}$ on $U$, it must therefore satisfy mixed $HRR_$ the primitive subspaces vanish in degrees $s \leq i \leq \lfloor \frac{d}{2} \rfloor$. It follows from Theorem ?? that $F \in L\left(\lfloor \frac{d}{2} \rfloor\right)_d$ as well. In terms of Toeplitz matrices, this says that if $\phi_d^{s-1}(F)$ is totally nonnegative, then so is $\phi_d^{\left\lfloor \frac{d}{2} \right\rfloor}(F)$; this is the totally nonnegative analogue of Lemma ??.
+
+
+\newpage
+
+% Page 17
+Corrigendum
+
+\textbf{17}
+
+Other Errata Here are some other errata from ?. page 21, proof of Corollary 4.13: the word "precise" should be replaced by the word "explicit"
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+page 25, the proof of Lemma 4.19: there should be a $\frac{1}{d!}$ on the last line of the displayed equation. 2. page 25-26, the proof of Theorem 4.21 contains the following false statements: 3. on page 25, the statement, after the last displayed equation "...the minors of $\phi_d(F)_{IK}$ for $I = \{0, ..., j\}$ a. and $K \subset \{j,...,d\}$ are precisely the consective maximal minors of $\phi_d^{\jmath}(F)$, or the consecutive initial minors of $\phi_d^i(F)$ of size $j+1...$" is false. on page 26, the statement after the third displayed equation "Since the minors of the $(j+1) \times (j+1)$ b. matrix $\phi_d^j(H_{t,u})$ are also minors of the matrix $\phi_d^i(H_{t,u})$ for all j, with $0 \le j \le i...$" is false. These statements have been corrected in our proofs of Theorem ?? and Theorem ??.
+
+\section*{References D. Bump, P. Diaconis, Toeplitz Minors, Journal of Combinatorial Theory, Series A, 97 (2002), no. 2, 252–271. S. Fallat, C. Johnson. Totally nonnegative matrices, Princeton Series in Applied Mathematics, Princeton University Press, Princeton, 2011, xvi+248 pp. W. Fulton, Young Tableaux, With applications to representation theory and geometry, London Mathematical Society Student Texts 35, Cambridge University Press, Cambridge, 1997, x+260 pp... G. Lehrer, D. Taylor, Unitary Reflection Groups, Australian Mathematical Society Lecture Series 20, Cambridge University Press, Cambridge, 2009, viii+294 pp. P. Macias Marques, C. McDaniel, A. Seceleanu, Higher Lorentzian Polynomials, Higher Hessians, and the Hodge- Riemann Relations for Graded Oriented Artinian Gorenstein Algebras in Codimension Two, International Mathematics Research Notices 2025, no. 13, Paper No. rnaf183, 34 pp. B. Sagan, Log concave sequences of symmetric functions and analogs of the Jacobi-Trudi determinants, Transactions of the American Mathematical Society 329 (1992), no. 2, 795–811. L. Smith, Polynomial Invariants of Finite Groups, Research Notes in Mathematics 6, A.K. Peters, Wellesley, Massachusetts, 1995, xvi+360 pp. R.P. Stanley, Enumerative Combinatorics, Volume 2, With a foreword by Gian-Carlo Rota and appendix 1 by Sergey Fomin, Cambridge Studies in Advanced Mathematics 62, Cambridge University Press, Cambridge, 1999, $xii+581$ pp.}
+
+
+\newpage
+
+\end{document}

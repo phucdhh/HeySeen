@@ -1,0 +1,388 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{proof_custom}{Proof}
+\renewcommand{\abstractname}{\Large\bfseries Abstract}
+
+
+\begin{document}
+
+
+% Page 1
+\section{GRADED BETTI NUMBERS OF THE JACOBIAN ALGEBRA OF}
+
+SURFACES IN $\mathbb{P}^3$
+
+ALEXANDRU DIMCA\textsuperscript{1} AND GABRIEL STICLARU ABSTRACT. We compute an explicit closed formula for the Hilbert polynomial of the Jacobian algebra $M(f)$ of a reduced surface $X: f = 0$ in $\mathbb{P}^3$ in terms of the graded Betti numbers of the algebra $M(f)$. When X has only isolated singularities, a result by A. du Plessis and C. T. C. Wall yields new necessary condition for a set of positive integers to be the graded Betti numbers of the Jacobian algebra of such a surface. The comparison with the plane curve case is discussed in detail and additional information is given in the case of nodal surfaces.
+
+\begin{itemize}
+  \item Introduction
+\end{itemize}
+
+Let $S = \mathbb{C}[x, y, z, t]$ be the polynomial ring in four variables $x, y, z, t$ with complex coefficients, and let $X: f = 0$ be a reduced surface of degree $d \geq 3$ in the complex projective space $\mathbb{P}^3$. We denote by $J_f$ the Jacobian ideal of $f$, i.e. the homogeneous ideal in S spanned by the partial derivatives $f_x, f_y, f_z, f_t$ of f, and by $M(f) = S/J_f$ the corresponding graded quotient ring, called the Jacobian (or Milnor) algebra of f. Consider the general form of the minimal resolution of the Milnor algebra $M(f)$ of a reduced surface $X: f = 0$ (1.1) 
+\[ 0 \longrightarrow \bigoplus_{k=1}^{r} S(1-d-b_k) \longrightarrow \bigoplus_{j=1}^{q} S(1-d-c_j) \longrightarrow \bigoplus_{i=1}^{p} S(1-d-d_i) \longrightarrow S^4(1-d) \longrightarrow S. \]
+ where $p \geq 3$, $q \geq 0$ and $r \geq 0$. We call the ordered sequence of degrees
+
+$\mathbf{d} = (d_1, \dots, d_p), \ \mathbf{c} = (c_1, \dots, c_q) \ \text{and} \ \mathbf{b} = (b_1, \dots, b_r)$
+
+the graded Betti numbers of the Jacobian algebra $M(f)$, since they determine and are determined by the usual graded Betti numbers of the Jacobian algebra $M(f)$ as defined for instance in [?]. It is known that there is a unique polynomial $P(M(f))(u) \in \mathbb{Q}[u]$, called the Hilbert polynomial of $M(f)$, and an integer $k_0 \in \mathbb{N}$ such that
+
+
+\[ H(M(f))(k) = P(M(f))(k) \]
+
+
+(1.2) 2010 Mathematics Subject Classification. Primary 14H50; Secondary 14B05, 13D02, 32S22. Key words and phrases. Jacobian ideal, Jacobian algebra, exponents, Tjurina numbers, graded Betti numbers. \textsuperscript{1} partial support from the project "Singularities and Applications" - CF 132/31.07.2023 funded by the European Union - NextGenerationEU - through Romania's National Recovery and Resilience Plan.
+
+
+\newpage
+
+% Page 2
+2
+
+\section{ALEXANDRU DIMCA AND GABRIEL STICLARU}
+
+for all $k \geq k_0$. We denote by $\Sigma$ the singular subscheme of X, which is defined by the Jacobian ideal $J(f)$. The general theory of Hilbert polynomials says that the degree of $P(M(f))$ is given by the dimension of the support of $\mathcal{O}_{\Sigma}$, the coherent sheal associated to the graded S-module $M(f)$. Hence the assumption dim $\Sigma = 0$ implies that the polynomial $P(M(f))$ is a constant, namely the total Tjurina number of X, given by
+
+\section{
+\[ P(M(f)) = \tau(X) = \sum \tau(X, s), \]
+}
+
+(1.3)
+
+$s \in \Sigma$
+
+where $\tau(X,s)$ denotes the Tjurina number of the isolated singularity $(X,s)$, and $\dim \Sigma = 1$ implies that
+
+
+\[ P(M(f))(u) = au + b, \]
+
+
+(1.4) where $a = \deg(\Sigma)$, the degree of the subscheme $\Sigma$. The first main result of this note is the following computation of the Hilbert polynomial $P(M(f))$ in terms of the graded Betti numbers of the Jacobian algebra $M(f)$ introduced in (??). \textbf{Theorem 1.1.} For the minimal resolution $(??)$ of the Jacobian algebra $M(f)$ of a reduced surface $X: f = 0$ of degree $d$ in $\mathbb{P}^3$, one has the following. (1) For any such surface, one has
+
+$p + r = q + 3$ and $\sum_{i=1}^{p} d_i - \sum_{j=1}^{q} c_j + \sum_{i=1}^{r} b_k = d - 1$.
+
+(2) The surface X has at most isolated singularities if and only if
+
+
+\[ (d-1)^2 + \sum_{i=1}^p d_i^2 - \sum_{j=1}^q c_j^2 + \sum_{k=1}^r b_k^2 = 0. \]
+
+
+If this is the case, then the total Tjurina number of X is given by the formula 
+\[ 6\tau(X) = (d-1)^3 - \sum_{i=1}^p d_i^3 + \sum_{j=1}^q c_j^3 - \sum_{k=1}^r b_k^3. \]
+
+
+(3) The surface X is smooth if and only if $p = 6$, $q = 4$, $r = 1$ and
+
+$\mathbf{d} = (d-1)_6$, $\mathbf{c} = (2d-2)_4$ and $\mathbf{b} = 3(d-1)$.
+
+
+\paragraph{(4) If the surface X:} f = 0 has a 1-dimensional singularity subscheme $\Sigma$, then the Hilbert polynomial $P(M(f))$ of the Jacobian algebra $M(f)$ is given by
+
+
+\[ P(M(f))(u) = \frac{A}{2}u - B, \]
+
+
+where
+
+
+\[ A = (d-1)^{2} + \sum_{i=1}^{p} d_{i}^{2} - \sum_{j=1}^{q} c_{j}^{2} + \sum_{k=1}^{r} b_{k}^{2} \]
+
+
+
+\newpage
+
+% Page 3
+\section{GRADED BETTI NUMBERS OF SURFACES}
+
+3
+
+and 
+\[ B = \frac{d(d-3)^2 - 4}{3} + \frac{(d-3)}{2} \left( \sum_{i=1}^p d_i^2 - \sum_{i=1}^q c_j^2 + \sum_{k=1}^r b_k^2 \right) + \frac{1}{6} \left( \sum_{i=1}^p d_i^3 - \sum_{i=1}^q c_j^3 + \sum_{k=1}^r b_k^3 \right). \]
+ When the surface X has only isolated singularities, that is when dim $\Sigma = 0$, then using a result by A. du Plessis and C.T.C. Wall quoted below in Theorem ??, we obtain the following new restrictions on the graded Betti numbers of the Jacobian algebra $M(f)$. Corollary 1.2. If the surface X has isolated singularities, then 
+\[ 6d_1(d-d_1-1)(d-1) \le \sum_{i=1}^p d_i^3 - \sum_{j=1}^q c_j^3 + \sum_{k=1}^r b_k^3 \le 6d_1(d-1)^2. \]
+ Theorem ?? is proved in Section 2 and Corollary ?? is proved in Section 3. In Section 4 a comparison with the plane curve case is discussed in detail. Sur- prizingly, many facts holding for the graded Betti numbers of curves fail in the case of surfaces, see for instance Proposition?? and Remark??. The similar behavior of the graded Betti numbers of maximal Tjurina curves and the graded Betti numbers of surfaces with large number of nodes, such as the Cayley surface from Example?? and the Kummer surface from Example ?? is highlighted in Remark ?? and it may be an interesting direction of further research. However, Example?? and Proposition ?? show that this analogy is rather subtle. In Section 5 we collect a number of additional examples. All the minimal resolu- tions corresponding to (??) are computated in this note using the Computer Algebra softwares CoCoA [?] and SINGULAR [?].
+
+2. Proof of Theorem ??
+
+We start with the following two Lemmas, whose proofs are elementary and straight- forward, so we leave them to the reader. \textbf{Lemma 2.1.} For any integer $a$ and $k > |a|$, one has 
+\[ \dim S_{k+a} = \binom{k+a+3}{3} = \frac{k^3 + 3(a+2)k^2 + (3a^2 + 12a + 11)k + a^3 + 6a^2 + 11a + 6}{6}. \]
+ Using the resolution (??), we get the following (2.1) 
+\[ \dim M(f)_{s+d-1} = \dim S_{s+d-1} - 4\dim S_s + \sum_{i=1}^p \dim S_{s-d_i} - \sum_{j=1}^q \dim S_{s-c_j} + \sum_{k=1}^r \dim S_{s-b_k}, \]
+ for any s large enough. Using now Lemma??, we get the following. \textbf{Lemma 2.2.} With the above notation, for any large integer s, one has the equality
+
+$6\dim M(f)_{s+d-1} =$
+
+
+\newpage
+
+% Page 4
+\section{ALEXANDRU DIMCA AND GABRIEL STICLARU}
+
+4 
+\[ = (p-q+r-3)s^3 + 3(d-1-d_1-d_2-d_3-\sum_{i=4}^{p}(d_i-2)+\sum_{j=1}^{q}(c_j-2)-\sum_{k=1}^{r}(b_k-2))s^2 + \]
+ 
+\[ +(3d^2+6d+2-44+\sum_{i=1}^{p}(3d_i^2-12d_i+11)-\sum_{j=1}^{q}(3c_j^2-12c_j+11)+\sum_{k=1}^{r}(3b_k^2-12b_k+11))s+ \]
+ 
+\[ +d^{3}+3d^{2}+2d-24-\sum_{i=1}^{p}(d_{i}^{3}-6d_{i}^{2}+11d_{i}-6)+\sum_{i=1}^{q}(c_{j}^{3}-6c_{j}^{2}+11c_{j}-6)-\sum_{k=1}^{r}(b_{k}^{3}-6b_{k}^{2}+11b_{k}-6). \]
+ Using these computations, we can prove Theorem ?? as follows. By definition of the Hilbert polynomial $P(M(f))$ we have
+
+$6P(M(f))(s+d-1) = 6\dim M(f)_{s+d-1}$
+
+Since the surface $X$ is reduced, we have
+
+$\deg P(M(f)) = \dim \Sigma \leq 1,$
+
+and hence the coefficients of $s^3$ and of $s^2$ in Lemma ?? must vanish. This proves the claim $(1)$. To prove the claim $(2)$, we note that X has at most isolated singularities if and only if dim $\Sigma < 1$. This last condition is equivalent to the vanishing of the coefficients of s in Lemma ??, in addition to the vanishings from the claim (1). When all these vanishing holds, then we conclude the proof of claim (2) by using (??) and the expression of the constant term in Lemma ??, simplified by using the equalities in (1) and the first equality in (2). To prove the claim (3), assume first that $X: f = 0$ is smooth. Then the partial derivatives $f_x, f_y, f_z$ and $f_t$ form a regular sequence in S and the resolution of $M(f)$ is well known in this case, and has the form $0 \to S(4-4d) \to S(3-3d)^4 \to S(2-2d)^6 \to S(1-d)^4 \to S.$ It follows that $\mathbf{d}$, $\mathbf{c}$ and $\mathbf{b}$ are given by the equalities in claim (3) when X is smooth. Conversely, if \textbf{d}, \textbf{c} and \textbf{b} are given by the equalities in claim (3), then using the claim (2) we see that X has at most isolated singularities and that $\tau(X) = 0$. Therefore the surface $X$ is smooth. The proof of claim $(4)$ follows directly from $(??)$ and Lemma $??$, where s has to be replaced by $u - (d - 1)$.
+
+3. Proof of Corollary ??
+
+One has the following result, see [?, Theorem 5.3]. \textbf{Theorem 3.1.} If the surface X has at most isolated singularities, then 
+\[ (d-1)^3 - d_1(d-1)^2 \le \tau(X) \le (d-1)^3 - d_1(d-d_1-1)(d-1). \]
+ In the case of plane curves, the corresponding result was obtained in [?], and played a key role in the understanding of free curves. Indeed, the reduced curve $C$ is free if and only if
+
+$\tau(C) = (d-1)^2 - d_1(d-d_1-1),$
+
+
+\newpage
+
+% Page 5
+\section{GRADED BETTI NUMBERS OF SURFACES}
+
+5
+
+i.e. the upper bound is attained, see $[?, ?]$ for related results. A free surface X has necessarily non-isolated singularities, and so freeness must be related to other invariants, see for instance ? \textbf{Remark 3.2.} The lower bound in Theorem ?? is attained for any pair $(d, d_1)$. Indeed, it is enough to find a degree d, reduced curve $C: f'(x, y, z) = 0$ such that $d_1$ is the minimal exponent of $C$ and
+
+
+\[ \tau(C) = (d - d_1 - 1)(d - 1), \]
+
+
+
+\paragraph{and then take X:} f = 0, with
+
+$f(x, y, z, t) = f'(x, y, z) + t^d$.
+
+The existence of curves $C$ as above is shown in [?, Example 4.5] and a complete characterization of them is given in [?, Theorem 3.5 (1)]. \textbf{Remark 3.3.} The upper bound in Theorem ?? is attained for any pair $(d, d_1)$ with $2d_1 < d$, since for such pairs $(d, d_1)$ the existence of free plane curves $C: f' = 0$ of degree d and with exponents $(d_1, d_2)$ is shown in [?] and then one constructs the surface X as in Remark?? above. It is an interesting open question to improve the upper bound in Theorem ?? when $2d_1 \geq d$. The best upper bound for such pairs is (at least conjecturally) known in the case of plane curves, see [?, ?], and is given by the stronger inequality
+
+
+\[ \tau(C) \le (d-1)^2 - d_1(d-d_1-1) - \binom{2d_1+2-d}{2}. \]
+
+
+If we start with a degree d and a reduced curve $C: f'(x, y, z) = 0$ such that $d_1 \ge d/2$ and take $X: f = 0$, with
+
+$f(x, y, z, t) = f'(x, y, z) + t^d,$
+
+then f and f' have the same minimal exponent $d_1$ and (3.1) 
+\[ \tau(X) \le (d-1)^3 - d_1(d-d_1-1)(d-1) - \binom{2d_1+2-d}{2}(d-1). \]
+ However, this stronger inequality fails for surfaces not constructed as suspensions of plane curves, as the following examples show. \textbf{Example 3.4.} Consider the Cayley surface
+
+
+\paragraph{$<math>X$:} f = xyz + xyt + xzt + yzt = 0
+
+in $\mathbb{P}^3$ having four $A_1$-singularities. Then $d=3, d_1=2>d/2$ and $\tau(X)=4$. Indeed, the minimal resolution of the Jacobian algebra is given by
+
+$0 \to S[-6]^2 \to S[-5]^8 \to S[-4]^9 \to S[-2]^4 \to S$
+
+and hence
+
+$\mathbf{d} = (2_9), \ \mathbf{c} = (3_8) \ \text{and} \ \mathbf{b} = (4_2).$
+
+The inequality in Theorem ?? is in this case $0 \le \tau(X) \le 8$, while the bound given by (??) is 2, which is clearly not good.
+
+
+\newpage
+
+% Page 6
+\section{ALEXANDRU DIMCA AND GABRIEL STICLARU}
+
+6 \textbf{Example 3.5.} Consider the Kummer surface $X: f = x^4 + y^4 + z^4 + t^4 - y^2z^2 - z^2x^2 - x^2y^2 - x^2t^2 - y^2t^2 - z^2t^2 = 0$ in $\mathbb{P}^3$ having sixteen $A_1$-singularities. Then $d=4, d_1=3>d/2$ and $\tau(X)=16$. Indeed, the minimal resolution of the Jacobian algebra is given by
+
+$0 \to S(-8)^3 \to S(-7)^{12} \to S(-6)^{12} \to S(-3)^4 \to S \to 0$
+
+and hence
+
+$\mathbf{d} = (3_{12}), \ \mathbf{c} = (4_{12}) \text{ and } \mathbf{b} = (5_3).$
+
+The inequality in Theorem ?? is in this case $0 \le \tau(X) \le 27$, while the bound given by (??) is 15, which is clearly not good. \textbf{Example 3.6.} Consider finally the octic surface with 144 nodes $X: f = 16(x^8 + y^8 + z^8 + t^8) + 224(x^4y^4 + x^4z^4 + x^4t^4 + y^4z^4 + y^4t^4 + z^4t^4) + 224(x^4y^4 + x^4z^4 + x^4t^4 + y^4z^4 + y^4t^4 + z^4t^4) + 224(x^4y^4 + x^4z^4 + x^4t^4 + y^4z^4 + y^4t^4 + z^4t^4) + 224(x^4y$
+
+
+\[ +2688x^2y^2z^2t^2 - 9(x^2 + y^2 + z^2 + t^2)^4 = 0. \]
+
+
+This is a special case of Chebyshev hypersurfaces, which are classical examples of nodal hypersurfaces with many singularities. They were introduced by Chmutov to construct complex projective hypersurfaces with a large number of nodes, see |?| Vol. 2, p. 419, [?] as well as [?, Corollary 3.2, (iii)]. The minimal resolution of the Jacobian algebra is given by $0 \to S(-20)^4 \oplus S(-22) \to S(-17)^4 \oplus S(-18)^{13} \to S(-14)^6 \oplus S(-16)^9 \to S(-7)^4 \to S(-18)^{13}$ and hence
+
+$\mathbf{d} = (7_6, 9_9), \ \mathbf{c} = (10_4, 11_{13}) \text{ and } \mathbf{b} = (13_4, 15).$
+
+The inequality in Theorem ?? is in this case $0 \le \tau(X) = 144 \le 343$, while the bound given by (??) is 147, which is also good.
+
+4. Comparison to the curve case
+
+Let $R = \mathbb{C}[x, y, z]$ and consider the general form of the minimal resolution of the Milnor algebra $M(f')$ of a reduced plane curve $C: f' = 0$, which is assumed not to be free 
+\[ (4.1) \qquad 0 \longrightarrow \bigoplus_{j=1}^{q'} R(1 - d - c'_j) \longrightarrow \bigoplus_{i=1}^{p'} R(1 - d - d'_i) \longrightarrow R^3(1 - d) \longrightarrow R, \]
+ with $c'_1 \leq ... \leq c'_{q'}$ and $d'_1 \leq ... \leq d'_{p'}$, where $d = \deg f'$, see for instance [?]. One has
+
+$p' = q' + 2$,
+
+which corresponds to the first equality in Theorem ?? (1) above. It follows from [?, Lemma 1.1 that
+
+$\epsilon_j = d'_{j+2} - c'_j \ge 1$ $j = 1, \dots, q'$.
+
+(4.2)
+
+
+\newpage
+
+% Page 7
+\section*{
+\[ d_1' + d_2' = d - 1 + \sum_{i=1}^{q'} \epsilon_i \]
+}
+
+\section{GRADED BETTI NUMBERS OF SURFACES}
+
+7
+
+Using |?, Formula (13)|, one obtains the relation
+
+\section{(4.3) or, equivalently,}
+
+
+\[ \sum_{i=1}^{p'} d_i - \sum_{i=1}^{q'} c'_j = d - 1, \]
+
+
+(4.4) which corresponds to the second equality in Theorem ?? (1) above. A new invariant was recently introduced for a reduced plane curve $C$, namely the type of C defined by
+
+
+\[ t(C) = d_1' + d_2' - d + 1, \]
+
+
+(4.5) see $|?|$. When the curve C is not free, then one clearly has
+
+
+\[ t(C) = \sum_{j=1}^{q'} \epsilon_j. \]
+
+
+(4.6) This invariant has nice properties, for instance a reduced plane curve $C$ is free (resp. plus-one generated) if and only if $t(C) = 0$ (resp. $t(C) = 1$). More, one has $t(C) \ge 0$ for any reduced curve, and the curves with $t(C) = 2$ and $t(C) = 3$ have been studied in detail in [?, ?]. One may try to extend this invariant to surfaces X in $\mathbb{P}^3$ by setting
+
+$t(X) = d_1 + d_2 + d_3 + 1 - d.$
+
+(4.7) The next result shows that this case is much more complicated. \textbf{Proposition 4.1.} Let $X : f = 0$ be a reduced surface in $\mathbb{P}^3$ with the minimal resolution (??). Then
+
+$t(X) = d_1 + d_2 + d_3 + 1 - d > 0$
+
+if there are first order Jacobian syzygies $\rho_1, \rho_2$ and $\rho_3$ which are linearly independent over the field of fractions K of the polynomial ring S and such that deg $\rho_j = d_j$ for $j = 1, 2, 3$. Note that if the surface X is tame with respect to the pair $(\rho_1, \rho_2)$ as in [?, Defini- tion 1.2], then the first order Jacobian syzygies $\rho_1, \rho_2$ and $\rho_3$ are linearly independent over the field K for any new additional syzygy $\rho_3$. However, unlike the curve case, Example ?? shows that in general one may have $t(X) < 0$. \textit{Proof.} Let $M(E, \rho_1, \rho_2, \rho_3)$ be the $4 \times 4$ matrix with the first row $(x, y, z, t)$ and the j-th row, for $j=2,3,4$ being given by the components of the syzygy $\rho_{j-1}$. Then
+
+$g = \det M(E, \rho_1, \rho_2, \rho_3) \neq 0$
+
+if and only if the syzygies $\rho_1, \rho_2$ and $\rho_3$ are linearly independent over the field K. On the other hand, at any smooth point $s \in X$, the rows of $M(E, \rho_1, \rho_2, \rho_3)$ evaluated at s are tangent vectors to X at s. Since their number is larger than the dimension of this vector space, it follows that $g(s) = 0$ at any smooth point of X. Therefore g
+
+
+\newpage
+
+% Page 8
+
+\newpage
+
+% Page 9
+
+\newpage
+
+% Page 10
+
+\newpage
+
+% Page 11
+\section{GRADED BETTI NUMBERS OF SURFACES}
+
+11
+
+All the claims in Theorem ?? hold, in particular one has
+
+$P(M(f))(u) = 38u - 119.$
+
+With the notation from Remark ?? one has
+
+$\beta_1 = b_1 - c_6 = 10 - 10 = 0.$
+
+\textbf{Example 5.5.} Consider the surface of degree $d = 12$ given by
+
+
+\paragraph{$<math>X$:} f = (x\textasciicircum{}3 - yzt)\textasciicircum{}4 + (t\textasciicircum{}3 - xyz)\textasciicircum{}4 = 0.
+
+Then X is a union of 4 cubic surfaces in $\mathbb{P}^3$ and a direct computation shows that the corresponding minimal resolution for $M(f)$ is given by
+
+$0 \to S(-25)^2 \to S(-16) \oplus S(-23)^2 \oplus S(-24)^4 \to$ $\rightarrow S(-12) \oplus S(-15)^2 \oplus S(-22)^5 \rightarrow S(-11)^4 \rightarrow S.$
+
+It follows that $p = 8$, $q = 7$ and $r = 2$, and the graded Betti numbers of this surface are
+
+$\mathbf{d} = (1, 4_2, 11_5), \ \mathbf{c} = (5, 12_2, 13_4) \text{ and } \mathbf{b} = (14_2).$
+
+All the claims in Theorem ?? hold, in particular one has
+
+$P(M(f))(u) = 81u - 491.$
+
+With the notation from Remark ?? one has
+
+$\alpha_1 = c_1 - d_4 = 5 - 11 = -6, \ \alpha_2 = \alpha_3 = 1, \ \alpha_4 = \alpha_5 = 2$
+
+and
+
+$\beta_1 = b_1 - c_6 = 14 - 13 = 1 = b_2 - c_7 = \beta_2$
+
+It follows that $t(S) = -2 < 0$ in this case. \textbf{Example 5.6.} Consider the surface of degree $d=16$ given by
+
+
+\paragraph{$<math>X$:} f = (x\textasciicircum{}4 - yzt\textasciicircum{}2)\textasciicircum{}4 + (t\textasciicircum{}4 - xyz\textasciicircum{}2)\textasciicircum{}4 = 0.
+
+Then X is a union of 4 quartic surfaces in $\mathbb{P}^3$ and a direct computation shows that the corresponding minimal resolution for $M(f)$ is given by 
+\[ 0 \to S(-29) \oplus S(-30) \oplus S(-32) \to S(-22)^2 \oplus S(-23) \oplus S(-28)^4 \oplus S(-29)^3 \oplus S(-31)^2 \to S(-29) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S(-30) \oplus S \]
+ $A \to S(-20)^2 \oplus S(-21)^3 \oplus S(-27)^4 \oplus S(-28)^2 \oplus S(-30) \to S(-15)^4 \to S.$ It follows that $p = 12$, $q = 12$ and $r = 3$, and the graded Betti numbers of this surface are $\mathbf{d} = (5_2, 6_3, 12_4, 13_2, 15), \ \mathbf{c} = (7_2, 8, 13_4, 14_3, 16_2) \text{ and } \mathbf{b} = (14, 15, 17).$ All the claims in Theorem ?? hold, in particular one has
+
+$P(M(f))(u) = 147u - 1382.$
+
+With the notation from Remark ?? one has
+
+$\alpha_9 = c_9 - d_{12} = 14 - 15 = -1$ $\beta_1 = b_1 - c_{10} = 14 - 14 = 0,$
+
+
+\newpage
+
+% Page 12
+12
+
+\section{ALEXANDRU DIMCA AND GABRIEL STICLARU}
+
+and
+
+$\beta_2 = b_2 - c_{11} = 15 - 16 = -1.$
+
+\section*{REFERENCES}
+
+[1] J. Abbott, A. M. Bigatti and L. Robbiano, CoCoA 4.7.4: a system for doing Computations in Commutative Algebra. Available at http://cocoa.dima.unige.it [2] T. Abe, A. Dimca, P. Pokora, A new hierarchy for complex plane curves, Canadian Mathe- matical Bulletin. Published online 2025:1-24. doi:10.4153/S0008439525101422 [3] V. I. Arnold, S. M. Gusein-Zade, A. N. Varchenko, Singularities of Differentiable Maps. vols 1/2, Monographs in Math., \textbf{82/83}, Birkhäuser, Basel (1985/1988) [4] S. V. Chmutov, Examples of projective surfaces with many singularities, J. Algebr. Geom. 1, 191–196 (1992). [5] W. Decker, G.-M. Greuel, G. Pfister and H. Schönemann. SINGULAR 4-0-2 — A computer algebra system for polynomial computations. Available at http://www.singular.uni-kl.de. [6] A. Dimca, Freeness versus maximal degree of the singular subscheme for surfaces in $P^3$, Geom. Dedicata 183(2016), 101–112. [7] A. Dimca, Freeness versus maximal global Tjurina number for plane curves. Math. Proc. Cam- bridge Phil. Soc. 163: 161 – 172 (2017). 8 A. Dimca, On the syzygies and Hodge theory of nodal hypersurfaces, Ann. Univ. Ferrara Sez. VII Sci. Mat. 63 (2017), 87–101. [9] A. Dimca, M. Saito, Generalization of theorems of Griffiths and Steenbrink to hypersurfaces with ordinary double points, Bull. Math. Soc. Sci. Math. Roumanie, 60(108) (2017), 351–371. [10] A. Dimca, G. Sticlaru, On the syzygies and Alexander polynomials of nodal hypersurfaces, Math. Nachrichten 285 (2012), 2120–2128. [11] A. Dimca, G. Sticlaru, On the exponents of free and nearly free projective plane curves, Rev. Mat. Complut. 30(2017), 259–268. 12 A. Dimca and G. Sticlaru, Plane curves with three syzygies, minimal Tjurina curves curves, and nearly cuspidal curves. Geom. Dedicata 207: 29 – 49 (2020). [13] A. Dimca, G. Sticlaru, Jacobian syzygies, Fitting ideals, and plane curves with maximal global Tjurina numbers, Collect. Math. 73 (2022), 391–409. [14] A. Dimca and G. Sticlaru, Bourbaki modules and the module of Jacobian derivations of pro- jective hypersurfaces, arXiv:2506.23950. [15] A. Dimca and G. Sticlaru, On type three complex plane curves, arXiv:2601.01824 [math.AG], 2026. [16] A.A. du Plessis, C.T.C. Wall, Application of the theory of the discriminant to highly singular plane curves, Math. Proc. Camb. Phil. Soc. 126 (1999) 256–266. [17] A.A. du Plessis, C.T.C. Wall, Discriminants, vector fields and singular hypersurfaces. New developments in singularity theory (Cambridge, 2000), 351–377, NATO Sci. Ser. II Math. Phys. Chem., 21, Kluwer Acad. Publ., Dordrecht, 2001. [18] D. Eisenbud, The Geometry of Syzygies: A Second Course in Algebraic Geometry and Com- mutative Algebra, Graduate Texts in Mathematics, Vol. 229, Springer 2005. [19] Ph. Ellia, Quasi complete intersections and global Tjurina number of plane curves, J. Pure Appl. Algebra 224 (2020), 423–431. [20] S. H. Hassanzadeh, A. Simis, Plane Cremona maps: Saturation and regularity of the base ideal. J. Algebra \textbf{371}: 620 – 652 (2012).
+
+
+\newpage
+
+% Page 13
+\section*{GRADED BETTI NUMBERS OF SURFACES}
+
+13
+
+Université Côte d'Azur, CNRS, LJAD, France and Simion Stoilow Institute of Mathematics, P.O. Box 1-764, RO-014700 Bucharest, Romania Email address: Alexandru.Dimca@univ-cotedazur.fr
+
+\section{FACULTY OF MATHEMATICS AND INFORMATICS, OVIDIUS UNIVERSITY BD. MAMAIA 124,}
+
+\section{900527 Constanta, Romania}
+
+
+\paragraph{Email address:} gabriel.sticlaru@gmail.com
+
+
+\newpage
+
+\end{document}

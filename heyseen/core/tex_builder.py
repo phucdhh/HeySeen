@@ -992,8 +992,14 @@ class TeXBuilder:
             if part.startswith('<math') or part.startswith('$') or part.startswith(r'\('):
                  # It's math, don't escape content (except normalizing delimiters)
                  if part.startswith('<math'):
-                     content = re.search(r'>((?:.|\n)+?)</math>', part).group(1)
-                     is_display = 'display="block"' in part
+                     match = re.search(r'>((?:.|\n)+?)</math>', part)
+                     if match:
+                         content = match.group(1)
+                         is_display = 'display="block"' in part
+                     else:
+                         # Malformed math tag, treat as text
+                         content = part
+                         is_display = False
                  elif part.startswith('$'):
                      content = part.strip('$')
                      is_display = False # Assume inline for single $

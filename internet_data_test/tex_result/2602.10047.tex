@@ -1,0 +1,722 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{proof_custom}{Proof}
+\renewcommand{\abstractname}{\Large\bfseries Abstract}
+
+
+\begin{document}
+
+
+% Page 1
+\section{A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR}
+
+\textbf{FIELDS}
+
+\section{MAURÍCIO CORRÊA, GILCIONE NONATO COSTA,}
+
+\section{AND ALEJANDRA SALAMANCA RUSSI}
+
+\begin{abstract}
+We study holomorphic vector fields whose singular locus contains a local complete intersection smooth positive–dimensional component. We prove global and local formulas expressing the limiting Milnor/Poincaré-Hopf con- tribution along such a component in terms of its embedded scheme structure, and we obtain sharp lower bounds for this contribution under holomorphic perturbations. We provide explicit families show optimality and illustrate how singularities may redistribute between a fixed neighborhood of the component and the part at infinity in projective compactifications.
+\end{abstract}
+
+\begin{itemize}
+  \item Introduction
+\end{itemize}
+
+In the non-isolated regime, the singular locus of a holomorphic vector field may contain a component W of codimension at least two, and the deformation theory acquires a genuinely geometric and dynamical character: under a holomorphic per- turbation, isolated singularities may split off from $W$, travel within a fixed small neighborhood, and then collapse back onto W as $t \to 0$, so that the resulting limiting Milnor count measures not merely the reduced support of $sing(\mathcal{F})$, but a residual contribution encoded in the scheme-theoretic structure supported on $W$. In particular, although the distribution of isolated singularities in a given deformation may vary—and, in projective compactifications, may even be partially absorbed by singularities appearing on the hyperplane at infinity—the guiding principle of this article is that W still carries an intrinsic minimal contribution, dictated by the embedded structure along W and independent of the specific perturbation once the analytic framework is fixed. The main results of the paper make this contribution explicit: we establish global and local formulas that isolate the term supported on W, and we derive sharp lower bounds for the limiting Milnor number contributed by singularities converging to W under holomorphic perturbations, with concrete examples exhibiting the extreme behaviors allowed by the theory. Consequently, let X be a germ of a holomorphic vector field on $\mathbb{C}^n$ such that its singular locus sing(X) contains a smooth complete intersection subvariety $W \subset \mathbb{C}^n$ of codimension $d \geq 2$. Given a holomorphic deformation $\{X_t\}$ of X, defined for $0 < |t| < \varepsilon$ with $\varepsilon > 0$ sufficiently small, assume that $X_t \to X$ as $t \to 0$ and that $\operatorname{sing}(X_t)$ consists only of isolated points for every $t \neq 0$. We then consider the limit
+
+
+\paragraph{$<math display="block">\mu(X_t, \mathbf{W}) $:} = \textbackslash\{\}lim\_\{t \textbackslash\{\}to 0\} \textbackslash\{\}sum\_\{p\_i\textasciicircum{}t \textbackslash\{\}in A\_\{\textbackslash\{\}mathbf\{W\}\}\} \textbackslash\{\}mu(X\_t, p\_i\textasciicircum{}t),
+
+(1.1) where
+
+
+\paragraph{$<math display="block">A_{\mathbf{W}} $:} = \textbackslash\{\}left\textbackslash\{\}\{ p\_i\textasciicircum{}t \textbackslash\{\}in \textbackslash\{\}operatorname\{sing\}(X\_t) \textbackslash\{\}mid \textbackslash\{\}lim\_\{t \textbackslash\{\}to 0\} p\_i\textasciicircum{}t \textbackslash\{\}in \textbackslash\{\}mathbf\{W\} \textbackslash\{\}right\textbackslash\{\}\},\textbackslash\{\},
+
+
+\newpage
+
+% Page 2
+\section{2 MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI}
+
+and $\mu(X_t, p_i^t)$ denotes the Milnor number (equivalently, the Poincaré-Hopf index) of $X_t$ at the isolated singular point $p_i^t$. Since the quantity in (??) may depend on the chosen deformation, the following question naturally arises: Question. Does there exist a lower bound $\mu_0(X, W)$ such that $\mu(X_t, \mathbf{W}) \geq \mu_0(X, \mathbf{W})$ for every deformation $\{X_t\}$ as above? This article was motivated by the work of Soares, who in [?] established sharp upper bounds for the Poincaré-Hopf index of a holomorphic vector-field germ $X$: $(\mathbb{C}^n,0)\to(\mathbb{C}^n,0)$ with an isolated zero at the origin. A key ingredient in Soares' approach is $\mathcal{K}$-equivalence: the germ X is replaced (up to $\mathcal{K}$-equivalence) by a polynomial vector field Y of a suitable degree $k$, still having an isolated zero at $0 \in \mathbb{C}^n$. Since the Poincaré-Hopf index is invariant under K-equivalence, one has $\mathcal{I}_0(Y) = \mathcal{I}_0(X)$. In the case of vector fields with isolated zeros, Mather's finite determinacy theory implies that a germ $X:(\mathbb{C}^n,0)\to(\mathbb{C}^n,0)$ is K-equivalent to its k-jet at the origin for some finite k, which we denote by $\mathbf{J}_0^k X$. In particular, up to $\mathcal{K}$-equivalence one may replace X by the polynomial vector field $\mathbf{J}_0^k X$, which still has an isolated zero at 0 and satisfies $\mathcal{I}_0(\mathbf{J}_0^k X) = \mathcal{I}_0(X)$. Since $\mathbf{J}_0^k X$ is polynomial, it induces a one-dimensional singular holomorphic foliation on the projective space $\mathbb{P}^n$. After a further (analytic) perturbation to remove possible positive-dimensional components of the singular set, one may apply a suitable case of the Baum-Bott theorem to relate the global data of the induced foliation to the local index at the origin. We denote by $\mathcal{I}_0(X)$ the Poincaré-Hopf index of X at 0. With this strategy, Soares proved the following result. \textbf{Theorem 1.1} ([?]). Let $X = X_1 \frac{\partial}{\partial z_1} + \cdots + X_n \frac{\partial}{\partial z_n}$ be a germ of a holomorphic vector field at $0 \in \mathbb{C}^n$ such that 0 is an isolated zero of X, and let k be the degree of $K$-determinacy of $X$. Then: (i) If $k = 1$, then $\mathcal{I}_0(X) = 1$.
+
+(ii) If $k > 1$ and $\mathbf{J}_0^k X = gR + \sum_{j=1}^{k-1} Y_j$, where $R = \sum_{i=1}^n z_i \frac{\partial}{\partial z_i}$ is the radial vector field, $g \in \mathbb{C}[z_1, \ldots, z_n]$ is homogeneous of degree $k-1$, and each $Y_i$ has homogeneous components of degree j, then
+
+
+\[ \mathcal{I}_0(X) \le \sum_{i=1}^n (k-1)^i. \]
+
+
+(iii) If $k > 1$ and $\mathbf{J}_0^k X = \sum_{j=1}^k Y_j$, where each $Y_j$ has homogeneous components of degree j and $Y_k$ is not of the form $gR$ (with g and R as above), then
+
+$\mathcal{I}_0(X) \leq k^n$.
+
+In [?], E. Esteves and I. Vainsencher obtained the same bounds by using Fulton's intersection theory. In turn, in [?, ?] we answered the above question for one-dimensional holomorphic foliations $\mathcal{F}$ on $\mathbb{P}^n$, with $n \geq 3$. More precisely, we consider a one-dimensional holomorphic foliation $\mathcal{F}$ on $\mathbb{P}^n$ of degree k such that its singular set is the disjoint union
+
+
+\[ \operatorname{sing}(\mathcal{F}) = \mathbf{W}_0 \cup \{p_1, \dots, p_r\},\ \]
+
+
+where $\mathbf{W}_0 = Z(f_1, \dots, f_d) := \{ z \in \mathbb{P}^n \mid f_i(z) = 0, \ i = 1, \dots, d \}$
+
+
+\newpage
+
+% Page 3
+A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS is a smooth complete intersection subvariety of codimension $d \geq 2$. Here each $f_i$ is a reduced homogeneous polynomial of degree $k_i$. Let $\mathbf{w}_0$ and $\mathcal{N}_{\mathbf{W}_0}$ denote the tangent and normal bundles of $\mathbf{W}_0$ in $\mathbb{P}^n$, respectively, and let $\pi_1: \mathbb{P}^n \to \mathbb{P}^n$ be the blow-up of $\mathbb{P}^n$ along $\mathbf{W}_0$, with exceptional divisor $\mathbf{E}_1 = \pi_1^{-1}(\mathbf{W}_0)$. To compute the Milnor number $\mu(\mathcal{F}, \mathbf{W}_0)$ (defined as the limit in $(??)$), we first assume that $\mathcal{F}$ is special along $\mathbf{W}_0$ (see [?, ?] for the definition), and we construct a holomorphic perturbation $\mathcal{F}_t$ of $\mathcal{F}$, for $0 < |t| < \varepsilon$ and $\varepsilon$ sufficiently small, with the following properties:
+
+(i) $\lim_{t\to 0} \mathcal{F}_t = \mathcal{F}$, and $\deg(\mathcal{F}_t) = \deg(\mathcal{F}) = k$ for all $t$; (ii) for any $t \neq 0$, the vanishing order of $\pi_1^* \mathcal{F}_t$ along $\mathbf{E}_1$ satisfies 
+\[ m_{\mathbf{E}_1}(\pi_1^* \mathcal{F}_t) = \begin{cases} m_{\mathbf{E}_1}(\pi_1^* \mathcal{F}), & \text{if } \mathbf{W}_0 \text{ is non-dicritical,} \\ m_{\mathbf{E}_1}(\pi_1^* \mathcal{F}) - 1, & \text{if } \mathbf{W}_0 \text{ is dicritical;} \end{cases} \]
+ (iii) if $m_{\mathbf{E}_1}(\pi_1^*\mathcal{F}_t) = 0$, then $\mathbf{W}_t$ is $\mathcal{F}_t$-invariant for all $t \neq 0$, where $\mathbf{W}_t$ is a holomorphic deformation of $\mathbf{W}_0$ with $\lim_{t\to 0} \mathbf{W}_t = \mathbf{W}_0$; (iv) if $m_{\mathbf{E}_1}(\pi_1^*\mathcal{F}_t) \geq 1$, then
+
+$\operatorname{sing}(\mathcal{F}_t) = \mathbf{W}_t \cup \{p_1^t, \dots, p_{s_t}^t\},\$
+
+and $\mathcal{F}_t$ is special along $\mathbf{W}_t$ for all $t \neq 0$. Therefore, we get (1.2) $\mu(\mathcal{F}, \mathbf{W}_0) = -\nu(\mathcal{F}, W_0, \varphi_0) + N(\mathcal{F}_0, A_{\mathbf{W}_0}) \ge -\nu(\mathcal{F}, W_0, \varphi_0)$ where (1.3) 
+\[ \nu(\mathcal{F}, W_0, \varphi_0) = -\deg(W_0) \sum_{k=1}^{n-d} \sum_{n=0}^{n-d-|a|} (-1)^{\delta_{|a|}^m} \frac{\varphi_a^{(m)}(\ell)}{m!} (k-1)^m \sigma_{a_1}^{(d)} \tau_{a_2}^{(d)} \mathcal{W}_{\delta_{|a|}^m}^{(d)}, \]
+
+
+$|a|=0$ $m=0$
+
+$k = \deg(\mathcal{F}_0), \ a = (a_1, a_2), \ 0 \le a_1 \le d, \ 0 \le a_2 \le n - d, \ |a| = a_1 + a_2, \ \delta^m_{|a|} := a_1 + a_2, \ \delta^m_{|a|} := a_1 + a_2, \ \delta^m_{|a|} := a_1 + a_2, \ \delta^m_{|a|} := a_1 + a_2, \ \delta^m_{|a|} := a_1 + a_2, \ \delta^$ $n-d-|a|-m$; and $\ell$ is given by
+
+
+\[ \ell = \begin{cases} m_{\mathbf{E}_1}(\pi_1^* \mathcal{F}_0), & \text{if } \mathbf{W}_0 \text{ is non-dicritical} \\ m_{\mathbf{E}_1}(\pi_1^* \mathcal{F}_0) - 1, & \text{if } \mathbf{W}_0 \text{ is dicritical,} \end{cases} \]
+ $\varphi_a(x) = x^{n-d-a_2} (1+x)^{d-a_1} \text{ and } \varphi_a^{(m)}(x) = \frac{d^m}{dx^m} \varphi_a(x),$ 
+\[ \mathcal{W}_{\delta}^{(d)} := \mathcal{W}_{\delta}^{(d)}(k_1, \dots, k_d) = \sum k_1^{i_1} \dots k_d^{i_d}. \]
+
+
+$i_1+\ldots+i_d=\delta$
+
+and $N(\mathcal{F}_0, A_{\mathbf{W}_0})$ is the number of embedded closed points associated with $W_0$, counted with multiplicity. In [?] we proved that the Milnor number $\mu(\mathcal{F}, \mathbf{W}_0)$ defined by (??) is a topological \textit{invariant}. In view of the results recalled above, we may now state the following global formula, which makes explicit the contribution of each positive-dimensional component of the singular locus. \textbf{Theorem 1.2.} Let $\mathcal{F}$ be a holomorphic foliation by curves on $\mathbb{P}^n$, with $n \geq 3$, of degree k. Assume that its singular locus $sing(\mathcal{F})$ is the disjoint union of smooth, non-dicritical, scheme-theoretic complete intersections $W_1, \ldots, W_r$ of pure codimen- sions $d_i \geq 2$, together with isolated points $p_1, \ldots, p_s$. Then:
+
+
+\newpage
+
+% Page 4
+\section{4 MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI}
+
+(i) 
+\[ \sum_{i=1}^{s} \mu(\mathcal{F}, p_i) = \sum_{i=0}^{n} k^i + \sum_{j=1}^{r} \nu(\mathcal{F}, W_j, \varphi_0) - \sum_{j=1}^{r} N(\mathcal{F}, A_{W_j}), \]
+ (ii) 
+\[ \mu(\mathcal{F}, W_j) := N(\mathcal{F}, A_{W_j}) - \nu(\mathcal{F}, W_j, \varphi_0) \ge -\nu(\mathcal{F}, W_j, \varphi_0), \qquad j = 1, \dots, r. \]
+ Here $N(\mathcal{F}, A_{W_j})$ denotes the number of embedded closed points associated with $W_j$, counted with multiplicity. In particular, the numerical contribution of each positive-dimensional component $W_j$ is exactly the difference $N(\mathcal{F}, A_{\mathbf{W}_j}) - \nu(\mathcal{F}, \mathbf{W}_j, \varphi_0)$; this quantity may therefore be regarded as the Milnor number of $\mathcal{F}$ along $\mathbf{W}_{i}$. Motivated by this interpretation, we next pass to the local analytic setting and show that, for germs with a positive- dimensional singular locus, the same philosophy yields a natural lower bound for the total Milnor number arising in holomorphic deformations. More precisely, adapting Mather's finite-determinacy ideas to our framework and exploiting holomorphic perturbations, we obtain: \textbf{Theorem 1.3.} Let $\mathcal{F}$ be a germ of holomorphic foliation by curves on $\mathbb{C}^n$, with $n \geq 3$. Let $\mathbf{W} \subset \operatorname{sing}(\mathcal{F})$ be a smooth complete intersection of pure codimension $d \geq 2$. Assume that $sing(\mathcal{F})$ consists of \textbf{W} together with, possibly, finitely many isolated points. Let $N(\mathcal{F}, A_{\mathbf{W}})$ be the number of embedded closed points of $\operatorname{sing}(\mathcal{F})$ supported at \textbf{W}, counted with multiplicity. If $N(\mathcal{F}, A_{\mathbf{W}})$ is finite, then for every deformation $\{\mathcal{F}_t\}$ of $\mathcal{F}$ with $0 < |t| < \epsilon$ (for $\epsilon > 0$ sufficiently small), such that $\lim_{t \to 0} \mathcal{F}_t = \mathcal{F}$ and $sing(\mathcal{F}_t)$ consists only of isolated points, one has
+
+
+\paragraph{$<math>\mu(\mathcal{F}_t, \mathbf{W}) $:} = \textbackslash\{\}lim\_\{t \textbackslash\{\}to 0\} \textbackslash\{\}sum\_\{p\textasciicircum{}t \textbackslash\{\}in A\_\{\textbackslash\{\}mathbf\{W\}\}\textasciicircum{}t\} \textbackslash\{\}mu(\textbackslash\{\}mathcal\{F\}\_t, p\_i\textasciicircum{}t) \textbackslash\{\}ge N(\textbackslash\{\}mathcal\{F\}, A\_\{\textbackslash\{\}mathbf\{W\}\}),
+
+(1.4) where
+
+$A_{\mathbf{W}}^t = \{ p \in \operatorname{sing}(\mathcal{F}_t) \mid \lim_{t \to 0} p \in \mathbf{W} \}.$
+
+Moreover, if $\mathcal{F}$ is totally simple along $\mathbf{W}$, then there exists a holomorphic pertur- bation $\mathcal{F}_t$ of $\mathcal{F}$ such that
+
+
+\[ \mu(\mathcal{F}_t, \mathbf{W}) = \lim_{t \to 0} \sum_{p_i^t \in A_{\mathbf{W}}^t} \mu(\mathcal{F}_t, p_i^t) = 0. \]
+
+
+(1.5) A particularly natural class of vector fields is provided by gradients. In the isolated setting, Soares' finite-determinacy strategy applies to $X = \nabla f$ without any essential change: if $f:(\mathbb{C}^n,0)\to(\mathbb{C},0)$ has an isolated critical point at 0, then its Milnor number $\mu_0(f)$ is the local algebraic multiplicity of the Jacobian ideal, and one has the classical identity $\mu_0(f) = \mathcal{I}_0(\nabla f)$ (see, e.g., [?]). Consequently, the upper bounds for $\mathcal{I}_0(X)$ obtained in [?] translate into corresponding upper bounds for $\mu_0(f)$ in the gradient case (see also the discussion in [?]). The present paper is motivated by the opposite regime, where the singular/critical locus is \textit{not} isolated and the deformation theory becomes genuinely more dynamic. When $sing(X)$ (or, in the gradient case, the critical scheme) contains a smooth component of codimension at least two, small perturbations may create isolated singularities that detach from the positive-dimensional locus, move inside a small
+
+
+\newpage
+
+% Page 5
+A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS neighborhood, and collapse back onto it as $t \to 0$; moreover, in projective compact- ifications one may simultaneously create singularities "at infinity" that absorb part of the total index. This flexibility is illustrated concretely in Examples 4.1–4.3, which realize the extreme behaviors permitted by our bounds. To make this more explicit in the gradient case, let $f:(\mathbb{C}^n,0)\to(\mathbb{C},0)$ be a holomorphic germ and set $X := \nabla f$. The singular scheme of X is the Jacobian (critical) scheme
+
+
+\paragraph{$<math>\Sigma(f) $:} = V\textbackslash\{\}left(\textbackslash\{\}frac\{\textbackslash\{\}partial f\}\{\textbackslash\{\}partial z\_1\}, \textbackslash\{\}dots, \textbackslash\{\}frac\{\textbackslash\{\}partial f\}\{\textbackslash\{\}partial z\_n\}\textbackslash\{\}right).
+
+Assume that the reduced support of $\Sigma(f)$ is a smooth complete intersection $W \subset$ $(\mathbb{C}^n,0)$ of pure codimension $d\geq 2$, and that $\Sigma(f)$ may have, in addition, a (possi- bly empty) 0-dimensional embedded part supported on W (together with, possibly, finitely many isolated points off W). Let $A_W \subset \Sigma(f)$ be the 0-dimensional sub- scheme supported on W given by the embedded associated points of $\Sigma(f)$, and define
+
+
+\paragraph{$<math>N(\nabla f, A_W) $:} = \textbackslash\{\}operatorname\{length\}(A\_W),
+
+i.e. the number of embedded closed points along $W$, counted with multiplicity. Given a deformation $f_t$ of f such that $\Sigma(f_t)$ consists only of isolated critical points for $0 < |t| < \epsilon$, set
+
+
+\paragraph{$<math>A_W^t $:} = \textbackslash\{\}\{ p \textbackslash\{\}in \textbackslash\{\}Sigma(f\_t) \textbackslash\{\}mid p \textbackslash\{\}to W \textbackslash\{\}text\{ as \} t \textbackslash\{\}to 0 \textbackslash\{\}\}.
+
+Since $\mu(f_t, p) = \mathcal{I}_p(\nabla f_t)$ for an isolated critical point $p$ [?], our local lower bound (Theorem ??), applied to the foliation induced by $X = \nabla f$, yields
+
+
+\[ \lim_{t \to 0} \sum_{p \in A_W^t} \mu(f_t, p) \geq N(\nabla f, A_W), \]
+
+
+whenever the limit is finite. Thus the embedded scheme structure of the Jacobian scheme along a smooth critical component yields a deformation-invariant lower bound for the total Milnor number produced by a holomorphic morsification (i.e. the sum of the Milnor numbers of the isolated singularities appearing in the de- formation); moreover, for sufficiently generic morsifications this lower bound is expected to be attained. From the viewpoint of the singularity theory of holo- morphic function germs, this same deformation—counting phenomenon is classically encoded by polar invariants, notably Lê cycles and Lê numbers [?]. Closely related formulations use Teissier's polar varieties and polar multiplicities, which connect po- lar data to local Chern-type invariants (e.g. via Chern-Mather/Euler-obstruction packages) [?]. In families, the principle that polar multiplicities control the cre- ation and splitting of isolated singularities is formalized by Gaffney's multiplicity polar theorem [?, ?]. While we do not attempt here to identify our explicit term $\nu(\cdot, W, \varphi_0)$ with a specific Lê number in full generality, both packages arise from the same intersection—theoretic mechanism (blow—ups along $W$ and residual/polar classes). In the complete-intersection set-up treated in this paper, our bounds are effectively computable from discrete data (degrees and vanishing order along the exceptional divisor).
+
+2. Preliminaries
+
+2.1. K-equivalence. We begin this section by recalling Mather's theory of stabil- ity and finite determinacy for map germs. We use the notion of $K$-determinacy
+
+
+\newpage
+
+% Page 6
+\section{6 MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI}
+
+introduced by John Mather in [?, ?], which is defined via the action of a group $\mathcal{K}$ on the space of analytic map germs from $\mathbb{C}^n$ to $\mathbb{C}^n$, denoted by $\mathcal{O}_{n,n}$. More precisely, let $K$ be the group of germs of biholomorphisms
+
+
+\paragraph{$<math>H$:} (\textbackslash\{\}mathbb\{C\}\textasciicircum{}n \textbackslash\{\}times \textbackslash\{\}mathbb\{C\}\textasciicircum{}n, (0,0)) \textbackslash\{\}longrightarrow (\textbackslash\{\}mathbb\{C\}\textasciicircum{}n \textbackslash\{\}times \textbackslash\{\}mathbb\{C\}\textasciicircum{}n, (0,0))
+
+for which there exists a germ of biholomorphism $\varphi:(\mathbb{C}^n,0)\to(\mathbb{C}^n,0)$ such that (i) $H(x,0) = (\varphi(x),0)$ for all x; (ii) if $f, g \in \mathcal{O}_{n,n}$ are such that H sends the graph of f to the graph of g over $\varphi$, namely
+
+$H(x, f(x)) = (\varphi(x), g(\varphi(x))),$
+
+then $f$ and $g$ are said to be $K$-equivalent. Equivalently, f and g are K-equivalent if there exist $H \in K$ and $\varphi$ as above such that
+
+$H \circ (1, f) \circ \varphi^{-1} = (1, q)$
+
+as germs $(\mathbb{C}^n,0) \to (\mathbb{C}^n \times \mathbb{C}^n,(0,0))$. With this notation, a germ $f \in \mathcal{O}_{n,n}$ is called \textbf{finitely} K-determined if there exists an integer $\ell \geq 0$ such that for every germ $g \in \mathcal{O}_{n,n}$ with $\mathbf{J}_0^{\ell}g = \mathbf{J}_0^{\ell}f$, the germs $f$ and $g$ are $\mathcal{K}$-equivalent. Finite $\mathcal{K}$- determinacy provides an effective criterion in the equidimensional case (source and target of the same dimension). In this setting one has the following characterization. \textbf{Lemma 2.1.} A germ $f \in \mathcal{O}_{n,n}$ is finitely $\mathcal{K}$-determined if and only if $f^{-1}(0)$ has an isolated singularity at the origin. The preceding discussion is tailored to situations where the singular locus is discrete. When the dimension of the source exceeds the dimension of the target, we proceed as follows. Let $f = (f_1, \ldots, f_d) : (\mathbb{C}^n, 0) \to (\mathbb{C}^d, 0)$ be a holomorphic map germ with $1 \le d \le n$, and assume that
+
+
+\paragraph{$<math>\mathbf{W} $:} = Z(f\_1, \textbackslash\{\}ldots, f\_d)
+
+is a smooth complete intersection of codimension d. Then, for each $z \in W$, some $d \times d$ minor of the Jacobian matrix $Jf$ is invertible. Accordingly, after a linear change of coordinates we may fix a splitting $\mathbb{C}^n = \mathbb{C}^d \oplus \mathbb{C}^{n-d}$ and write $z = (x, y)$, with $x \in \mathbb{C}^d$ and $y \in \mathbb{C}^{n-d}$. For each fixed $y \in \mathbb{C}^{n-d}$ we consider the induced equidimensional germ $f_y: (\mathbb{C}^d, 0) \longrightarrow (\mathbb{C}^d, 0), \qquad f_y(x) := f(x, y) = (f_1(x, y), \dots, f_d(x, y)).$ We now introduce a parameter-dependent analogue of $\mathcal{K}$-equivalence. Let $\mathcal{K}^{(d)}$ be the group of families of biholomorphism germs
+
+
+\paragraph{$<math>H_{\nu}^{(d)}$:} (\textbackslash\{\}mathbb\{C\}\textasciicircum{}d \textbackslash\{\}times \textbackslash\{\}mathbb\{C\}\textasciicircum{}d, (0,0)) \textbackslash\{\}longrightarrow (\textbackslash\{\}mathbb\{C\}\textasciicircum{}d \textbackslash\{\}times \textbackslash\{\}mathbb\{C\}\textasciicircum{}d, (0,0)),
+
+depending holomorphically on the parameters $y = (y_1, \ldots, y_{n-d})$, such that for (generic) parameters $y \in \mathbb{C}^{n-d}$ there exists a biholomorphism $\varphi_y : (\mathbb{C}^d, 0) \to (\mathbb{C}^d, 0)$ with the properties (i) $H_y^{(d)}(x,0) = (\varphi_y(x),0);$ (ii) $H_u^{(d)}(x, f_u(x)) = (\varphi_u(x), g_u(\varphi_u(x))),$ where $g_y$ is defined analogously from a second germ $g$. \textbf{Definition 2.2.} Two holomorphic map germs $f, g: (\mathbb{C}^n, 0) \to (\mathbb{C}^d, 0)$ are $\mathcal{K}^{(d)}$- \textbf{equivalent} if for generic $y \in \mathbb{C}^{n-d}$ there exist $H_y^{(d)} \in \mathcal{K}^{(d)}$ and an associated biholomorphism $\varphi_y: (\mathbb{C}^d, 0) \to (\mathbb{C}^d, 0)$ such that
+
+
+\newpage
+
+% Page 7
+A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS (i) $H_y^{(d)}(x,0) = (\varphi_y(x),0);$ (ii) $H_{y}^{(d)}(x, f_{y}(x)) = (\varphi_{y}(x), g_{y}(\varphi_{y}(x))),$ for all $x$ in a neighborhood of $0 \in \mathbb{C}^d$. A germ $f:(\mathbb{C}^n,0)\to(\mathbb{C}^d,0)$ is said to be \textbf{finitely} $\mathcal{K}^{(d)}$-determined if there exists an integer $\ell \geq 0$ such that whenever a germ g satisfies $\mathbf{J}_0^{\ell}g = \mathbf{J}_0^{\ell}f$, then g is $\mathcal{K}^{(d)}$-equivalent to f. The \textbf{degree of} $\mathcal{K}^{(d)}$-\textbf{determinacy} of f is the integer
+
+
+\paragraph{$<math>\ell_0 $:} = \textbackslash\{\}min \textbackslash\{\}\{ \textbackslash\{\}ell \textbackslash\{\}in \textbackslash\{\}mathbb\{N\} \textbackslash\{\}mid f \textbackslash\{\}text\{ is \} \textbackslash\{\}ell - \textbackslash\{\}mathcal\{K\}\textasciicircum{}\{(d)\} \textbackslash\{\}text\{-determined \} \textbackslash\{\}\}.
+
+\textbf{Theorem 2.3} (Artin approximation, analytic version [?, ArtinApprox2018]). Let $f(x,y)$ be a vector of convergent power series in two sets of variables x and y, namely $f \in \mathbb{C}\{x,y\}^m$. Assume that a formal power series vector $\widehat{y}(x) \in \mathbb{C}[[x]]^n$ satisfies $\hat{y}(0) = 0$ and
+
+
+\[ f(x,\widehat{y}(x)) = 0. \]
+
+
+Then, for every $c \in \mathbb{N}$, there exists a convergent power series solution $\widetilde{y}(x) \in \mathbb{C}\{x\}^n$ such that
+
+$f(x, \widetilde{y}(x)) = 0$ and $\widetilde{y}(x) \equiv \widehat{y}(x) \pmod{(x)^c}$. We shall use Theorem in [?] to replace formal constructions by convergent ones up to an arbitrarily prescribed jet order. This perspective motivates the follow- ing parameter-dependent notion of contact equivalence, modeled on Mather's $K$- equivalence |?, ?|. Let $f, g \in \mathcal{O}_{n,n}$ be two holomorphic map germs at 0. We say that f and g have the same k-jet at 0 if all partial derivatives of f and g at 0 of order $\leq k$ coincide; equivalently, their Taylor expansions agree up to total degree k. We denote by $\mathbf{J}_0^k f$ the $k$-jet of $f$ at 0. \textbf{Definition 2.4.} A germ $f:(\mathbb{C}^n,0)\to(\mathbb{C}^d,0)$ is finitely $\mathcal{K}^{(d)}$-determined if there exists an integer $\ell \geq 0$ such that, for every germ $g: (\mathbb{C}^n, 0) \to (\mathbb{C}^d, 0)$,
+
+$\mathbf{J}_0^{\ell}g = \mathbf{J}_0^{\ell}f \implies g \text{ is } \mathcal{K}^{(d)}\text{-equivalent to } f.$
+
+The degree of $\mathcal{K}^{(d)}$-determinacy of f is the integer
+
+
+\paragraph{$<math>\ell_0 $:} = \textbackslash\{\}min \textbackslash\{\}\{ \textbackslash\{\}ell \textbackslash\{\}in \textbackslash\{\}mathbb\{N\} \textbackslash\{\}mid f \textbackslash\{\}text\{ is \} \textbackslash\{\}ell\textbackslash\{\}text\{-\}\textbackslash\{\}mathcal\{K\}\textasciicircum{}\{(d)\}\textbackslash\{\}text\{-determined\} \textbackslash\{\}\}.
+
+In particular, if we choose local coordinates $\mathbb{C}^n = \mathbb{C}^d \oplus \mathbb{C}^{n-d}$ and write $z =$ $(x,y)$ with $x\in\mathbb{C}^d$ and $y\in\mathbb{C}^{n-d}$, then for each fixed parameter y we obtain an equidimensional germ
+
+
+\paragraph{$<math>f_y$:} (\textbackslash\{\}mathbb\{C\}\textasciicircum{}d, 0) \textbackslash\{\}to (\textbackslash\{\}mathbb\{C\}\textasciicircum{}d, 0), \textbackslash\{\}qquad f\_y(x) := f(x, y),
+
+and, by construction, $f_y(0) = 0$ for y near 0. For generic y (i.e. for all y outside a proper analytic subset) the source and target of $f_y$ have the same dimension, so classical Mather theory applies to the slices $f_y$. \textbf{Lemma 2.5.} Let $W = Z(f_1, \ldots, f_d) \subset (\mathbb{C}^n, 0)$ be a germ of a smooth complete intersection, where each $f_i$ is reduced, and set $f = (f_1, \ldots, f_d) : (\mathbb{C}^n, 0) \to (\mathbb{C}^d, 0)$. Then there exist local coordinates $(x,y)$ on $\mathbb{C}^n = \mathbb{C}^d \oplus \mathbb{C}^{n-d}$ such that, for generic $y \in \mathbb{C}^{n-d}$, the slice $f_y: (\mathbb{C}^d, 0) \to (\mathbb{C}^d, 0), \qquad f_y(x) = (f_1(x, y), \dots, f_d(x, y)),$ is finitely $K$-determined (in the classical, equidimensional sense).
+
+
+\newpage
+
+% Page 8
+\section{8 MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI}
+
+\textit{Proof.} Since W is smooth of codimension d at 0, the Jacobian matrix of f has rank d at 0. After reordering coordinates if necessary, we may assume that the $d \times d$ minor
+
+
+\[ Df(0) = \left[\frac{\partial f_i}{\partial z_j}(0)\right]_{1 < i, j < d} \]
+
+
+(2.1) is invertible. Consider the holomorphic map germ $\psi: (\mathbb{C}^n, 0) \to (\mathbb{C}^n, 0), \qquad \psi(z) = (f_1(z), \dots, f_d(z), z_{d+1}, \dots, z_n).$ By (??) and the holomorphic inverse function theorem, $\psi$ is a local biholomorphism near 0. In the new coordinates $z' = \psi(z) = (x, y)$, the map f becomes the projection to the first d coordinates:
+
+$f \circ \psi^{-1}(x, y) = (x_1, \dots, x_d).$
+
+Therefore, for every y near 0 the slice $(f \circ \psi^{-1})_y$ is the identity germ on $(\mathbb{C}^d, 0)$, hence has an isolated zero at $x=0$ and is finitely K-determined in the classical sense. Transporting back by $\psi$ yields the claim for $f_y$ (and in fact for all y sufficiently close to 0). For later use it is convenient to expand each component $f_i(x,y)$ as a convergent power series in $x$ with coefficients depending holomorphically on $y$:
+
+$f_i(x,y) = \sum x^a f_{i,a}(y), \qquad f_{i,a}(y) \in \mathbb{C}\{y\},$
+
+(2.2)
+
+$a \in \mathbb{N}^d$
+
+where $a = (a_1, \ldots, a_d), x^a = x_1^{a_1} \cdots x_d^{a_d}, \text{ and } |a| = a_1 + \cdots + a_d.$ Writing $f_{i,a}(y) = a_1 + \cdots + a_d$ $\sum_{b\in\mathbb{N}^{n-d}} \alpha_{i,a,b} y^b$ with $y^b = y_1^{b_1} \cdots y_{n-d}^{b_{n-d}}$, we obtain
+
+$f_i(x,y) = \sum \quad \sum \quad \alpha_{i,a,b} \, x^a y^b.$
+
+(2.3)
+
+$a \in \mathbb{N}^d$ $b \in \mathbb{N}^{n-d}$
+
+\textbf{Example 2.6.} Let $f:(\mathbb{C}^n,0)\to(\mathbb{C},0)$ be a holomorphic germ whose critical set is smooth of codimension one. After a linear change of coordinates we may assume that the critical set is the hyperplane
+
+
+\[ \Sigma = \{ z \in \mathbb{C}^n \mid z_1 = 0 \}. \]
+
+
+Writing $x = z_1$ and $y = (z_2, \ldots, z_n)$, we may express $f$ as
+
+$f(x,y) = \sum_{j=m}^{\infty} a_j(y) x^j, \qquad a_m(0) \neq 0,$
+
+so $a_m(y)$ is a unit in $\mathbb{C}\{y\}$ after shrinking the neighborhood of 0. Choose a holomor- phic function $b_1(y)$ with $b_1(y)^m = a_m(y)$ (after restricting to a simply connected neighborhood if needed), and define a biholomorphism germ $\varphi_y:(\mathbb{C},0)\to(\mathbb{C},0)$ of the form
+
+
+\[ \varphi_y(x) = b_1(y) x + \sum_{j>2} b_j(y) x^j \]
+
+
+such that $(\varphi_y(x))^m = f(x,y)$ (one may construct $\varphi_y$ recursively by comparing coefficients). Then $b_1(y) \neq 0$ for y near 0, hence $\varphi_y$ is biholomorphic. Set- ting $g(x,y) = x^m$, we obtain a $\mathcal{K}^{(1)}$-equivalence between f and g: indeed, with $H_y(x,w) = (\varphi_y(x), w)$ one has 
+\[ H_y(x, f(x,y)) = (\varphi_y(x), f(x,y)) = (\varphi_y(x), (\varphi_y(x))^m) = (\varphi_y(x), g(\varphi_y(x), y)). \]
+
+
+
+\newpage
+
+% Page 9
+A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS 3. Holomorphic vector fields with non-isolated singularities In order to study indices of germs of foliations on possibly non-compact varieties with non-isolated singularities, we introduce the notions of an $\epsilon$-neighborhood and a precompact $\epsilon$-neighborhood of a codimension-d submanifold. Let M be a complex manifold and let $W \subset M$ be a complete intersection of codimension d. Fix $\epsilon > 0$. For each $z \in \mathbf{W}$, let $D_{\epsilon}(z)$ denote a disk of radius $\epsilon$ centered at z (in a local holomorphic chart). We define the $\epsilon$-neighborhood of W by
+
+
+\paragraph{$<math>W_{\epsilon} $:} = \textbackslash\{\}bigcup D\_\{\textbackslash\{\}epsilon\}(z). $z \in \mathbf{W}$
+
+We say that $V_{\epsilon}$ is a precompact $\epsilon$-neighborhood of W if there exists an open pre- compact set $U \subset M$ such that $V_{\epsilon} := U \cap \mathbf{W}_{\epsilon}$. Let $\mathcal{F}$ be a one-dimensional holomorphic foliation on $\mathbb{C}^n$ whose singular set consists of a smooth complete intersection manifold $W \subset \mathbb{C}^n$ and, possibly, finitely many isolated points. We assume that $\mathbf{W} = Z(f_1, \dots, f_d)$, where each $f_i : \mathbb{C}^n \to \mathbb{C}^n$ $\mathbb{C}$ is holomorphic and W is smooth of pure codimension $d \geq 2$. Unless stated otherwise, we work under the standing assumption that
+
+$\operatorname{sing}(\mathcal{F}) = \mathbf{W} \cup \{p_1, \dots, p_r\},\$
+
+for some $r \in \mathbb{Z}_{>0}$. Thus $\mathcal{F}$ can be generated by a germ of holomorphic vector field X on $\mathbb{C}^n$ defined on a coordinate atlas $\bigcup_{\alpha} (U_{\alpha}, \varphi_{\alpha})$ by
+
+$X_{\alpha} = X|_{U_{\alpha}} = \sum_{i=1}^{n} X_{i} \frac{\partial}{\partial z_{i}} = (X_{1}, \dots, X_{n}).$
+
+
+\paragraph{Let f:} \textbackslash\{\}mathbb\{C\}\textasciicircum{}n \textbackslash\{\}to \textbackslash\{\}mathbb\{C\}\textasciicircum{}d be defined by $f(z) = (f_1(z), \dots, f_d(z))$. By the holomorphic submersion theorem (after possibly shrinking the chart), the map $u = \psi(z) = (f_1(z), \dots, f_d(z), z_{d+1}, \dots, z_n) = (\omega_1, \omega_2) \in \mathbb{C}^d \oplus \mathbb{C}^{n-d}$ induces a change of coordinates on $\mathbb{C}^n$ such that $\psi(W) = W_0$ is given by $u_1 = \cdots = 0$ $u_d = 0$, equivalently $\omega_1 = 0$. Let
+
+
+\[ Y = \psi_* X = \sum_{i=1}^n Y_i \frac{\partial}{\partial w_i}. \]
+
+
+This provides a convenient expression for $Y$: each component admits an expansion of the form
+
+
+\paragraph{$<math>Y_i(u) $:} = \textbackslash\{\}sum u\_1\textasciicircum{}\{a\_1\} u\_2\textasciicircum{}\{a\_2\} \textbackslash\{\}cdots u\_d\textasciicircum{}\{a\_d\} g\_\{i,a\}(u),
+
+(3.1)
+
+$|a|=m_i$
+
+where for at least one multi-index a the coefficient $g_{i,a} \in \mathcal{O}_n$ does not belong to the ideal generated by $W_0$ on a suitable precompact neighborhood. We write $m_i := \operatorname{mult}_W(Y_i)$. As in [?], we define the multiplicity of $\mathcal{F}$ along W by
+
+
+\paragraph{$<math>m_W(\mathcal{F}) $:} = \textbackslash\{\}min\textbackslash\{\}\{m\_1, \textbackslash\{\}dots, m\_n\textbackslash\{\}\}.
+
+Since $\mathbf{W}_0$ is defined by $u_1 = \cdots = u_d = 0$ (equivalently $\omega_1 = 0$), each local section $Y_i$ of
+
+
+\[ Y = \psi_* X = \sum_{i=1}^n Y_i \frac{\partial}{\partial w_i} \]
+
+
+
+\newpage
+
+% Page 10
+10MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI can be written as 
+\[ Y_i(w) = \sum_{|a|=m_i}^{\infty} u_1^{a_1} \cdots u_d^{a_d} Y_{i,a}(u_{d+1}, \dots, u_n) = \sum_{|a|=m_i}^{\infty} \omega_1^a Y_{i,a}(\omega_2), \]
+ $|a|=m_i$
+
+$|a|=m_i$
+
+where $a = (a_1, \ldots, a_d) \in \mathbf{N}^d$ and for each i at least one coefficient $Y_{i,a}$ does not vanish along $\omega_1 = 0$. \textbf{Theorem 3.1.} Let $\mathcal{F}$ be a one-dimensional holomorphic foliation on $\mathbb{C}^n$ with $\mathbf{W} =$ $Z(f_1,\ldots,f_d)\subset \operatorname{sing}(\mathcal{F})$ a smooth complete intersection on $\mathbb{C}^n$ and each $f_i\in\mathcal{O}_{\mathbb{C}^n}$. Then there exists a polynomial approximation $\{\mathcal{F}_{\kappa}\}\$ of $\mathcal{F}$, and analytic sets $W_{\kappa} \subset$ $\operatorname{sing}(\mathcal{F}_{\kappa})$, such that: (a) $\mathbf{W}_{\kappa}$ is a smooth algebraic local complete intersection for all $\kappa$; (b) $\lim_{\kappa \to \infty} \mathbf{W}_{\kappa} = \mathbf{W}$ on each precompact $\epsilon$-neighborhood of $W$.
+
+\textit{Proof.} Let $X := \{X_{\alpha}, U_{\alpha}\}$ be a vector field defining $\mathcal{F}$ in local coordinates $\{U_{\alpha}, \varphi_{\alpha}\}$, and write
+
+
+\paragraph{$<math display="block">X(z) $:} = \textbackslash\{\}sum\_\{i=1\}\textasciicircum{}\{n\} X\_i(z) \textbackslash\{\}frac\{\textbackslash\{\}partial\}\{\textbackslash\{\}partial z\_i\} = (X\_1(z), \textbackslash\{\}dots, X\_n(z)).
+
+(3.2) Let $f_i \in \mathcal{O}_{\mathbb{C}^n}$ be germs of holomorphic functions such that $\mathbf{W} := Z(f_1, \ldots, f_d)$ is a smooth complete intersection subvariety. After reordering the coordinates if necessary, we may assume that a $d \times d$ minor of the Jacobian matrix $Jf$ of $f$ is invertible on a neighborhood U of some point of W. Hence the map $\varphi:\mathbb{C}^n\to\mathbb{C}^n$ given by
+
+$z \longmapsto \varphi(z) = (f_1(z), \dots, f_d(z), z_{d+1}, \dots, z_n) = w$
+
+is a local biholomorphism. The push-forward $Y = \varphi_* X$ is a holomorphic vector field such that $\mathbf{W}_0 := \varphi(W) = Z(w_1, \dots, w_d) \subset \operatorname{sing}(Y)$ is the common zero locus of the coordinate functions $w_i$ for $i = 1, \ldots, d$, and
+
+
+\paragraph{$<math>Y(w) $:} = \textbackslash\{\}varphi\_* X(u) = \textbackslash\{\}sum\_\{i=1\}\textasciicircum{}n Y\_i(w) \textbackslash\{\}frac\{\textbackslash\{\}partial\}\{\textbackslash\{\}partial w\_i\}.
+
+(3.3) Fix an open precompact $\epsilon/2$-neighborhood $V \subset \mathbb{C}^n$ such that the set of embedded points $\mathcal{A}_{\mathbf{W}}$ is contained in V. After shrinking V if necessary, we may assume that V is contained in a polydisc centered at the origin on which all coefficient functions $X_i$ in (??) admit convergent power series expansions. Let $X_{\kappa}$ be the holomorphic vector field obtained by truncating the power series of each coefficient $X_i$ to total degree $\leq \kappa$. Then $X_{\kappa}$ is polynomial and $X_{\kappa} \to X$ uniformly on $V$ as $\kappa \to \infty$. In particular, for $\epsilon > 0$ fixed and sufficiently small, we may choose $\kappa \gg 0$ so that $X_{\kappa}$ is $\epsilon/2$-close to X on $\overline{V}$. Fix such a $\kappa$ once and for all. Let $Y = \varphi_* X$ be the vector field inducing the push-forward one-dimensional foliation $\mathcal{G}$, where $\varphi(z) = (f_1(z), \ldots, f_d(z), z_{d+1}, \ldots, z_n)$. Keeping this notation, denote by $\mathcal{G}_{\kappa}$ the foliation induced by the polynomial vector field $Y_{\kappa}$ associated with $X_{\kappa}$ via the corresponding truncation $\varphi_{\kappa}$. Since $\mathbf{W}_0 = \varphi(\mathbf{W})$ is a smooth complete intersection in $\mathbb{C}^n$, it extends (after homogenization) to a smooth complete intersection in $\mathbb{P}^n$. We now construct a polynomial deformation of $Y_{\kappa}$. Let $Y_{\kappa}$ be as in ?? and define
+
+
+\[ Y_{\kappa,t} = Y_{\kappa} + t\,\widetilde{Y}, \]
+
+
+(3.4)
+
+
+\newpage
+
+% Page 11
+11
+
+\section{A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS where}
+
+$\widetilde{Y} = Q_1 \frac{\partial}{\partial w_1} + \dots + Q_n \frac{\partial}{\partial w_n},$ 
+\[ Q_{j}(w) = \begin{cases} \sum_{|I|=q_{j}} a_{I,j} w_{1}^{i_{1}} \cdots w_{d}^{i_{d}} & \text{if } 1 \leq j \leq d, \\ \sum_{|I|=q_{j}} R_{I,j}(w) w_{1}^{i_{1}} \cdots w_{d}^{i_{d}} & \text{if } d+1 \leq j \leq n, \end{cases} \]
+ and
+
+where $a_{I,j} \in \mathbb{C}$ and each $R_{I,j}$ is an affine linear function. We impose
+
+$q_1 = \cdots = q_d = q_{d+1} + 1 = \cdots = q_n + 1 = \ell + 1,$
+
+and choose the coefficients so that $\deg(Q_j) \leq \deg(Y_{\kappa})$ and the hyperplane at infinity $H^{\infty}$ is invariant under $Y_{\kappa,t}$. By an arbitrarily small perturbation of the coefficients of $Y$, we may further assume that $Y_{\kappa,t}$ is special along $\mathbf{W}_0$. Consequently, we may arrange that the foliation $\mathcal{G}_{\kappa,t}$ has no embedded points associated with $\mathbf{W}_0$ for $t \neq 0$. Moreover: (i) $\mathcal{G}_{\kappa,0} = \mathcal{G}_{\kappa}$; (ii) $\deg(\mathcal{G}_{\kappa,t}) = \deg(\mathcal{G}_{\kappa});$ (iii) If $\ell = 0$, then $\operatorname{sing}(\mathcal{G}_{\kappa,t}) = \{p_1^t, \ldots, p_{s_t}^t\}$ and $W_0$ is $\mathcal{G}_{\kappa,t}$-invariant for every $t \in D_{\epsilon} \setminus \{0\};$ (iv) If $\ell > 0$, then $\operatorname{sing}(\mathcal{G}_{\kappa,t}) = W_0 \cup \{p_1^t, \dots, p_{s_t}^t\}$ is a disjoint union for every $t \in D_{\epsilon} \setminus \{0\}$, and $\mathcal{G}_{\kappa,t}$ is special along $W_0$ with $\ell = m_E(\mathcal{G}_{\kappa,t}, W_0)$. Since the coefficients of $Y_{\kappa,t}$ are polynomials, the vector field extends holomor- phically across sets of codimension at least 2 by Hartogs' extension theorem; in particular, $Y_{\kappa,t}$ defines a holomorphic foliation on $\mathbb{C}^n$. Statements (i) and (ii) are immediate. Statements (iii) and (iv) follow from the construction, after possibly adjusting the coefficients of $a_{I,j}$ and $R_{I,j}$. Next, possibly shrinking $\epsilon$, choose a polynomial vector field $\alpha = \sum_{i=1}^{n} \alpha_i(w) \frac{\partial}{\partial w_i}, \qquad \alpha_i \in \mathbb{C}[w_1, \dots, w_n], \qquad \deg(\alpha) \leq \deg(Y_\kappa),$ such that the deformation
+
+
+\[ \widetilde{Y}_t = Y_{\kappa,t} + t \sum_{i=1}^n \alpha_i \frac{\partial}{\partial w_i} \]
+
+
+(3.5) has only isolated singularities for every $t \neq 0$ on the chosen precompact $\epsilon/2$- neighborhood. Equivalently, the foliations induced by $Y_t$ have only isolated sin- gularities on that neighborhood whenever $t \neq 0$. In particular, for $t \neq 0$ sufficiently small, each neighborhood of an embedded point of Y gives rise to singular points of $Y_t$, and the total number of such points (counted with multiplicity) coincides with the number of embedded points associ- ated with $W_0$. Thus, for $t \in D_{\epsilon/2}$ with $\epsilon$ small enough, the set of singularities of $\widetilde{Y}_t$ converging to $W_0$ has cardinality (with multiplicity) equal to $\mathcal{A}_{\mathbf{W}}$, hence is finite and constant for all t with $0 < |t| < \epsilon/2$. We now explain why this number is minimal. Let $\{Z_t\}_{t\in D'_{\epsilon}}$ be any other generic holomorphic deformation of $Y$ whose singular set consists only of isolated points on the same precompact $\epsilon/2$-neighborhood $V$. Fix a norm $\|\cdot\|$ on $\mathcal{O}_{\mathbb{C}^n}(V)$. Since $||Z_t - Y|| \le \epsilon/2$ and $||Y_t - Y|| \le \epsilon/2$, it follows that $||Y_t - Z_t|| < \epsilon$ on V for
+
+
+\newpage
+
+% Page 12
+12MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI $\epsilon$ sufficiently small. Therefore, the number of points in $\operatorname{sing}(Z_t)$ is at least the number of points in $\mathcal{A}_{\mathbf{W}}$ (counted with multiplicity). Finally, these isolated points $p_i^t$ corresponding to the singularities of Y associated with $W_0$ converge to $\mathbf{W}_0$ by continuity. Fix a precompact $\epsilon$-neighborhood V of $\mathbf{W}_0$ containing all embedded closed points associated with $\mathbf{W}_0$. Then
+
+
+\[ N_{\mathbf{W}_0} = \mu(Y, \mathbf{W}_0) = \lim_{t \to 0} \sum_{p_i^t \in \Omega_t} \mu(Y_t, p_i^t). \]
+
+
+(3.6) Since $Y = X_{\kappa}$, it follows that for every $\kappa$ one has $N_{\mathbf{W}_0}^{\kappa} = \mu(X_{\kappa}, \mathbf{W}_0) = \lim_{t \to 0} \sum_{p_i^t \in A_{W_0}} \mu((X_{\kappa})_t, p_i^t) \ge N_{\mathbf{W}_0}.$ (3.7) \textbf{Definition 3.2.} A foliation $\mathcal{F}$ is said to be \textit{totally simple} along a positive-dimensional component $\mathbf{W} \subset \operatorname{sing}(\mathcal{F})$ if, for every point $q \in \mathbf{W}$, there exists a local represen- tative holomorphic vector field X of $\mathcal{F}$ and a $d \times d$ minor of the Jacobian matrix $JX(q)$ whose eigenvalues are all nonzero. \textbf{Theorem 3.3.} If $\mathcal{F}$ is totally simple along $\mathbf{W}$, then there exists a holomorphic perturbation $\{\mathcal{F}_t\}$ of $\mathcal{F}$ such that $\mathcal{F}_0 = \mathcal{F}$, $\lim_{t\to 0} \mathcal{F}_t = \mathcal{F}$, and
+
+
+\paragraph{$<math>\Omega_t $:} = \textbackslash\{\}\{ p\_t \textbackslash\{\}in \textbackslash\{\}operatorname\{sing\}(\textbackslash\{\}mathcal\{F\}\_t) \textbackslash\{\}mid p\_t \textbackslash\{\}to \textbackslash\{\}mathbf\{W\} \textbackslash\{\}text\{ as \} t \textbackslash\{\}to 0 \textbackslash\{\}\} = \textbackslash\{\}varnothing.
+
+Consequently,
+
+
+\[ \lim_{t\to 0}\mu(\mathcal{F}_t,\mathbf{W})=0. \]
+
+
+(3.8) \textit{Proof.} Let V be a precompact $\epsilon$-neighborhood of \textbf{W}. Let $f = (f_1, \ldots, f_d)$ be as above, so that $\mathbf{W} = Z(f_1, \dots, f_d)$, and let
+
+
+\paragraph{$<math>\varphi $:} = (f\_1, \textbackslash\{\}ldots, f\_d, z\_\{d+1\}, \textbackslash\{\}ldots, z\_n)
+
+be a local change of coordinates on $\mathbb{C}^n$. Let $Y = \varphi_* X$ be the push-forward of a local vector-field representative X of $\mathcal{F}$, so that
+
+
+\[ Y(w) = \sum_{i=1}^{n} Y_i(w) \frac{\partial}{\partial w_i}. \]
+
+
+
+\paragraph{Denote by \textbackslash\{\}mathbf\{W\}\_0 :} = \textbackslash\{\}varphi(\textbackslash\{\}mathbf\{W\}) the image of $\mathbf{W}$; then $\mathbf{W}_0$ is locally given by $\{w_1 = \cdots = a\}$ $w_d = 0$. Moreover, each component $Y_i$ admits an expansion of the form (3.9) 
+\[ Y_i(w) = \sum w_1^{\alpha_1} \cdots w_d^{\alpha_d} Y_{i,\alpha}(w), \qquad \alpha = (\alpha_1, \dots, \alpha_d), \quad |\alpha| = \alpha_1 + \dots + \alpha_d, \]
+ $|\alpha| \geq m_i$ for suitable holomorphic functions $Y_{i,\alpha}$. By simplicity, the Jacobian matrix $JY(w)$ has, along $\mathbf{W}_0 \cap \widetilde{V}$ (where $\widetilde{V} := \varphi(V)$), a $d \times d$ submatrix whose determinant is nowhere vanishing. After reordering coordinates if necessary, we may assume that this is the submatrix corresponding to the first d components $(Y_1, \ldots, Y_d)$ and the variables $(w_1, \ldots, w_d)$. In particular, the linear part of $(Y_1, \ldots, Y_d)$ in the variables $(w_1,\ldots,w_d)$ is invertible along $\mathbf{W}_0\cap\widetilde{V}$, and therefore $m_{W_0}(Y)=1$. Equivalently, on $V$ we may write
+
+$Y_i(w) = \sum_{j=1}^d a_{i,j}(w) w_j, \qquad i = 1, \dots, n,$
+
+(3.10)
+
+
+\newpage
+
+% Page 13
+\section{A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS}
+
+13
+
+for suitable holomorphic functions $a_{i,j}$, with the $d \times d$ matrix $(a_{i,j})_{1 \le i,j \le d}$ invertible along $\mathbf{W}_0 \cap \widetilde{V}$. Choose constants $\epsilon_{d+1}, \ldots, \epsilon_n \in \mathbb{C}^*$ and consider the holomorphic deformation $\{Y_t\}_{t\in D_{\epsilon}}$ defined by
+
+$Y_t = Y + t(0, \dots, 0, \epsilon_{d+1}, \dots, \epsilon_n).$
+
+(3.11) We claim that, for all sufficiently small $t \neq 0$, the vector field $Y_t$ has no zeros on V. Indeed, if $Y_t(w) = 0$, then in particular the first d components vanish, i.e. $Y_1(w) = \cdots = Y_d(w) = 0$. By (??) and the invertibility of $(a_{i,j})_{1 \le i,j \le d}$ on $V \cap \mathbf{W}_0$, this forces $w_1 = \cdots = w_d = 0$, hence $w \in \mathbf{W}_0$. But on $\mathbf{W}_0$ the last $n-d$ components of $Y_t$ equal
+
+$Y_{d+1}(w) + t\epsilon_{d+1}, \ldots, Y_n(w) + t\epsilon_n,$
+
+and since $Y|_{\mathbf{W}_0} \equiv 0$ while $\epsilon_{d+1}, \ldots, \epsilon_n \neq 0$, none of these can vanish for $t \neq 0$. This contradiction proves the claim. Finally, set $X_t := \varphi^* Y_t$. Then $X_t \to X$ as $t \to 0$ and, by the claim, $X_t$ has no zeros on V for all sufficiently small $t \neq 0$. Equivalently, $\Omega_t = \emptyset$, and therefore $\mu(\mathcal{F}_t, \mathbf{W}) = 0$ for $t \neq 0$, yielding (??).
+
+4. Examples
+
+In this section we present explicit families of one-dimensional holomorphic fo- liations that make concrete the invariants and inequalities proved in the previous sections, and clarify why the hypotheses there are necessary. More precisely, the examples are chosen so that the singular set contains a smooth positive-dimensional component $\mathbf{W} \subset \operatorname{sing}(\mathcal{F})$ (a smooth local complete intersection), and we compare different kinds of perturbations $\{\mathcal{F}_t\}$ of $\mathcal{F}$. First, the examples exhibit the mechanism behind the definition of embedded closed points associated with W: for suitable deformations, isolated singularities of $\mathcal{F}_t$ may "bubble off" from \textbf{W} and converge back to \textbf{W} as $t \to 0$, contributing to the limit count $N(\mathcal{F}, \mathbf{W})$. This provides a geometric interpretation of the quantities appearing in our statements, and shows that $N(\mathcal{F}, \mathbf{W})$ is not merely formal: it can be computed and can vary with the deformation in the non-compact/local setting, hence the need to work inside a fixed precompact $\epsilon$-neighborhood (equivalently, inside the fixed neighborhood $\mathcal{A}_{\mathbf{W}}$ introduced earlier). Second, the examples test the lower bound phenomenon of Theorem ??: once $\mathcal{A}_{\mathbf{W}}$ is fixed and sing($\mathcal{F}_t$) is isolated for $t \neq 0$, the number of singularities of $\mathcal{F}_t$ that converge to W (counted with multiplicity) cannot drop below the intrinsic contri- bution predicted by $N(\mathcal{F}, \mathbf{W})$. In particular, by exhibiting deformations where the bound is sharp, the examples show that the inequality in Theorem ?? is genuinely optimal in general. Third, the examples explain the necessity of controlling behavior at infinity. Even when the local singular set near \textbf{W} is well understood, polynomial approxi- mations and projective compactifications can create (or move) singularities on the hyperplane at infinity, and these may absorb part of the total Milnor number. This clarifies why the analysis of \textbf{W} in $\mathbb{C}^n$ must be coupled with an understanding of what happens after passing to $\mathbb{P}^n$, and why different perturbations can lead to different distributions between the neighborhood of \textbf{W} and the \textit{infinite} part. Finally, the last examples illustrate the \textit{totally simple} situation introduced above: when W is totally simple, one can construct holomorphic perturbations for which $\operatorname{sing}(X_t) \cap \mathcal{A}_{\mathbf{W}} = \emptyset$, so that no isolated singularities converge to \textbf{W} and the local contribution along W vanishes. This shows that our embedded-point contribution is
+
+
+\newpage
+
+% Page 14
+14MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI a genuinely singular phenomenon: it disappears under a transverse nondegeneracy condition, and this provides a useful borderline case for applications (for instance, when deciding whether \textbf{W} must contribute nontrivially to index computations). Together, these examples serve as a practical guide for applying the theory: they indicate what to expect from generic perturbations, what can go wrong without compactness, how the bounds interact with contributions at infinity, and in which geometric regimes the contribution of a positive-dimensional component $\mathbf{W}$ is forced to be nonzero or can be made to disappear. In the first example we fix an explicit m-parameter family of polynomial vector fields on $\mathbb{C}^3$ whose singular set contains the line $\mathbf{W} = \{z_1 = z_2 = 0\}$. We then perturb the field in two different ways and track how the isolated singularities of the perturbations distribute: how many converge to W, how many escape to the hyperplane at infinity, and how this depends on the common roots of $\alpha_3$ with the characteristic equations. The goal is to exhibit concretely the range of possible values of $\mu(X_t, \mathbf{W})$ and to show how the embedded contribution $N(\mathcal{F}, A_{\mathbf{W}_0})$ enters the count predicted by our formulas. \textbf{Example 4.1.} Let us consider a family of polynomial vector fields X defined on $\mathbb{C}^3$ as follows:
+
+
+\[ X = \sum_{i=0}^{m} a_i z_1^{k-i} z_2^i \frac{\partial}{\partial z_1} + \sum_{i=0}^{m} b_i z_1^{k-i} z_2^i \frac{\partial}{\partial z_2} + \sum_{i=0}^{m-1} c_i(z) z_1^{m-i-1} z_2^i \frac{\partial}{\partial z_3}, \]
+ where $m \geq 2$, $c_i(z) = \alpha_{i,0} + \sum_{j=1}^{3} \alpha_{i,j} z_j$ is an affine linear function for $i = 0, \ldots, m-1$ 1, and $a_i$, $b_i$ are complex numbers. To simplify the notation, set
+
+$\alpha_j(\lambda) = \sum_{i=0}^{m-1} \alpha_{i,j} \lambda^i$ $(j = 0, 1, 2, 3).$
+
+Assume that
+
+$a(\lambda) = \sum_{i=0}^{m} a_i \lambda^i$ and $b(\lambda) = \sum_{i=0}^{m} b_i \lambda^i$
+
+have no common roots. In this way, $\deg(a) = \deg(b) = \deg(\alpha_i) + 1 = m$. We also assume that
+
+$sing(X) = \mathbf{W} = \{ z \in \mathbb{C}^3 \mid z_1 = z_2 = 0 \}.$
+
+Now, let $\mathcal{F}$ be the one-dimensional holomorphic foliation on $\mathbb{P}^3$ induced, on the affine chart $\mathbb{C}^3$, by the vector field X. Thus, the singular set of $\mathcal{F}$ consists of
+
+$\mathbf{W}_0 = \{ [x] \in \mathbb{P}^3 \mid x_0 = x_1 = 0 \},$
+
+(with $z_i = x_{i-1}/x_3$ for $i = 1, 2, 3$) together with $m + 1$ isolated closed points, counted with multiplicities. Namely,
+
+
+\paragraph{$<math>p_i = [u_{1i} $:} \textbackslash\{\}beta\_i u\_\{1i\} : 1 : 0] \textbackslash\{\}in \textbackslash\{\}text\{sing\}(\textbackslash\{\}mathcal\{F\}),
+
+where $\beta_i$ is a root of the equation $b(\lambda) - \lambda a(\lambda) = 0$ and
+
+
+\[ u_{1j} = \frac{a(\beta_j) - \alpha_3(\beta_j)}{\alpha_1(\beta_j) + \beta_j \alpha_2(\beta_j)}. \]
+
+
+Thus, if $u_{1j} = 0$ for some j, then there is at least one embedded point of $sing(\mathcal{F})$ associated with $\mathbf{W}_0$. Therefore, the number of embedded singular points of $\operatorname{sing}(\mathcal{F})$ associated with $\mathbf{W}_0$ satisfies $N(\mathcal{F}, A_{\mathbf{W}_0}) \leq m-1$, since $a(\lambda)$ and $\alpha_3(\lambda)$ have at most $m-1$ common roots. If $\alpha_3 \equiv 0$, then it is possible that $N(\mathcal{F}, A_{\mathbf{W}_0}) = m$, as
+
+
+\newpage
+
+% Page 15
+15
+
+A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS we will see. To determine the Milnor number $\mu(X_t, \mathbf{W})$, consider the holomorphic deformation $X_t$ of X on $\mathbb{C}^3$ given by
+
+
+\[ X_t = X - t \left( \epsilon_1 \frac{\partial}{\partial z_1} + \epsilon_2 \frac{\partial}{\partial z_2} + \epsilon_3 \frac{\partial}{\partial z_2} \right), \]
+
+
+(4.1) where each $\epsilon_i \neq 0$ is a generic complex number. Thus, 
+\[ X_t^{-1}(0) = \{ p_{ij}^t = (z_{1ij}^t, \lambda_j z_{1ij}^t, z_{3ij}^t) \in \mathbb{C}^3, \ 1 \le i, j \le m \}, \]
+ where $\lambda_j$ is a root of the equation $\epsilon_1 b(\lambda) - \epsilon_2 a(\lambda) = 0$, $z_{1ij}^t$ is an m-th root of $t\epsilon_1/a(\lambda_j)$, and 
+\[ z_{3ij}^t = -\frac{\alpha_0(\lambda_j)}{\alpha_2(\lambda_i)} + z_{1ij}^t \frac{\epsilon_3 a(\lambda_j) - \epsilon_1(\alpha_1(\lambda_j) + \lambda_j \alpha_2(\lambda_j))}{\epsilon_1 \alpha_2(\lambda_i)}, \]
+ where we necessarily assume $\alpha_3(\lambda_j) \neq 0$. Under this condition,
+
+
+\[ \lim_{t \to 0} z_{1ij}^t = 0, \qquad \lim_{t \to 0} z_{3ij}^t = -\frac{\alpha_0(\lambda_j)}{\alpha_3(\lambda_j)}. \]
+
+
+Hence,
+
+
+\[ \mu(X_t, \mathbf{W}) = \lim_{t \to 0} \sum_{p_{ij}^t \in \mathcal{A}_{\mathbf{W}}} \mu(X_t, p_{ij}^t) = m^2 \]
+
+
+(4.2) for a generic perturbation $X_t$ as in (??). However, if there is exactly one $t_i$ such that
+
+$\epsilon_1 b(t_i) - \epsilon_2 a(t_i) = 0,$
+
+where $t_i$ is also a root of $\alpha_3$, then the limit in (??) equals $m^2 - m$. In the worst situation, when the equations $\epsilon_1 b(\lambda) - \epsilon_2 a(\lambda) = 0$ and $\alpha_3(\lambda) = 0$ have $m-1$ common roots, the minimum value of $\mu(X_t, \mathbf{W})$ is $m^2 - (m-1)m = m$, provided that $\alpha_3 \not\equiv 0$. If $\alpha_3 \equiv 0$, then it is possible that the minimum value becomes $\mu(X_t, \mathbf{W}) = 0$. To better understand this situation, consider other holomorphic perturbations $Y_t$ of X defined by
+
+$Y_t = X - t \left( \epsilon_1 \frac{\partial}{\partial z_1} + \epsilon_2 \frac{\partial}{\partial z_2} + (z_3^m + \epsilon_3) \frac{\partial}{\partial z_2} \right).$
+
+(4.3) In this case, for $t \neq 0$ the singular set of $Y_t$ consists generically of $m^3$ isolated points, counted with multiplicities. In fact,
+
+$\operatorname{sing}(Y_t) = \{q_{ijk}^t = (z_{1ij}^t, \lambda_i z_{1ij}^t, z_{3ijk}^t) \in \mathbb{C}^3\},$
+
+where $\lambda_j$ is a root of $\epsilon_1 b(\lambda) - \epsilon_2 a(\lambda) = 0$, $z_{1ij}^t$ is an m-th root of $t\epsilon_1/a(\lambda_j)$, and $z_{3ijk}^t$ is a root (in the variable $z_3$) of the polynomial equation 
+\[ (z_{1ij}^t)^m(\alpha_1(\lambda_j) + \lambda_j \alpha_2(\lambda_j)) + (z_{1ij}^t)^{m-1}(\alpha_0(\lambda_j) + \alpha_3(\lambda_j)z_3) - t(z_3^m + \epsilon_3) = 0. \]
+ After the change of variable $w = 1/z_3$, this equation reduces to an equation in $w$; letting $t \to 0$ one obtains
+
+
+\[ w^m + \frac{\alpha_3(\lambda_j)}{\alpha_0(\lambda_j)} w^{m-1} = 0. \]
+
+
+That is, the limit values for w are 0 and $-\alpha_3(\lambda_i)/\alpha_0(\lambda_i)$, with multiplicities $m-1$ and 1, respectively. Therefore, generically, $m^2$ isolated singularities of $Y_t$ converge to the curve W and $m^3 - m^2$ of them converge to the point at infinity
+
+$H_3 \cap \mathbf{W}_0 = p = [0:0:1:0],$
+
+
+\newpage
+
+% Page 16
+16MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI where $H_3 \subset \mathbb{P}^3$ is the hyperplane defined by $\xi_3 = 0$. Moreover, for each $\lambda_i$ such that $\alpha_3(\lambda_i) = 0$, there are m additional singular points converging to p, counted with multiplicity. Let $\beta$ be the maximal number of common roots of $\alpha_3(\lambda) = 0$ and $\epsilon_1 b(\lambda) - \epsilon_2 a(\lambda) = 0$ as $(\epsilon_1, \epsilon_2)$ vary. Thus, $\beta \leq m$. Therefore, the minimum value for the limit (??) is
+
+$m^2 - \beta m$.
+
+Let $\mathcal{F}_t$ be the one-dimensional holomorphic foliation on $\mathbb{P}^3$ induced by $Y_t$. On the hyperplane at infinity $H_3 = \mathbb{P}^3 \setminus \mathbb{C}^3 = \mathbb{P}^2$, the foliation $\mathcal{F}_t$ is described by the vector field 
+\[ \widetilde{Y}_{t} = \left(\sum_{i=0}^{m} a_{i} u_{1}^{m-i} u_{2}^{i} - u_{1} g(u_{1}, u_{2})\right) \frac{\partial}{\partial u_{1}} + \left(\sum_{i=0}^{m} b_{i} u_{1}^{m-i} u_{2}^{i} - u_{2} g(u_{1}, u_{2})\right) \frac{\partial}{\partial u_{2}}, \]
+ where $g(u_1, u_2) = -t + \sum_{i=1}^{m} (\alpha_{i,1}u_1 + \alpha_{i,2}u_2 + \alpha_{i,3})u_1^{m-1-i}u_2^i, \qquad u_i = \xi_{i-1}/\xi_2 \text{ for } i = 1, 2.$ A direct computation shows that $\mu(\mathcal{F}_t|_{H_3},0) \geq m^2$, and more precisely, $\mu(\mathcal{F}_t|_{H_3},0) = m^2$ $m^2 + N(\mathcal{F}, A_{\mathbf{W}_0})$. Therefore, $m^2 + N(\mathcal{F}, A_{\mathbf{W}_0})$ singular points in $H_3$ converge to $p$, and 
+\[ \mu(\mathcal{F}, p) := \lim_{t \to 0} \sum_{\lim_{t \neq i_{j_k} = p}} \mu(\mathcal{F}_t, q_{ij_k}^t) = m^3 - m^2 + \beta m + m^2 + N(\mathcal{F}, A_{\mathbf{W}_0}). \]
+ Hence $\mu(\mathcal{F}, p) \leq m^3 + \beta m + N(\mathcal{F}, A_{\mathbf{W}_0})$. By Theorem ??, we have
+
+$\mu(\mathcal{F}, \mathbf{W}_0) = -\nu(\mathcal{F}, \mathbf{W}_0, \varphi_a) + N(\mathcal{F}, A_{\mathbf{W}_0}),$
+
+where $-\nu(\mathcal{F}, \mathbf{W}_0, \varphi_a) = m^3 + m^2$ since $\deg(\mathcal{F}) = m$, $\chi(\mathbf{W}_0) = 2$, $\deg(\mathbf{W}_0) = 1$, and $\ell = m_{\mathbf{E}_1}(\pi^*\mathcal{F}) = m-1$. Therefore, 
+\[ \mu(Y_t, \mathbf{W}) = -\nu(\mathcal{F}, \mathbf{W}_0, \varphi_a) + N(\mathcal{F}, A_{\mathbf{W}_0}) - \lim_{t \to 0} \sum_{\substack{\text{lim } q_{ijk}^t = p}} \mu(\mathcal{F}_t, q_{ijk}^t). \]
+ Since $\mu(Y_t, \mathbf{W}) \geq 0$, it follows that $\mu(\mathcal{F}, p) < -\nu(\mathcal{F}, \mathbf{W}_0, \varphi_a) + N(\mathcal{F}, A_{\mathbf{W}_0}) = m^3 + m^2 + m - 1 = MS(\mathcal{F}, p) - 1,$ where $MS(\mathcal{F}, p)$ is the Soares' bound. This maximum value for $\mu(\mathcal{F}, p)$ (and hence the minimum value for $\mu(X_t, \mathbf{W})$ is achieved, for instance, by the vector field
+
+
+\[ X(z) = z_2^m \frac{\partial}{\partial z_1} + z_2^m \frac{\partial}{\partial z_2} + z_1^m \frac{\partial}{\partial z_3}. \]
+
+
+Here we work with a concrete vector field whose singular locus contains a curve component W together with an embedded singular point on W and additional isolated points. We first analyze the standard translation perturbation and explain why it is not sufficient in projective space because a curve component persists in the deformed foliation. We then introduce a refined deformation (together with a deformation of the curve) so that the singular set becomes purely zero-dimensional, and we follow the limits of the singular points as $t \to 0$. The purpose is to illustrate, in a hands-on computation, how curve components and embedded points affect the Milnor count and why one must control the behavior at infinity.
+
+
+\newpage
+
+% Page 17
+\section{A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS}
+
+17
+
+\textbf{Example 4.2.} Let X be the holomorphic vector field on $\mathbb{C}^3$ defined by 
+\[ X = \left(3z_1(z_2 - z_1^2) + z_3 - z_1^3\right) \frac{\partial}{\partial z_1} + \left((z_1 + 5)(z_2 - z_1^2) + 2(z_3 - z_1^3)\right) \frac{\partial}{\partial z_2} + \]
+ $(z_2(z_2-z_1^2)+z_3-z_1^3)\frac{\partial^2}{\partial z_2}$. Thus, the singular set of X contains the curve $\mathbf{W} \subset \mathbb{C}^3$ defined by
+
+$z_2 - z_1^2 = z_3 - z_1^3 = 0$
+
+and the isolated point $A = (1, 3, -5)$. Furthermore, there is an embedded singular point $P = (1, 1, 1) \in \text{sing}(X) \cap \mathbf{W}$. Indeed, from the first two components of X we obtain $5(z_1-1)(z_2-z_1^2)=0$, and setting $z_1=1$ yields the points A and P. Let $\mathcal{F}$ be the holomorphic foliation on $\mathbb{P}^3$ induced by X on $\mathbb{C}^3$. Then $\operatorname{sing}(\mathcal{F}) = \mathbf{W}_0 \cup \mathbf{W}_1 \cup [1:1:1:1] \cup [1:3:-5:1] \cup [16:12:7:0],$ where $\mathbf{W}_0$ is the twisted cubic defined by
+
+$\xi_1 \xi_3 - \xi_0^2 = \xi_2 \xi_3^2 - \xi_0^3 = \xi_0 \xi_3 - \xi_1 \xi_2 = 0,$
+
+while $\mathbf{W}_1$ is defined by $\xi_0 = \xi_3 = 0$. To compute the Milnor number $\mu(\mathcal{F}, \mathbf{W}_0)$, we first consider the usual holomorphic deformation $X_t$ of X given by
+
+$X_t = X - t \left( \epsilon_1 \frac{\partial}{\partial z_1} + \epsilon_2 \frac{\partial}{\partial z_2} + \epsilon_3 \frac{\partial}{\partial z_3} \right),$
+
+(4.4) where the $\epsilon_i$ are generic complex numbers. To determine $\operatorname{sing}(X_t)$, we use the first two components of $X_t$ and obtain
+
+$5(z_1-1)(z_2-z_1^2)=(2\epsilon_1-\epsilon_2)t.$
+
+Thus, we have two distinct situations: $2\epsilon_1 \neq \epsilon_2$ or $2\epsilon_1 = \epsilon_2$. If $2\epsilon_1 \neq \epsilon_2$, then $\operatorname{sing}(X_t)$ contains three points, with two singular points converging to \textbf{W} and the third point converging to A. If $2\epsilon_1 = \epsilon_2$, then $\operatorname{sing}(X_t)$ contains only two points, with one point converging to $A$ and the other singular point converging to $P$. Therefore,
+
+$\mu(X_t, \mathbf{W}) = \lim_{t \to 0} \sum_{p_i^t \in \mathcal{A}_{\mathbf{W}}} \mu(X_t, p_i^t) \ge 1,$
+
+and the minimum value is attained when $2\epsilon_1 = \epsilon_2$. However, $\mathbf{W}_1 \subset \operatorname{sing}(\mathcal{F}_t)$ for all $t \neq 0$, where $\mathcal{F}_t$ is the foliation on $\mathbb{P}^3$ induced by $X_t$. Therefore, we need to make another deformation of X as well as of the curve $\mathbf{W}_0$. More precisely, let $\mathbf{W}_t$ be the curve defined by
+
+$\xi_1 \xi_3 - \xi_0^2 = \xi_2 \xi_3^2 - \xi_0^3 - t \xi_1^3 = 0.$
+
+Thus, $\mathbf{W}_t$ is a smooth complete intersection for all $t \neq 0$. Now consider the holo- morphic deformation $Y_t$ of X defined by $Y_t = (3z_1f_1^t(z) + f_2^t(z) - t\epsilon_1)\frac{\partial}{\partial z_1} + ((z_1+5)f_1^t(z) + 2f_2^t(z) - t\epsilon_2)\frac{\partial}{\partial z_2}$ $+(z_2f_1^t(z)+f_2^t(z)-t(\epsilon_3+\alpha_0z_1^3+\alpha_1z_2^3+\alpha_2z_3^3))\frac{\partial}{\partial z_2}$ where $f_1^t(z) = z_2 - z_1^2$, $f_2^t(z) = z_3 - z_1^3 - tz_2^3$, and $\epsilon_i$ and $\alpha_i$ are nonzero generic complex numbers. Let $\mathcal{G}_t$ be the holomorphic foliation on $\mathbb{P}^3$ induced by $Y_t$. In general, for $t \neq 0$ the singular set of $Y_t$ consists of 27 isolated points, counted with multiplicities. Let $z_i^t = (z_{1i}^t, z_{2i}^t, z_{3i}^t) \in \text{sing}(Y_t)$. From the first two components of $Y_t$ we obtain again
+
+$5(z_{1i}^t - 1)(z_{2i}^t - (z_{1i}^t)^2) = (2\epsilon_1 - \epsilon_2)t,$
+
+
+\newpage
+
+% Page 18
+18MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI which implies
+
+$\lim_{t \to 0} z_{1i}^t = 1$, or $\lim_{t \to 0} (z_{2i}^t - (z_{1i}^t)^2) = 0$.
+
+If the first situation occurs, then $\lim_{t\to 0} z_{2i}^t = 1$ or $\lim_{t\to 0} z_{2i}^t = 3$. If the second situation occurs, then $\lim_{t\to 0} z_i^t \in \mathbf{W}_t$. First, assume that
+
+$2\epsilon_1 - \epsilon_2 = \alpha_0 = \alpha_1 = \alpha_2 = 0.$
+
+Then the singular set of $Y_t$ consists of two isolated points, one converging to A and the other converging to $P$. Thus,
+
+$\mu(Y_t, \mathbf{W}) = \lim_{t \to 0} \sum_{p_i^t \in \mathcal{A}_{\mathbf{W}}} \mu(Y_t, p_i^t) \ge 1.$
+
+Now assume that $2\epsilon_1 \neq \epsilon_2$. Then
+
+$z_{3i}^t = t \left( \frac{(3\epsilon_2 - \epsilon_1)z_{1i}^t - 5\epsilon_1}{5(z_{1i}^t - 1)} \right).$
+
+From the third component of $Y_t$ we obtain a polynomial of degree 27 determining the variable $z_{1i}^t$. Let
+
+
+\[ \nu_{1i}^0 = \lim_{t \to 0} \frac{1}{z_{1i}^t}, \]
+
+
+which satisfies 
+\[ \nu^{9}(\nu-1)^{8} \left[ 5(\epsilon_{3}-\epsilon_{1})\nu^{10} + (3\epsilon_{3}-\epsilon_{1}-5\epsilon_{3})\nu^{9} + (2\epsilon_{2}-\epsilon_{1})\nu^{8} + 5(\nu-1)\sum_{i=0}^{2} \alpha_{i}\nu^{6-2i} \right] = 0. \]
+ Consequently, $sing(Y_t)$ consists of 27 isolated points, of which 26 converge to $\mathbf{W}_0$, since $\mu(X,A) = 1$. Among the eight points $z_i^t$ such that $\lim_{t\to 0} z_{1i}^t = 1$, only one converges to A, and the other seven converge to $P = (1, 1, 1) \in \mathbf{W}$. Moreover, all points $z_i^t \in \text{sing}(Y_t)$ such that $\lim_{t\to 0} u_{1i}^t = 0$ converge to $(\mathbb{P}^3 \setminus \mathbb{C}^3) \cap \mathbf{W}_0 = [0:0:$ $[1:0]=p$. To determine $\mu(\mathcal{F},\mathbf{W}_0)$, we analyze the foliation $\mathcal{G}_t$ restricted to the hyperplane $H_3 = \mathbb{P}^3 \setminus \mathbb{C}^3$. On $H_3$, the foliation $\mathcal{G}_t$ is described by 
+\[ \widetilde{Y}_{t} = \left(t\alpha_{2}u_{1} - 4u_{1}^{3} - tu_{2}^{3} + u_{1}g_{t}(u_{1}, u_{2})\right) \frac{\partial}{\partial u_{1}} + \left(t\alpha_{2}u_{2} - 3u_{1}^{3} - 2tu_{2}^{3} + u_{2}g_{t}(u_{1}, u_{2})\right) \frac{\partial}{\partial u_{2}}, \]
+ where $g_t(u_1, u_2) = u_1^2 u_2 + (1 + t\alpha_1)u_1^3 + t(1 + \alpha_2)u_2^3$ and $u_i = \xi_{i-1}/\xi_2$ for $i = 1, 2$. It is not difficult to see that $sing(Y_t)$ consists of 13 isolated points, counted with multiplicity. To locate them, it is enough to write $u_{1i}^t = \lambda_t u_{2i}^t$ for $u_i^t = (u_{1i}^t, u_{2i}^t) \in$ $sing(Y_t)$. Then 
+\[ \begin{cases} 3(\lambda_t)^4 - 4(\lambda_t)^3 + 2t\lambda_t - t = 0, \\ u_{2i}^t \left[ t\alpha_2 - \left( 3(\lambda_t)^3 + 2t \right) (u_{2i}^t)^2 + \left( (\lambda_t)^2 + (1 + t\alpha_1)(\lambda_t)^3 + t(1 + \alpha_2) \right) (u_{2i}^t)^3 \right] = 0. \end{cases} \]
+ For every $\lambda_i^t$ solving the first equation $(i = 1, 2, 3, 4)$, there are three isolated singular points different from the origin $O = (0,0) \in H_3$. Letting $t \to 0$ in the first equation yields
+
+
+\[ 3\lambda^4 - 4\lambda^3 = 0 \iff \lambda^3(3\lambda - 4) = 0. \]
+
+
+Hence, counting multiplicities, $\lambda = 0$ is a triple root and $\lambda = \frac{4}{3}$ is a simple root. Note that the parametrization $u_1 = \lambda u_2$ only describes singular points with $u_2 \neq 0$.
+
+
+\newpage
+
+% Page 19
+\section{A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS}
+
+19
+
+The origin $O = (0,0)$ must be treated separately (and indeed $O \in \text{sing}(\tilde{Y}_t)$ for all t). For $\lambda = \frac{4}{3}$, the second equation at $t = 0$ becomes
+
+$u_2\left(-3\lambda^3 u_2^2 + (\lambda^2 + \lambda^3)u_2^3\right) = 0,$
+
+so besides $u_2 = 0$ there is a nonzero solution $u_2 = \frac{3\lambda^3}{\lambda^2 + \lambda^3} = \frac{3\lambda}{1 + \lambda},$ and hence $(u_1, u_2) = \left(\frac{4}{3} \cdot \frac{12}{7}, \frac{12}{7}\right) = \left(\frac{16}{7}, \frac{12}{7}\right).$ Therefore, not all singular points converge to $O$ as $t \to 0$: at least one singular point converges to $(16/7, 12/7) \in H_3$. The remaining singular points collapse to O (with multiplicity), which accounts for the large local Milnor number at O. This last example is designed to show two extreme phenomena for the same fixed component $\mathbf{W} = \{z_1 = z_2 = 0\}$. First, we choose perturbations that eliminate all isolated singular points near W, yielding $\mu(X_t, \mathbf{W}) = 0$ and demonstrating that the minimum can be attained. Second, we replace the transcendental coefficients by polynomial truncations and obtain deformations whose projective foliations acquire arbitrarily large local Milnor number at the point at infinity $p = [0:0:1:0]$. This makes explicit that, without additional restrictions, the behavior at infinity can force unbounded contributions, and it clarifies the role of escape to infinity in our results. \textbf{Example 4.3.} Let us consider the following vector field $X$ on $\mathbb{C}^3$: (4.5) 
+\[ X = \left(z_1 \cos(z_3) + z_2 \sin(z_3)\right) \frac{\partial}{\partial z_1} + \left(-z_1 \sin(z_3) + z_2 \cos(z_3)\right) \frac{\partial}{\partial z_2} + z_1 P_m(z_3) \frac{\partial}{\partial z_2}, \]
+ where $P_m$ is a polynomial of degree m with distinct roots $\gamma_i$ for $i = 1, \ldots, m$. Thus, the singular set of X is defined by $z_1 = z_2 = 0$ and will be denoted by W. It is not difficult to see that \textbf{W} is a totally simple component of $sing(X)$, since the Jacobian matrix $JX$ has an invertible $2 \times 2$ minor along \textbf{W}. As usual, we consider small perturbations $X_t$ of X given by
+
+$X_t = X - t \sum_{i=1}^{3} (a_{i0} + a_{i1}z_1 + a_{i2}z_2) \frac{\partial}{\partial z_i},$
+
+(4.6) where the $a_{ij}$ are complex numbers. For $t \neq 0$, the singular set of $X_t$ is determined by solving the system 
+\[ \begin{cases} z_1(\cos(z_3) - ta_{11}) + z_2(\sin(z_3) - ta_{12}) &= ta_{10}, \\ -z_1(\sin(z_3) + ta_{21}) + z_2(\cos(z_3) - ta_{22}) &= ta_{20} \end{cases} \]
+ (4.7) for $(z_1, z_2)$ and then, from the third component of $X_t$, obtaining the $z_3$-coordinate of the isolated singular points. Generally speaking, for $t \neq 0$ the singular set of $X_t$ is composed of isolated points with infinite cardinality, and $\operatorname{sing}(X_t) \subset \mathcal{A}_{\mathbf{W}}$. However, if $a_{30} \neq 0$ and $a_{ij} = 0$ for $i = 1, 2$, then $sing(X_t) = \emptyset$. Indeed, under this condition, if $p_t = (z_1^t, z_2^t, z_3^t) \in \text{sing}(X_t)$, then $z_1^t = z_2^t = 0$, but the third component of $X_t$ cannot vanish. Therefore,
+
+
+\[ \mu(X_t, \mathbf{W}) = \lim_{t \to 0} \sum_{p_i^t \in \mathcal{A}_{\mathbf{W}}} \mu(X_t, p_i^t) \ge 0, \]
+
+
+
+\newpage
+
+% Page 20
+20MAURÍCIO CORRÊA, GILCIONE NONATO COSTA, AND ALEJANDRA SALAMANCA RUSSI and the minimum value 0 is attained for $a_{30} \neq 0$ and $a_{ij} = 0$ for $i = 1, 2$. Now, we consider a polynomial deformation $X_k^t$ of X as follows:
+
+$X_k^t = X_k - t \sum_{i=1}^3 (a_{i0} + a_{i1}z_1 + a_{i2}z_2) \frac{\partial}{\partial z_i},$
+
+where 
+\[ X_k = \left(z_1 f_k(z_3) + z_2 g_k(z_3)\right) \frac{\partial}{\partial z_1} + \left(-z_1 g_k(z_3) + f_k(z_3) z_2\right) \frac{\partial}{\partial z_2} + z_1 P_m(z_3) \frac{\partial}{\partial z_2}, \]
+ with $f_k(z_3) = \sum_{i=0}^k (-1)^i \frac{z_3^{2i}}{(2i)!}, \qquad g_k(z_3) = \sum_{i=0}^k (-1)^i \frac{z_3^{2i+1}}{(2i+1)!}.$ Let $\mathcal{F}_k^t$ be the one-dimensional holomorphic foliation on $\mathbb{P}^3$ whose restriction to the affine chart $\mathbb{C}^3$ is described by $X_k^t$. The singular set of $X_k^t$ has at least $4k+2$ isolated singularities, counted with multiplicities. More precisely, for all $M > 0$ there exists a natural number $k_0$ such that, if $z_k^t \in \text{sing}(X_k^t)$, then $|z_k^t| > M$ for all $k > k_0$. Therefore,
+
+
+\[ \lim_{k \to \infty} \mu(\mathcal{F}_k^t, p) = \infty, \qquad p = [0:0:1:0]. \]
+
+
+This example can be generalized to higher dimensions. Let $X = \sum_{i=1}^{n} P_i(z) \frac{\partial}{\partial z_i}$ be a vector field on $\mathbb{C}^n$ with $z = (z_1, \ldots, z_n)$, where
+
+$P_i(z) = \sum_{j=1}^{a} z_j f_{ij}(z_{d+1}, \dots, z_n), \qquad i = 1, \dots, n,$
+
+and each $f_{ij} = f_{ij}(z_{d+1}, \dots, z_n)$ is analytic. Thus,
+
+
+\[ \mathbf{W} = \{ z \in \mathbb{C}^n \mid z_1 = \dots = z_d = 0 \} \subset \operatorname{sing}(X). \]
+
+
+Assume that the matrix
+
+
+\[ \mathbf{A} = \left| \frac{\partial P_i}{\partial z_i} \right|_{1 \le i \le d} = \left| f_{ij} \right| \]
+
+
+is nonsingular for all $(z_{d+1}, \ldots, z_n) \in \mathbb{C}^{n-d}$. Then there exists $\epsilon > 0$ (small enough) such that the deformation
+
+
+\[ X_t = X - t \sum_{i=t+1}^n a_i \frac{\partial}{\partial z_i}, \qquad a_i \neq 0, \]
+
+
+has no isolated singular points converging to \textbf{W} for $0 < |t| < \epsilon$. Acknowledgments. MC is partially supported by the Università degli Studi di Bari and by the PRIN 2022MWPMAB- "Interactions between Geometric Structures and Function Theories" and he is a member of INdAM-GNSAGA
+
+\section*{REFERENCES}
+
+[1] P. Aluffi, Chern classes for singular hypersurfaces, Trans. Amer. Math. Soc. \textbf{351} (1999), 3989–4026. [2] M. Corrêa Jr., A. Fernández-Pérez, G. Nonato Costa, and R. Vidal Martins, Foliations by curves with curves as singularities, Ann. Inst. Fourier (Grenoble) 64 (2014), no. 4, 1781–1805. [3] E. Esteves and I. Vainsencher, A note on M. Soares' bounds, Ann. Inst. Fourier (Grenoble) \textbf{56} (2006), no. 1, 269–276.
+
+
+\newpage
+
+% Page 21
+\section{A LOWER BOUND FOR THE MILNOR NUMBER OF VECTOR FIELDS}
+
+21
+
+[4] A. Fernández-Pérez and G. Nonato Costa, On foliations by curves with singularities of pos- itive dimension, J. Dyn. Control Syst. \textbf{26} (2020), no. 3, 581–609. [5] A. Fernández-Pérez, G. Nonato Costa, R. Rosas, and R. C. O. Bazán, On the Milnor number of non-isolated singularities of holomorphic foliations and its topological invariance, J. Topol. \textbf{16} (2023), 176–191. [6] T. Gaffney, The multiplicity polar theorem, Inventiones Mathematicae 107 (1992), 527–556. [7] T. Gaffney, Polar multiplicities and equisingularity of map germs, Topology 32 (1993), 185– 223. [8] P. Griffiths and J. Harris, \textit{Principles of Algebraic Geometry}, John Wiley \& Sons, 1994. [9] Lê Dũng Tráng and B. Teissier, Variétés polaires locales et classes de Chern des variétés singulières, Annals of Mathematics 114 (1981), 457–491. [10] D. B. Massey, Lê Cycles and Hypersurface Singularities, Lecture Notes in Mathematics, Vol. 1615, Springer-Verlag, Berlin, 1995. [11] J. N. Mather, Stability of $C^{\infty}$ mappings, III: Finitely determined map germs, Publ. Math. Inst. Hautes Études Sci. \textbf{35} (1968), 127–156. [12] J. N. Mather, Stability of $C^{\infty}$ mappings, IV: Classification of stable germs by \textbf{R}-algebras, Publ. Math. Inst. Hautes Études Sci. \textbf{37} (1969), 223–248. [13] J. Milnor, Singular Points of Complex Hypersurfaces, Annals of Mathematics Studies, Vol. 61, Princeton Univ. Press, Princeton, NJ, 1968. [14] G. Nonato Costa, Holomorphic foliations by curves on $\mathbb{P}^3$ with non-isolated singularities, Ann. Fac. Sci. Toulouse Math. (6) \textbf{15} (2006), no. 2, 297–321. [15] A. Parusiński and P. Pragacz, A formula for the Milnor number, Compositio Mathematica \textbf{98} (1995), 113–128. [16] G. Rond, "Artin Approximation," Journal of Singularities, vol. 17, pp. 108–192, 2018. DOI: $10.5427/\text{jsing}.2018.17\text{g}.$ [17] A. Seidenberg, Reduction of singularities of the differential equation $Ady = Bdx$, Amer. J. Math. \textbf{90} (1968), 248–269. [18] D. Siersma, Isolated line singularities, in: Singularities, Part 2 (Arcata, Calif., 1981), Proc. Sympos. Pure Math., Vol. 40, Amer. Math. Soc., Providence, RI, 1983, pp. 485–496. [19] M. G. Soares, Lectures on Point Residues, Monografías del IMCA, No. 28, 2002. [20] M. G. Soares, Bounding Poincaré-Hopf indices and Milnor numbers, Math. Nachr. 278 (2005), no. 6, 703–711. Maurício Corrêa, Università degli Studi di Bari, Via E. Orabona 4, I-70125, Bari,
+
+\section{ITALY Email address, M. Corrêa: mauricio.barros@uniba.it,mauriciomatufmg@gmail.com}
+
+GILCIONE NONATO COSTA, ICEX – UFMG, DEPARTAMENTO DE MATEMÁTICA, AV. ANTÔNIO Carlos 6627, 30123-970 Belo Horizonte MG, Brazil Email address, G. N. Costa: gilcione@mat.ufmg.br Alejandra Salamanca Russi, ICEx – UFMG, Departamento de Matemática, Av. An-
+
+TÔNIO CARLOS 6627, 30123-970 BELO HORIZONTE MG, BRAZIL Email address, A. S. Russi: alejandra.russi.s@gmail.com
+
+
+\newpage
+
+\end{document}

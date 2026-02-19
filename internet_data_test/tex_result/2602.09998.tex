@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{proof_custom}{Proof}
+\renewcommand{\abstractname}{\Large\bfseries Abstract}
+
+
+\begin{document}
+
+
+% Page 1
+\section{STABILITY AND BIFURCATION ANALYSIS IN A}
+
+MECHANOCHEMICAL MODEL OF PATTERN FORMATION SZYMON CYGAN\textsuperscript{1,3} , ANNA MARCINIAK-CZOCHRA\textsuperscript{1,2,*} , FINN MÜNNICH\textsuperscript{1}
+
+AND DIETMAR OELZ\textsuperscript{4}
+
+\begin{abstract}
+We analyze the stability and bifurcation structure of steady states in a mechano- chemical model of pattern formation in regenerating tissue spheroids. The model cou- ples morphogen dynamics with tissue mechanics via a positive feedback loop: mechanical stretching enhances morphogen production, while morphogen concentration modulates tis- sue elasticity. Global strain conservation implements a nonlocal inhibitory effect, realizing a mechanochemical variant of the local activation—long-range inhibition mechanism. For ex- ponential elasticity-morphogen coupling, the system admits a variational formulation. We prove existence of nonconstant steady states for small diffusion and uniqueness of the homo- geneous state for large diffusion. Linear stability analysis shows that only unimodal patterns are stable, while multimodal solutions are unstable. Bifurcation analysis reveals subcritical and supercritical pitchforks, with fold bifurcations generating bistable regimes. Our results demonstrate that mechanochemical feedback provides a robust mechanism for single-peaked pattern formation without requiring a second diffusible inhibitor.
+\end{abstract}
+
+\begin{itemize}
+  \item Introduction
+\end{itemize}
+
+Self-organized pattern formation refers to the spontaneous emergence of spatially hetero- geneous states from homogeneous equilibria in spatially extended systems governed by local interactions. In biological modeling, such phenomena are commonly described by coupled par- tial differential equations combining nonlinear reaction—diffusion dynamics with mechanical feedback, leading to symmetry breaking and spatial organization in developing or regenerating tissues. Despite extensive modeling efforts, a rigorous mathematical understanding of how nonlinear chemical kinetics interacting with mechanical couplings give rise to robust pattern selection remains incomplete [?,?]. In particular, nonlocal mechanical constraints introduce qualitative changes in stability properties, mode selection, and bifurcation structure, posing significant analytical challenges for the theory of pattern formation. Since Turing's seminal proposal that diffusion-driven instabilities can generate spatial pat- terns [?], reaction-diffusion models have become a central theoretical framework for biological pattern formation [?]. Canonical examples such as the Gierer-Meinhardt model [?] formalized the local activation—long-range inhibition (LALI) principle, showing how nonlinear interac- tions between an autocatalytic activator and a spatially extended inhibitory signal can give rise to stable patterns. In these classical Turing-type systems [?,?,?], pattern formation relies on at least two interacting morphogens with sufficiently distinct effective ranges, typically realized through differential diffusion. Despite their conceptual success, identifying concrete molecular implementations of Turing systems in vivo has remained notoriously difficult [?]. In particular, the nature of the long-range inhibitory signal is often unclear, raising the pos- sibility that mechanisms beyond simple molecular diffusion may underlie observed patterns. \textsuperscript{1} Institute for Mathematics, Heidelberg University, Germany \textsuperscript{2} Interdisciplinary Center for Scientific Computing (IWR), Heidelberg University, Germany \textsuperscript{3} Instytut Matematyczny, Uniwersytet Wrocławski, Poland \textsuperscript{4} School of Mathematics and Physics, University of Queensland, Australia
+
+\begin{itemize}
+  \item orresponding author; Email: anna.marciniak@iwr.uni-heidelberg.de.
+\end{itemize}
+
+
+\newpage
+
+% Page 2
+\section{S. CYGAN, A. MARCINIAK-CZOCHRA, F. MÜNNICH, AND D. OELZ}
+
+Motivated by this, kernel-based formulations of pattern formation have been proposed, in which spatial interactions are encoded directly through nonlocal activation—inhibition kernels rather than diffusion operators [?,?]. Such models can reproduce the full repertoire of classical two-dimensional patterns, including spots, stripes, and networks, without explicitly invoking diffusive transport. More generally, it was demonstrated that reaction—diffusion systems with arbitrarily many components can be reduced to integro-differential descriptions characterized by effective kernels [?], implying that distinct molecular mechanisms may generate identical spatial patterns if they share the same interaction structure. While powerful, this abstraction also lacks direct biological interpretation, as the cellular or molecular origins of the effective kernels are often not directly identifiable. Growing experimental evidence indicates that mechanical forces are integral to biological organization across scales, challenging purely chemical views of pattern formation [?]. This has motivated mechanochemical frameworks in which tissue mechanics and biochemical signaling are dynamically coupled. These questions are often investigated using biologically motivated mathematical models, with patterning in the freshwater polyp Hydra providing a prominent example [?,?]. Existing Hydra models range from classical reaction-diffusion descriptions of activation—inhibition dynamics [?,?] to more recent formulations based on receptor-mediated interactions coupled to intracellular signaling [?,?]. However, purely biochemical models ap- pear insufficient to account for observed patterning behavior in \textit{Hydra}. Both experimental and theoretical studies indicate that mechanical effects can act as effective long-range interactions and generate robust spatial organization [?,?,?]. Mechanochemical models naturally give rise to feedback loops between deformation and signaling [?], suggesting that mechanical coupling can replace the classical diffusible inhibitor and provide an alternative realization of the LALI mechanism $[?,?,?]$. Several theoretical frameworks have incorporated mechanical effects into pattern forma- tion models, ranging from simple mechanochemical feedbacks that generate coupled chem- ical—mechanical patterns [?,?] to more elaborate continuum descriptions, such as biphasic poroelastic tissue models, in which mechanically induced flows enable pattern formation even for minimal biochemical kinetics [?]. Despite this progress, a systematic mathematical under- standing of pattern selection and stability in mechanochemical systems remains incomplete. In contrast to classical Turing models, where mode selection and stability are well character- ized, the influence of mechanical coupling on pattern multiplicity, robustness, and minimal pattern-forming requirements is still poorly understood. In this work, we address these gaps by analyzing the stability and bifurcation structure of stationary solutions in a new mechanochemical model of symmetry breaking in Hydra aggre- gates, which was recently validated against experimental observations [?]. The model couples morphogen dynamics to tissue mechanics via a positive feedback mechanism: mechanical stretching enhances morphogen production, while morphogen concentration modulates tis- sue elasticity. Together with a global strain conservation constraint, this coupling yields a mechanochemical variant of the LALI paradigm that does not require a second diffusible in- hibitor. We focus on an exponential elasticity—morphogen coupling, which endows the system with a variational structure amenable to rigorous analysis. By deriving a reduced one-dimensional model that preserves the essential mechanochemical feedback while simplifying the geometric setting (Section ??), we obtain, for the first time, a framework amenable to rigorous analytical investigation of the dynamics. We establish the existence of spatially heterogeneous steady states for sufficiently small diffusion coefficients and prove uniqueness of the homogeneous equilibrium for large diffusion, deriving explicit bounds on the corresponding critical values by variational methods (Section ??). This analy- sis explains the mechanism of symmetry breaking, demonstrating how patterned states bifur- cate from the homogeneous configuration. We then investigate the pattern selection problem
+
+
+\newpage
+
+\end{document}

@@ -1,0 +1,773 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{proof_custom}{Proof}
+\renewcommand{\abstractname}{\Large\bfseries Abstract}
+
+
+\begin{document}
+
+
+% Page 1
+Wiman-Valiron method for fractional derivatives and sharp growth estimates of $\alpha$-analytic solutions for linear fractional
+
+differential equations Igor Chyzhykov 2026 February 12,
+
+\begin{abstract}
+
+\end{abstract}
+
+We consider a fractional linear differential equation with successive derivatives given by $\mathbb{D}_{\alpha}^{n}y+p_{n-1}(x)\mathbb{D}_{\alpha}^{n-1}y+\cdots+p_{1}(x)\mathbb{D}_{\alpha}y+p_{0}(x)y=0$, where $\mathbb{D}^{j}_{\alpha}$ is the jth iteration of the Caputo-Djrbashian fractional derivative of order $\alpha > 0$, $p_i$ are $\alpha$-analytic functions for $0 < x^{\alpha} < R$. Generalizing a result of Kilbas, Rivero Rodríguez-Germá and Trujillo, we prove the existence and uniqueness of the corresponding Cauchy problem in the class of $\alpha$-analytic functions. We establish an exact growth order for the solution when $p_j(x) = P_j(x^{\alpha})$, where $P_j$ are poly- nomials, and $p_0$ dominates in some sense. This is the full counterpart of the classical case of ordinary differential equations. In particu- lar, we demonstrate the sharpness of Kochubei's result and generalize it. To achieve this, we extend the Wiman-Valiron theory to analytic functions and the Djrbashian-Gelfond-Leontiev generalized fractional derivatives. Keywords: fractional calculus (primary); fractional linear differen- tial equations; Wiman-Valiron method; $\alpha$-analytic solution; Cauchy problem; Caputo-Djrbashian derivative; Gelfond-Leontiev derivative; growth of solutions; Mittag-Leffler functions MathSubjClass: 34A08 (primary), 26A33, 30B10, 33E12, 34A12,
+
+34A25, 34M03.
+
+
+\newpage
+
+% Page 2
+Introduction 1 Fractional linear differential equations
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+Though fractional differential equations have a variety of applications in mod- elling physical processes, their theory is not as well developed as that of ordinary differential equations. Let $\alpha > 0$. This paper studies sequential fractional linear differential equations of the form (see [?, Chap. V.1]) $\mathbb{D}_{\alpha}^{n} y + p_{n-1}(x) \mathbb{D}_{\alpha}^{n-1} y + \dots + p_{1}(x) \mathbb{D}_{\alpha} y + p_{0}(x) y = 0,$
+
+(1)
+
+where $\mathbb{D}_{\alpha}$ is the fractional Caputo-Djrbashian derivative, $\mathbb{D}_{\alpha}^{j}$ its jth iteration, $p_i, j \in \{0, \ldots, n-1\}$ are $\alpha$-analytic functions, i. e. $p_i(x) = P_i(x^{\alpha}), P_i(z)$ being analytic on $\{z \in \mathbb{C} : |z| < R\}, 0 < R \le \infty$. This type of equation was introduced and studied in the case of constant coefficients and the Riemann- Liouville operator $D^{\alpha}$ instead of the Caputo-Djrbashian operator in [?, Chap. V]. It is worth remarking that neither the semigroup property $D^{\alpha}D^{\beta} =$ $D^{\alpha+\beta}$ nor the commutativity property $D^{\alpha}D^{\beta}=D^{\beta}D^{\alpha}$ holds in general for either the Riemann-Liouville or the Caputo-Djrbashian operators (see [?, Chap. IV.6, [?]). Sufficient conditions for the semigroup property and commutativity can be found in [?, Chap. IV.6], [?]. Note that the existence and uniqueness of a solution to the Cauchy prob- lem for a more general than (??) linear differential equation of fractional order was established in [?]. As it is stated in [?] for the cases $n = 1$ and $n = 2$ equation (??) possesses the unique $\alpha$-analytic soultions on $0 < |x|^{\alpha} < R$ that satisfy initial condi- tions for both the Riemann-Liouville and the Caputo-Djrbashian derivatives. Although the formal series representations of solutions are given in [?], their convergence is not rigorously proved. On the other hand, A. Kochubei ([?]) established an asymptotically sharp estimate of the growth of solutions to equation (??) in the case $n=1$ where A is a polynomial. In other words, the Cauchy problem
+
+
+\[ \mathbb{D}_{\alpha}y + a(x)y = 0, \quad y(0) = y_0, \]
+
+
+where $a(x) = A(x^{\alpha})$, and A is a polynomial of degree m, has a unique solution of the form $y(x) = v(x^{\alpha})$, where v is an entire function of order not greater than $\frac{m+1}{\alpha}$. In the classical case, when $\alpha = 1$, there are various sharp estimates for the growth of solutions in both model cases when the coefficients are entire functions or analytic in the unit disc $\{z \in \mathbb{C} : |z| < 1\}$ (see, for example,
+
+
+\newpage
+
+% Page 3
+[?], [?], [?], [?], and [?]). Two principal tools are used to obtain lower estimates for the growth of solutions: the Wiman-Valiron method, which was originally developed in [?, ?, ?, ?] (see also the survey [?]) and the logarithmic derivative estimate ([?], [?], [?]). On one hand, there is still no understanding of how one can generalize the logarithmic derivative estimate approach for fractional derivatives (cf. |?|). On the other hand, in [?] the authors succeeded in generalizing the Wiman- Valiron method for Riemann-Liouville derivatives. This allowed us to obtain sharp asymptotic growth of solutions to a special fractional linear differential equation, but not for $(??)$. The reason is that, to find an asymptotic for an $\alpha$- analytic solution of (??), one needs to generalize the Wiman-Valiron theory for Gelfond-Leontiev type derivatives (see [?], [?]). We do this in Section ??, where we prove Theorem ??, the main result of the paper. In the final section we study equation (??). Theorem ?? establishes the existence and uniqueness of a solution to the Cauchy problem for $(??)$ in the class of $\alpha$- analytic functions. This is a slight generalization of a result from ?. We then consider the case when all coefficients of $(??)$ are polynomials of $t^{\alpha}$. We prove (Theorem ??) that in this case all $\alpha$-analytic solutions are of the form $v(t^{\alpha})$ where v is an entire function of finite order of the growth. Finally, Theorem ?? gives sharp values for the order of the growth of $v$ under natural conditions on the coefficients. Auxiliary results are given in Section ??. We use the notation $a \lesssim b$ if there exists a constant $C > 0$ such that $a \leq Cb$. Similarly, $a \gtrsim b$ is understood in an analogous manner. If $a \lesssim b$ and $a \gtrsim b$, then we write $a \asymp b$ and say that a and b are comparable. Additionally, $a(t) \sim b(t)$ means that the quotient $a(t)/b(t)$ approaches one as t tends its limit. Fractional integrals and derivatives
+
+\begin{itemize}
+  \item 
+\end{itemize}
+
+Let $0 < T \le \infty$ and $L(0,T)$ be the class of all integrable functions on $(0,T)$. The Riemann-Liouville fractional derivative of order $\alpha > 0$ for $\varphi \in L(0,T)$ is defined as 
+\[ D^{\alpha}\varphi(x) = \frac{d^n}{dx^n} \{ I^{n-\alpha}\varphi(x) \}, \quad \alpha \in (n-1, n], \quad n \in \mathbb{N}, \]
+ where
+
+
+\[ I^{\alpha}\varphi(x) = \frac{1}{\Gamma(\alpha)} \int_{-\infty}^{\infty} \frac{\varphi(t) dt}{(x-t)^{1-\alpha}} \]
+
+
+
+\newpage
+
+% Page 4
+is the Riemann-Liouville fractional integral of order $\alpha > 0$ for $\varphi$, $\Gamma(\alpha)$ is the Gamma function. In particular, if $0 < \alpha < 1$, then
+
+
+\[ D^{\alpha}\varphi(x) = \frac{1}{\Gamma(1-\alpha)} \frac{d}{dx} \int_{-\infty}^{\infty} \frac{\varphi(t) dt}{(x-t)^{\alpha}}, \]
+
+
+provided that $I^{1-\alpha}\varphi$ is absolutely continuous on $(0,T)$. The fractional derivative and integral have the following property (|?|) 
+\[ I^{\alpha}x^{\beta-1} = \frac{\Gamma(\beta)}{\Gamma(\beta+\alpha)}x^{\beta+\alpha-1}, \ D^{\alpha}x^{\beta-1} = \frac{\Gamma(\beta)}{\Gamma(\beta-\alpha)}x^{\beta-\alpha-1}, \quad \alpha, \beta > 0, \alpha \neq \beta, \]
+
+
+(2)
+
+
+\[ D^{\alpha}1 = \frac{1}{\Gamma(1-\alpha)}x^{-\alpha}, \ D^{\alpha}x^{\alpha-j} = 0, \quad \alpha > 0, j \in \{1, 2, \dots, [\alpha] + 1\}. \]
+
+
+(3)
+
+We can see that, on one hand, Riemann-Liouville fractional differentiation can produce a singularity and, on the other hand, it can be defined on func- tions with a singularity at the origin. Despite this the Caputo-Djrbashian, or regularized fractional derivative
+
+
+\[ (\mathbb{D}^{\alpha}\varphi)(x) = D^{\alpha}\left(\varphi(x) - \sum_{k=0}^{n-1} \frac{\varphi^{(k)}(0)}{k!} x^{k}\right) \]
+ 
+\[ =D^{\alpha}\varphi(x)-\sum_{k=0}^{n-1}\frac{\varphi^{(k)}(0)}{\Gamma(k+1-\alpha)}x^{k-\alpha},\quad n-1<\alpha\leq n, \]
+
+
+(4)
+
+is defined on functions that are continuous with their derivatives up to order $n-1$ and vanishes on constants, which is more natural for physical applica- tions. Though the operator $I^{\alpha}$ is associative and commutative with respect to the index, i.e. $I^{\alpha} \circ I^{\beta} = I^{\beta} \circ I^{\alpha} = I^{\alpha+\beta}$, $\alpha, \beta > 0$, this is not the case for $D^{\alpha}$ and $\mathbb{D}_{\alpha}$ (see [?, Chap.IV], [?]). \textbf{Example 1.} Let $\alpha = \frac{1}{2}$, $u(t) = u_0 + u_1 t^{\frac{1}{2}} + u_2 t$, $t > 0$. Then
+
+
+\[ \mathbb{D}_{\frac{1}{2}}u(t) = u_1 \frac{\Gamma(3/2)}{\Gamma(1)} + u_2 \frac{\Gamma(2)}{\Gamma(3/2)} t^{\frac{1}{2}}, \]
+ 
+\[ \mathbb{D}^2_{\frac{1}{2}}u(t) = u_2, \]
+ 
+\[ \mathbb{D}_1 u(t) = u'(t) = \frac{1}{2} u_1 t^{-\frac{1}{2}} + u_2. \]
+
+
+
+\newpage
+
+% Page 5
+
+\newpage
+
+% Page 6
+Since $\frac{\Gamma(\alpha m+1)}{\Gamma(\alpha m+1-\gamma)} \sim (\alpha m)^{\gamma}$, $m \to \infty$, the power series under the operator $D^{\beta}$ has the same radius of convergence. Then
+
+
+\[ D^{\beta}D^{\gamma} \sum_{m=0}^{\infty} u_m t^{\alpha m} \]
+
+
+
+\[ = \sum_{m=\left[\frac{\gamma+\beta}{\alpha}\right]}^{\infty} u_m \frac{\Gamma(\alpha m+1)}{\Gamma(\alpha m+1-\gamma)} \frac{\Gamma(\alpha m-\gamma+1)}{\Gamma(\alpha m+1-\gamma-\beta)} t^{\alpha m-\gamma-\beta} = D^{\gamma+\beta} u(t). \quad (8) \]
+ The equality $D^{\gamma} \circ D^{\beta} = D^{\beta+\gamma}$ follows by exchanging the roles of $\beta$ and $\gamma$. $\square$ Let
+
+
+\[ f(z) = \sum_{n=0}^{\infty} a_n z^n, \quad z = re^{i\theta} \]
+
+
+(9)
+
+be an entire function. Let $u(t) = f(t^{\alpha}) = \sum_{n=0}^{\infty} a_n t^{\alpha n}, t > 0$. Direct compu- tation shows that 
+\[ (\mathbb{D}^{\alpha}u)(t) = \sum_{n=1}^{\infty} a_n \frac{\Gamma(n\alpha+1)}{\Gamma(n\alpha+1-\alpha)} t^{\alpha(n-1)} = (\mathcal{D}^{\alpha}f)(t^{\alpha}), \]
+
+
+(10)
+
+where
+
+
+\[ (\mathcal{D}^{\alpha}f)(z) = \sum_{n=1}^{\infty} a_n \frac{\Gamma(n\alpha+1)}{\Gamma(n\alpha+1-\alpha)} z^{n-1}, \]
+
+
+is the so-called Djrbashian-Gelfond-Leontiev operator ([?], [?]), a special case of the Gelfond-Leontiev generalized differential operator corresponding to the Mittag-Leffler function $E_{\alpha}(z) = \sum_{k=0}^{\infty} \frac{z^k}{\Gamma(k\alpha+1)}, \ \alpha > 0.$ The corresponding integral operator, right inverse to $\mathcal{D}^{\alpha}$, can be written as
+
+
+\[ (\mathcal{I}^{\alpha}f)(z) = \sum_{n=0}^{\infty} a_n \frac{\Gamma(n\alpha+1)}{\Gamma(n\alpha+1-\alpha)} z^{n+1}, \]
+
+
+with $\mathcal{I}_{\alpha}\mathcal{D}_{\alpha}f(z) = f(z) - f(0)$. We also have [?, Sec. 22.3] the integral representation
+
+
+\[ \mathcal{I}^{\alpha}f(z) = \frac{z}{\Gamma(\alpha)} \int_0^1 (1-t)^{\alpha-1} f(zt^{\alpha}) dt. \]
+
+
+It follows from (??) that ([?, Section 2.5], [?, Sec. 18.2, 22.3])
+
+$\mathcal{D}^{\alpha} = Q \circ \mathbb{D}_{\alpha} \circ Q^{-1}$.
+
+where Q is the substitution operator $z \mapsto z^{\frac{1}{\alpha}}$, $Q^{-1}$ is its inverse, for a corre- sponding branch of a multivalued power function chosen on a segment $[0, z]$. This note allows us to apply the approach used in [?] to derive Wiman-Valiron type results for the operator $\mathcal{D}^{\alpha}$.
+
+
+\newpage
+
+% Page 7
+\begin{itemize}
+  \item 
+\end{itemize}
+
+Wiman-Valiron theory For $r \in [0, +\infty)$ and an entire function f of the form (??) we denote $M(r,f) = \max\{|f(z)|: |z|=r\}$. We define the maximal term as $\mu(r,f)=$ $\max\{|a_n|r^n:n\geq 0\}$ and the central index of the series as $\nu(r,f)=\max\{n\geq 1\}$ $0: |a_n|r^n = \mu(r,f)$. Note that $\nu(r,f)$ is non-decreasing, and an entire function f is transcendental if and only if $\nu(r, f) \to +\infty$ as $r \to +\infty$. For a non-constant entire function $f$, the order $\sigma(f)$ is defined as follows:
+
+
+\paragraph{$<math display="block">\sigma(f) $:} = \textbackslash\{\}overline\{\textbackslash\{\}lim\_\{r \textbackslash\{\}to \textbackslash\{\}infty\}\} \textbackslash\{\}frac\{\textbackslash\{\}log \textbackslash\{\}log M(r, f)\}\{\textbackslash\{\}log r\} = \textbackslash\{\}overline\{\textbackslash\{\}lim\_\{r \textbackslash\{\}to \textbackslash\{\}infty\}\} \textbackslash\{\}frac\{\textbackslash\{\}log \textbackslash\{\}nu(r, f)\}\{\textbackslash\{\}log r\}.
+
+(11)
+
+Let $V$ be the class of positive continuous nondecreasing functions $v$ on $[0,+\infty)$ such that $\frac{x^2}{v(x)\ln v(x)}$ increases to $+\infty$ on $x\in[x_0;+\infty), x_0>0$, and $\int_{0}^{+\infty} \frac{dx}{v(x)} < +\infty$. For example, the function $v(x) = x \ln^{\alpha+1} x$, $(x \ge e)$, $\alpha \in (0,1)$ belongs to $V$. A measurable set $E \subset [0, \infty)$ is called of finite logarithmic measure if 
+\[ \int_{E\cap[1,\infty)}\frac{dt}{t}<\infty. \]
+ The main result of the Wiman-Valiron theory can be formulated as follows (cf. |?, Lemma 3.8|) \textbf{Theorem A.} Let $v \in V$ and $\varkappa(t) = 4\sqrt{v(t) \ln v(t)}$. Suppose that $f$ is an entire function, $|z_0| = r$, and
+
+$|f(z_0)| > M(r, f)v^{-2}(\nu(r, f)),$
+
+holds. There exists a set $E \subset \mathbb{R}_+$ of finite logarithmic measure such that if $r\left(1-\frac{1}{40\varkappa(\nu)}\right) < \rho < r\left(1+\frac{1}{40\varkappa(\nu)}\right), \quad r \notin E, \nu = \nu(r,f),$ and $q \in \mathbb{Z}_+$, then we have for $|z| = \rho$
+
+
+\[ \left(\frac{r}{\nu}\right)^q f^{(q)}(z) = f(z) + O\left(\frac{\varkappa(\nu)}{\nu}\right) M(\rho, f). \]
+
+
+In particular, if $\ln \rho - \ln r = o\left(\frac{1}{\varkappa(\nu)}\right)$ then 
+\[ M(\rho, f^{(q)}) = \left(\frac{\nu}{\rho}\right)^q \left\{ 1 + O\left(\frac{\varkappa(\nu)}{\nu}\right) \right\} M(\rho, f) = (1 + o(1)) \left(\frac{\nu}{r}\right)^q M(r, f) \]
+ as $r \to +\infty$, $r \notin E$.
+
+
+\newpage
+
+% Page 8
+The main result of [?] literally repeats Theorem ?? for arbitrary $q > 0$ and the Riemann-Liouville derivative $D^q f$ instead of $f^{(q)}$. Note that $|z|^q D^q f$ is a single-valued function of $z$. We generalize the Wiman-Valiron method for the Djrbashian-Gelfond- Leontiev fractional derivative $\mathcal{D}_{\alpha}$. \textbf{Theorem 1.} Let $v \in V$ and $\varkappa(t) = 4\sqrt{v(t) \ln v(t)}$. Suppose that $f$ is an entire function, $|z_0| = r$, and
+
+$|f(z_0)| \ge M(r, f)v^{-2}(\nu(r, f))$
+
+holds. Then there exists a set $E \subset \mathbb{R}_+$ of finite logarithmic measure such that if $r\left(1-\frac{1}{40\varkappa(\nu)}\right) < \rho < r\left(1+\frac{1}{40\varkappa(\nu)}\right), \quad r \notin E, \nu = \nu(r,f),$ $\alpha > 0$ and $j \in \mathbb{N}$, then we have for $|z| = \rho$
+
+
+\[ \mathcal{D}_{\alpha}^{j} f(z) = (\nu \alpha)^{j\alpha} \frac{f(z)}{z^{j}} + O\left(\frac{\varkappa(\nu)}{\nu}\right) \frac{M(\rho, f)}{\rho^{j}}. \]
+
+
+
+\[ (12) \]
+
+
+In particular, if $\ln \rho - \ln r = o\left(\frac{1}{\varkappa(\nu)}\right)$ then 
+\[ M(\rho, \mathcal{D}_{\alpha}^{j} f(z)) = \frac{(\nu \alpha)^{j\alpha}}{\rho^{j}} \left\{ 1 + O\left(\frac{\varkappa(\nu)}{\nu}\right) \right\} M(\rho, f) = (1 + o(1)) \frac{(\nu \alpha)^{j\alpha}}{r^{j}} M(r, f) \]
+
+
+(13)
+
+as $r \to +\infty$, $r \notin E$. Preleminaries 2 Auxiliary results from Wiman-Valiron theory 2.1 To prove Theorem ?? we need the following statements frequently used in the Wiman-Valiron theory. For $\rho \in [0; +\infty)$ we put $\mu(r, \rho, f) = |a_{\nu(r, f)}| \rho^{\nu(r, f)}$. \textbf{Lemma 2} (Lemma 3.4. [?], cf. Lemma 2 [?]). Let $v \in V$ and $\varkappa(t) =$ $4\sqrt{v(t)\ln v(t)}$. Then for any fixed positive q and for all $\rho$, $|\ln \rho - \ln r| \leq \frac{1}{\varkappa(\nu)}$, we have 
+\[ \sum_{|n-\nu|>\varkappa(\nu)} n^q |a_n| \rho^n = o\left(\frac{\nu^q \mu(r,\rho,f)}{v(\nu)^3}\right), \quad \nu = \nu(r,f), \]
+
+
+(1)
+
+as $r \to +\infty$ outside a set of finite logarithmic measure.
+
+
+\newpage
+
+% Page 9
+\textbf{Lemma 3} (Lemma 3.5. |?|, cf. Lemma 7 |?|). Suppose that P is a polynomial of degree m and $|P(z)| \leq M$ for $|z| \leq r$. Then for $R \geq r$ we have
+
+\section{
+\[ |P'(z)| \le \frac{eMmR^{m-1}}{r^m}, \quad |z| < R. \]
+}
+
+\textbf{Lemma 4} (Lemma 3.6. [?], cf. Lemma 8, [?]). Suppose that P is a polyno- mial of degree m and $|P(z)| \leq M$ for $|z| < r$. If $|z_0| \leq r$ and $|P(z_0)| \geq \eta M$, $0 < \eta \le 1$, then for $|z - z_0| \le \frac{\eta r}{8m}$ we have
+
+
+\[ \frac{1}{2}|P(z_0)| \le |P(z)| \le \frac{3}{2}|P(z_0)|. \]
+
+
+\textbf{Theorem B} ([?, Lemma 3.7], cf. [?, Theorem 10]). Let $v \in V$ and $\varkappa(t) =$ $4\sqrt{v(t)\ln v(t)}$. Suppose that f is an entire function, $|z_0|=r, r\not\in E$ a set of finite logarithmic measure,
+
+$|f(z_0)| \ge \eta M(r, f), \quad v^{-2}(\nu(r, f)) \le \eta \le 1.$
+
+Then, if $z = z_0 e^{\tau}$, $|\tau| \leq \frac{\eta}{18\varkappa(\nu)}$, $\nu = \nu(r, f)$, we have
+
+
+\[ \ln \frac{f(z)}{f(z_0)} = (\nu(r, f) + \varphi_1)\tau + \varphi_2\tau^2 + \delta(\tau), \]
+
+
+where $|\varphi_j| \le 2, 2\left(\frac{18\varkappa(\nu)}{n}\right)^j, \quad (j=1,2), \quad |\delta(\tau)| \le 8, 8\left(\frac{18\varkappa(\nu)\tau}{n}\right)^3.$ Chain rule for higher derivatives and Bell polyno- 2.2 mials Suppose that $f \circ g$ is well-defined, and there exist $f^{(n)}$ and $g^{(n)}$ at the corre- sponding points. According to Faá di Bruno's formula 
+\[ (f \circ g)^{(n)} = \sum_{j_1 + 2j_2 + \dots + nj_n = n} \frac{n!}{j_1! \cdots j_n!} f^{(j_1 + \dots + j_n)}(g) \prod_{s=1}^n \left(\frac{g^{(s)}}{s!}\right)^{j_s}. \]
+ Noting that $j_s$ is zero for $s > n - k + 1$ and combining the terms with the same values of $j_1 + j_2 + \cdots + j_{n-k+1} = k$ we arrive to the formula
+
+
+\[ (f \circ g)^{(n)} = \sum_{k=1}^{n} f^{(k)}(g) B_{nk}(g', g'', \dots, g^{(n-k+1)}) \]
+
+
+(2)
+
+
+\newpage
+
+% Page 10
+where 
+\[ B_{n,k}(z_1,\ldots,z_{n-k+1}) = \sum_{\substack{j_1+2j_2+\cdots+(n-k+1)j_{n-k+1}=n\\j_1+j_2+\cdots+j_{n-k+1}=k}} \frac{n!}{j_1!\cdots j_{n-k+1}!} \prod_{s=1}^{n-k+1} \left(\frac{z_s}{s!}\right)^{j_s}, \]
+
+
+$j_1+j_2+\cdots+j_{n-k+1}=k$
+
+(3)
+
+are called \textit{incomplete Bell polynomials}. For example, $B_{n,n}(z_1) = z_1^n$, $B_{n,n-1}(z_1, z_2) = \frac{n(n-1)}{2} z_1^{n-2} z_2$, and $B_{n,1}(z_1, \dots, z_n) = z_n$.
+
+It is convenient to define $B_{n,0} \equiv 0$. We write $B_{n,k}^*(z_1,\ldots,z_n):=B_{n,k}(|z_1|,\ldots,|z_n|)$. To estimate the Bell polynomial we need the following lemma. \textbf{Lemma 5.} For $\alpha > 0$, $n, k \in \mathbb{N}$, $n \geq k$, and $g(w) = w^{\alpha}$, we have 
+\[ B_{nk}^*(g', g'', \dots, g^{(n-k+1)}) \le (n-1)!\alpha^k(\alpha+1)\cdots(\alpha+n-k)|w|^{k\alpha-n}.  \]
+ (4) Proof of Lemma ??. Since $g^{(j)}(w) = \alpha(\alpha - 1) \cdots (\alpha - j + 1) w^{\alpha - j}$, we have
+
+$B_{n,n}(q') = \alpha^n w^{n\alpha-n}, n \in \mathbb{N},$
+
+
+\[ B_{n,n-1}(g',g'') = \frac{n(n-1)}{2}\alpha^{n-1}(\alpha-1)w^{(n-1)\alpha-n}, \ n \ge 2. \]
+ Thus, the assertion of the lemma holds for $k \in \{n-1, n\}$. To show that this is true for $1 \le k < n-1$ we use the induction in $k$. For $k = 1$ $B_{n,1}(z_1, \ldots, z_n) = z_n$, so $(w^{\alpha})^{(n)} = \alpha(\alpha - 1) \cdots (\alpha - n + 1) w^{\alpha - n}$, and the assertion follows. Assume that (??) holds for $n \leq m$ and $1 \leq k \leq n$, and $k \leq m-1$. Then 
+\[ (f \circ g)^{(m+1)} = \left(\sum_{k=1}^{m} f^{(k)}(g) B_{m,k}(g', \dots, g^{(m-k+1)})\right)' \]
+
+
+
+\[ = \sum \left( f^{(k+1)}(g)g'B_{m,k}(g',\ldots,g^{(m-k+1)}) + f^{(k)}(g)(B_{m,k}(g',\ldots,g^{(m-k+1)}))' \right) = \]
+ $k=1$ $m+1$ 
+\[ = \sum_{k=1}^{m+1} f^{(k)}(g)g'B_{m,k-1}(g',\ldots,g^{(m-k+2)}) + \sum_{k=1}^{m} f^{(k)}(g)(B_{m,k}(g',\ldots,g^{(m-k+1)}))'. \]
+ Combining this with (??) we deduce $B_{m+1,k}^*(g',\ldots,g^{(m-k+2)}) = |g'|B_{m,k-1}^*(g',\ldots,g^{(m-k+2)}) +$ 
+\[ + \sum_{j_1+2j_2+\dots+(m-k+1)j_{m-k+1}=m} \frac{m!}{j_1!\dots j_{m-k+1}!} \sum_{s=1}^{m-k+1} j_s \frac{|g^{(s+1)}|}{|g^{(s)}|} \prod_{l=1}^{m-k+1} \left(\frac{|g^{(l)}|}{l!}\right)_{(5)}^{j_l} \]
+ $j_1+j_2+\cdots+j_{m-k+1}=k$
+
+
+\newpage
+
+% Page 11
+Evidently, $\frac{|g^{(s+1)}|}{|g^{(s)}|} = \frac{|\alpha - s|}{|w|}$. Then, we have
+
+
+\[ \sum_{s=1}^{m-k+1} j_s \frac{|g^{(s+1)}|}{|g^{(s)}|} \]
+
+
+
+\[ \leq \frac{1}{|w|}(\alpha(j_1+\cdots+j_{m-k+1})+j_1+2j_2+\cdots+(m-k+j)j_{m-k+j})=\frac{\alpha k+m}{|w|}. \]
+ We rewrite (??) as follows, using the induction assumption
+
+$B_{m+1,k}^*(g',\ldots,g^{(m-k+2)})$
+
+
+\[ = |g'| B_{m,k-1}^*(g', \dots, g^{(m-k+2)}) + \frac{\alpha k + m}{|w|} B_{m,k}^*(g', \dots, g^{(m-k+1)}) \]
+ $\leq \alpha |w|^{\alpha-1} (m-1)! \alpha^{k-1} (\alpha+1) \cdots (\alpha+m-k+1) |w|^{(k-1)\alpha-m}$ $+\frac{\alpha k+m}{|w|}(m-1)!\alpha^k(\alpha+1)\cdots(\alpha+m-k)|w|^{k\alpha-m}$ $= (m-1)!|w|^{k\alpha-m-1}\alpha^k(\alpha+1)\cdots(\alpha+m-k)[\alpha+m-k+1+\alpha k+m]$ $\leq m!|w|^{k\alpha-m-1}\alpha^k(\alpha+1)\cdots(\alpha+m-k)(\alpha+m-k+1)$ as long as $\alpha k + m \leq (m-1)(\alpha + m - k + 1)$. This inequality is equivalent to $\alpha(m-k-1) \geq m-(m-1)(m-k+1)$. However, the left-hand side is nonnegative because $k \leq m-1$, while the right-hand side is nonpositive for $m \geq 2$ because $\frac{m}{m-1} \leq 2 \leq m-k+1$. The induction step is proved. The assertion of the lemma follows.
+
+Proof of Theorem ?? 3 Let $(\nu = \nu(r, f))$ $\nu_1 = \min\{n : |n - \nu| \le \varkappa(\nu)\}, \quad \nu_2 = \max\{n : |n - \nu| \le \varkappa(\nu)\}.$ By the definition of the class V, we have that $\nu/\varkappa(\nu)\uparrow+\infty$, so $\nu_1\sim\nu_2\sim\nu$ as $\nu \to +\infty$. Since $\mu(r,\rho,f) \leq \mu(\rho,f) \leq M(\rho,f)$, from Lemma ?? with $q=0$ for all $\rho$, $|\ln \rho - \ln r| \leq \frac{1}{\varkappa(\nu)}$, we obtain 
+\[ f(z) = P(z)z^{\nu_1} + o\left(\frac{\mu(r,\rho,f)}{v(\nu)^3}\right) = P(z)z^{\nu_1} + o\left(\frac{M(\rho,f)}{v(\nu)^3}\right), \quad |z| = \rho \quad (1) \]
+
+
+
+\newpage
+
+% Page 12
+as $r \to +\infty$ outside a set E of finite logarithmic measure, where
+
+
+\[ P(z) = \sum |a_n| z^{n-\nu_1}. \]
+
+
+(2)
+
+$|n-\nu| < \varkappa(\nu)$
+
+In particular, from (??) with $\rho = r$ we have $|P(z)|r^{\nu_1} \leq (1+o(1))M(r,f)$, i.e. for all sufficiently large $r \notin E$
+
+\section{$|P(z)| \le \frac{1,01M(r,f)}{r^{\nu_1}} =: M^*(r), \quad |z| = r.$}
+
+(3)
+
+We write
+
+
+\[ f(z) = P(z)z^{\nu_1} + R(z), \]
+
+
+(4)
+
+where $P(z)$ is the polynomial (??). From now on we assume that r is large enough so $\nu_1 > \max\{j, \alpha j\}$. Next, we need the asymptotic estimate of the Gamma functions (|?|) 
+\[ \frac{\Gamma(t+a)}{\Gamma(t+b)} = t^{a-b} \left( 1 + O\left(\frac{1}{t}\right) \right), \quad t \to +\infty, \quad b, a \in \mathbb{R}. \]
+
+
+(5)
+
+First, we estimate the fractional derivative of order $\alpha$ for $R(z)$. From Remark ?? and Lemma ?? we have 
+\[ |\mathcal{D}_{\alpha}^{j}R(z)| = \left| \sum_{|n-\nu| > \varkappa(\nu), n>j} \frac{\Gamma(1+n\alpha)}{\Gamma(1+n\alpha-j\alpha)} a_{n} \rho^{n-j} e^{in\theta} \right| \]
+ 
+\[ \leq C \sum_{n \in \mathbb{N}} (n\alpha)^{j\alpha} |a_n| \rho^{n-j} = o\left(\frac{\nu^{j\alpha}\mu(r,\rho,f)}{\rho^j v(\nu)^3}\right), \quad r \to \infty, r \notin E. \quad (6) \]
+ where E is a set of finite logarithmic measure, $C = \sup\{2, \frac{\Gamma(n+1)}{\Gamma(n\alpha+1-j\alpha)}n^{-j\alpha}\}.$ Repeated application of Lemma ?? shows that for any $q \in \mathbb{Z}_+$ and $|z| = \rho$ we have that
+
+$|P^{(q)}(z)| = O\left(\left(\frac{\varkappa(\nu)}{r}\right)^q\right)M^*(r).$
+
+In fact,
+
+$|P'(z)| \le \frac{eM^*(r)2\varkappa(\nu)\rho^{\nu_2-\nu_1-1}}{r^{\nu_2-\nu_1}}$
+
+
+\[ \leq \frac{2eM^*(r)\varkappa(\nu)}{\rho} \left(1 + \frac{1}{40\varkappa(\nu)}\right)^{2\varkappa(\nu)} = O\left(\frac{\varkappa(\nu)}{r}M^*(r)\right). \]
+ 
+\[ |P^{(j)}(z)| \le \frac{e \max\{|P^{(j-1)}(z)|\}(2\varkappa(\nu) - j)\rho^{\nu_2 - \nu_1 - j - 1}}{r^{\nu_2 - \nu_1 - j}} = O\left(\left(\frac{\varkappa(\nu)}{r}\right)^j M^*(r)\right). \]
+
+
+
+\newpage
+
+% Page 13
+We need the generalization Leibniz's formula for fractional derivatives in order to estimate the fractional derivative of the first summand in (??). Let $f(x)$ and $g(x)$ be analytic functions on $[a,b]$. Then, according to ([?], p.216)
+
+
+\[ D^{q}(f \cdot g) = \sum_{k=0}^{+\infty} {q \choose k} (D^{q-k}f)g^{(k)}, \]
+
+
+(8)
+
+where $\binom{q}{k} = \frac{(-1)^k q \Gamma(k-q)}{\Gamma(1-q)\Gamma(k+1)}$.
+
+Taking into account Remark?? and Lemma?? we deduce
+
+
+\[ \mathcal{D}_{\alpha}^{j}(z^{\nu_{1}}P(z)) = Q(\mathbb{D}_{\alpha}^{j}(Q^{-1}(z^{\nu_{1}}P(z)))) \]
+ $= Q((D^{\alpha})^{j}(w^{\alpha\nu_{1}}P(w^{\alpha}))) = Q(D^{\alpha j}(w^{\alpha\nu_{1}}P(w^{\alpha}))).$
+
+(9)
+
+In the following arguments we consider a branch of the power function chosen on the segment $[0, w]$ emanating from the origin. Using (??) and (??) we obtain 
+\[ \mathcal{D}_{\alpha}^{j}(z^{\nu_{1}}P(z)) = Q(D^{j\alpha}(w^{\alpha\nu_{1}}P(w^{\alpha}))) = Q\left(\sum_{n=0}^{+\infty} \binom{j\alpha}{m} D^{j\alpha-m}w^{\alpha\nu_{1}}(P(w^{\alpha}))^{(m)}\right) \]
+
+
+
+\[ = Q \left( \sum_{m=0}^{\infty} {j\alpha \choose m} \frac{\Gamma(\alpha\nu_1 + 1)}{\Gamma(\alpha\nu_1 + 1 - j\alpha + m)} w^{\alpha\nu_1 + m - j\alpha} \right) \]
+ 
+\[ \times \sum^{m} P^{(k)}(w^{\alpha}) B_{m,k}((w^{\alpha})', \dots, (w^{\alpha})^{(m-k+1)})  \]
+ $k=0$ 
+\[ =\frac{\Gamma(\alpha\nu_1+1)}{\Gamma(\alpha\nu_1+1-i\alpha)}z^{\nu_1-j}P(z) \]
+ 
+\[ +Q\left(\sum_{m=1}^{\infty} {j\alpha \choose m} \frac{\Gamma(\alpha\nu_1+1)}{\Gamma(\alpha\nu_1+1-j\alpha+m)} w^{\alpha\nu_1+m-j\alpha}\right) \]
+ m $\times \sum_{k=1}^{m} P^{(k)}(w^{\alpha}) B_{m,k}((w^{\alpha})', \dots, (w^{\alpha})^{(m-k+1)})$ $k=1$ 
+\[ =: \frac{\Gamma(\alpha\nu_1+1)}{\Gamma(\alpha\nu_1+1-j\alpha)} z^{\nu_1-j} P(z) + \tilde{R}(z). \]
+
+
+
+\newpage
+
+% Page 14
+Applying Lemma ?? we get 
+\[ |\tilde{R}(z)| \le Q \left( \sum_{m=1}^{\infty} \left| {j\alpha \choose m} \right| \frac{\Gamma(\alpha\nu_1 + 1)}{\Gamma(\alpha\nu_1 + 1 - j\alpha + m)} |w|^{\alpha\nu_1 + m - j\alpha} \]
+ 
+\[ \times \sum_{k=1}^{m} |P^{(k)}(w^{\alpha})| \alpha^{k}(\alpha+1) \cdots (\alpha+m-k) |w|^{k\alpha-m}  \]
+ 
+\[ = \sum_{i=1}^{\infty} \frac{j\alpha |\Gamma(m-j\alpha)|}{|\Gamma(1-j\alpha)|\Gamma(m+1)} \frac{\Gamma(\alpha\nu_1+1)}{\Gamma(\alpha\nu_1+1-j\alpha+m)} |z|^{\nu_1-j} \]
+ 
+\[ \times \sum |P^{(k)}(z)| \alpha^k (\alpha+1) \cdots (\alpha+m-k) |z|^k \]
+
+
+
+\[ =\frac{\alpha j \Gamma(\alpha \nu_1+1)|z|^{\nu_1-j}}{\Gamma(\alpha)|\Gamma(1-j\alpha)|} \sum_{k=1}^{2\varkappa(\nu)} |P^{(k)}(z)|\alpha^k|z|^k \sum_{m=k}^{\infty} \frac{|\Gamma(m-j\alpha)|\Gamma(\alpha+m-k+1)}{\Gamma(m+1)\Gamma(\alpha\nu_1+1-j\alpha+m)}. \]
+ Let $b_m = \frac{|\Gamma(m-j\alpha)|\Gamma(\alpha+m-k+1)}{\Gamma(m+1)\Gamma(\alpha\nu_1+1-j\alpha+m)}$. To estimate the sum $\sum_{m=k}^{\infty}$ we consider two cases. First, let $k \leq m \leq [2\alpha\nu_1]$. Then 
+\[ \frac{b_{m+1}}{b_m} = \frac{|m - j\alpha|}{m+1} \frac{\alpha + m - k + 1}{\alpha \nu_1 + m + 1 - j\alpha} < \frac{2\alpha \nu_1 + \alpha - k + 1}{3\alpha \nu_1 + 1 - j\alpha} < \frac{3}{4}, \quad \nu \to \infty. \]
+ So,
+
+
+\[ \sum_{m=k}^{[2\alpha\nu_1]} b_m < 4b_k = 4 \frac{|\Gamma(k-j\alpha)|\Gamma(\alpha+1)}{\Gamma(k+1)\Gamma(\alpha\nu_1+1-j\alpha+k)}. \]
+
+
+
+\[ (11) \]
+
+
+Second, if $m > 2\alpha\nu_1$, then using Stirling's formula [?, Sec. 12.33]
+
+$\Gamma(x) = x^{x - \frac{1}{2}} e^{-x} \sqrt{2\pi} e^{\frac{\theta(x)}{12x}}, \quad \theta(x) \in (0, 1), \ x \to +\infty,$
+
+(12)
+
+we deduce
+
+
+\[ \frac{\Gamma(\alpha+m-k+1)}{\Gamma(\alpha\nu_1+1-j\alpha+m)} \]
+
+
+
+\[ = \frac{(\alpha + m - k + 1)^{\alpha + m - k + \frac{1}{2}}}{e^{\alpha + m - k + 1}} \frac{e^{\frac{\theta_1}{12(\alpha + m - k + 1)}}}{e^{\frac{\theta_2}{12(\alpha \nu_1 + m - j\alpha + 1)}}} \frac{e^{\alpha \nu_1 + m - j\alpha + 1}}{(\alpha \nu_1 + m - j\alpha + 1)^{\alpha \nu_1 + m - j\alpha + \frac{1}{2}}} \]
+ 
+\[ = \frac{e^{\alpha \nu_1 \]
+
+
+
+\newpage
+
+% Page 15
+Applying the inequality $e \leq \left(1 + \frac{1}{y}\right)^{y+1}$, $y > 1$ in the form $e^{\gamma} \leq \left(1 + \frac{\gamma}{x}\right)^{x+\gamma}$, $\gamma < x$ with $x = \alpha + m - k + 1$ and $\gamma = \alpha \nu_1 + k - (j+1)\alpha$, we obtain 
+\[ \frac{\Gamma(\alpha + m - k + 1)}{\Gamma(\alpha \nu_1 + 1 - j\alpha + m)} \le 2 \frac{(\alpha \nu_1 + m + 1 - j\alpha)^{\frac{1}{2}}}{(\alpha + m - k + 1)^{\alpha \nu_1 + k - (j+1)\alpha + \frac{1}{2}}}. \]
+
+
+
+\[ (13) \]
+
+
+Thus, for $m > 2\alpha\nu_1$ we have that 
+\[ b_m \asymp \frac{1}{m^{j\alpha+1}} \frac{m^{\frac{1}{2}}}{(m+o(1))^{\alpha\nu_1+k-(j+1)\alpha+\frac{1}{2}}} = \frac{1}{(m+o(1))^{\alpha\nu_1+k-\alpha+1}}, \quad \nu_1 \to \infty. \]
+ Then 
+\[ \sum_{m=[2\alpha\nu_1]+1}^{\infty} b_m \le \int_{2\alpha\nu_1}^{\infty} \left(\frac{2}{x}\right)^{\alpha\nu_1+k-\alpha+1} dx = \frac{2}{\alpha\nu_1+k-\alpha} \frac{1}{(\nu_1\alpha)^{\alpha\nu_1+k-\alpha}}. \]
+ We now show that the last term is infinitely small with respect to $b_k$ as $\nu \to \infty$. In fact, using Stirling's formula we deduce that
+
+
+\[ \frac{1}{b_k(\alpha\nu_1+k-\alpha)}\frac{1}{(\nu_1\alpha)^{\alpha\nu_1+k-\alpha}} \]
+
+
+
+\[ \lesssim k^{j\alpha+1} \left( \frac{\alpha\nu_1 + k + 1 - j\alpha}{e} \right)^{\alpha\nu_1 + k + 1 - j\alpha} \frac{(\alpha\nu_1 + k + 1 - j\alpha)^{-\frac{1}{2}}}{(\alpha\nu_1 + k - \alpha)(\nu_1\alpha)^{\alpha\nu_1 + k - \alpha}} \]
+ 
+\[ \lesssim \frac{1}{(e+o(1))^{\alpha\nu_1+k-j\alpha}} \frac{k^{j\alpha+1}}{(\alpha\nu_1+k-j\alpha)^{\frac{1}{2}+(j-1)\alpha}} = o(1), \quad \nu \to \infty. \]
+ Finally,
+
+
+\[ \sum_{k=1}^{\infty} b_m \lesssim b_k = \frac{|\Gamma(k-j\alpha)|}{\Gamma(k+1)} \frac{\Gamma(\alpha+1)}{\Gamma(\alpha\nu_1+1+k-j\alpha)}. \]
+
+
+(14)
+
+Taking into account (??), (??) and (??) we obtain 
+\[ \left| \tilde{R}(z) \right| \lesssim |z|^{\nu_1 - j} \left| \sum_{k=1}^{2\varkappa(\nu)} \frac{|\Gamma(k - j\alpha)|}{\Gamma(k+1)} \frac{\Gamma(\alpha\nu_1 + 1)}{\Gamma(\alpha\nu_1 + 1 + k - j\alpha)} \alpha^k |z|^k P^{(k)}(z) \right| \]
+
+
+
+\[ \lesssim |z|^{\nu_1 - j} \sum_{k=1}^{2\varkappa(\nu)} (\varkappa(\nu)\alpha)^k \left(\frac{\rho}{r}\right)^k \frac{M^*(r)}{(\alpha\nu_1)^{k - j\alpha}} \]
+
+
+
+\[ \lesssim |z|^{\nu_1 - j} (\alpha \nu_1)^{j\alpha} \sum_{k=1}^{2\varkappa(\nu)} \left(\frac{\varkappa(\nu)\rho}{r\nu_1}\right)^k M^*(r) \lesssim |z|^{\nu_1 - j} (\alpha \nu_1)^{j\alpha} \frac{\varkappa(\nu)}{\nu} M^*(r) \]
+
+
+
+\newpage
+
+% Page 16
+Therefore, in view of (??) and the previous estimate we have 
+\[ \mathcal{D}_{\alpha}^{j}(f(z)) = \frac{\Gamma(\alpha\nu_{1}+1)}{\Gamma(\alpha\nu_{1}+1-j\alpha)} z^{\nu_{1}-j} P(z) + O\left(\frac{\varkappa(\nu)}{\nu}\right) \rho^{\nu_{1}} \nu^{j\alpha} \frac{M^{*}(r)}{\rho^{j}} \]
+ 
+\[ = \frac{\Gamma(\alpha\nu_1 + 1)}{\Gamma(\alpha\nu_1 + 1 - i\alpha)} \left( \frac{f(z)}{z^j} + o\left(\frac{\mu(r, \rho, f)}{\sigma^j \nu(\nu)^3}\right) + O\left(\frac{\varkappa(\nu)}{\nu} \frac{M^*(r)}{\sigma^j} \rho^{\nu_1}\right) \right). \tag{15} \]
+ Since $\frac{1}{v(t)^3} = o\left(\frac{\varkappa(t)}{t}\right)$, $t \to +\infty$, using (??) and (??) we obtain for $|z| = \rho$
+
+$\mathcal{D}_{\alpha}^{j} f(z)$
+
+
+\[ = \frac{\Gamma(\nu_1 \alpha + 1)}{\Gamma(\nu_1 \alpha + 1 - j\alpha)} \left( \frac{f(z)}{z^j} + o\left(\frac{\varkappa(\nu)}{\nu} \frac{M(\rho, f)}{\rho^j}\right) + O\left(\frac{\varkappa(\nu)}{\nu} \frac{M(r, f)}{\rho^j} \left(\frac{\rho}{r}\right)_{(16)}^{\nu_1} \right) \right) \]
+ when $r \to +\infty$ outside a set of finite logarithmic measure. Next we choose $z_0$ so that $|f(z_0)| = M(r, f)$ and take $\eta = 1$, $\tau = \ln(\rho/r)$. Then, by Lemma ??, we have $\ln \left| f\left(\frac{\rho}{r}z_0\right) \right| = \ln |f(z_0)| + \nu\tau + O(1), \quad |\tau| \le \frac{1}{18\varkappa(\nu)},$ so that
+
+$\ln M(\rho, f) > \ln M(r, f) + \nu \ln(\rho/r) + O(1)$
+
+and, since $(\rho/r)^{\nu_1-\nu} = \exp\{\tau(\nu_1-\nu)\} = O(1)$, we have 
+\[ \left(\frac{\rho}{r}\right)^{\nu_1} M(r,f) = \left(\frac{\rho}{r}\right)^{\nu} \left(\frac{\rho}{r}\right)^{\nu_1 - \nu} M(r,f) = O\left(\left(\frac{\rho}{r}\right)^{\nu} M(r,f)\right) = O(M(\rho,f)). \]
+ Thus, (??) yields 
+\[ \mathcal{D}_{\alpha}^{j} f(z) = \frac{\Gamma(\nu_{1}\alpha + 1)}{\Gamma(\nu_{1}\alpha + 1 - j\alpha)} \left( \frac{f(z)}{z^{j}} + O\left( \frac{\varkappa(\nu)}{\nu} \frac{M(\rho, f)}{\rho^{j}} \right) \right). \]
+
+
+
+\[ (17) \]
+
+
+From (??) we have 
+\[ \frac{\Gamma(\nu_1\alpha+1)}{\Gamma(\nu_1\alpha+1-j\alpha)} = (\nu\alpha)^{j\alpha} \left(1+O\left(\frac{1}{\nu}\right)\right), \quad \nu \to +\infty. \]
+
+
+(18)
+
+Therefore, (??) implies 
+\[ \mathcal{D}_{\alpha}^{j} f(z) = (\nu \alpha)^{j\alpha} \left( 1 + O\left(\frac{1}{\nu}\right) \right) \left( \frac{f(z)}{z^{j}} + O\left(\frac{\varkappa(\nu)}{\nu} \frac{M(\rho, f)}{\rho^{j}}\right) \right) \]
+ 
+\[ = (\nu \alpha)^{j\alpha} \left( \frac{f(z)}{z} + O\left( \frac{\varkappa(\nu)}{\nu} \frac{M(\rho, f)}{\rho^j} \right) \right) \]
+
+
+
+\newpage
+
+% Page 17
+when $r \to +\infty$ outside a set of finite logarithmic measure, which is (??). We then choose z in (??) to maximise $|f(z)|$ and $|\mathcal{D}^{\alpha}f(z)|$ and deduce that
+
+$M(\rho, \mathcal{D}_{\alpha}^{j} f) = \left(1 + O\left(\frac{\varkappa(\nu)}{\nu}\right)\right) \frac{(\nu\alpha)^{j\alpha}}{\rho^{j}} M(\rho, f).$ To complete the proof of (??) it remains to show that
+
+$\ln M(\rho, f) = \ln M(r, f) + \nu \ln(\rho/r) + o(1).$
+
+To see this we note that $(??)$ and $(??)$ yield for our range of $\rho$
+
+$\ln M(\rho, f) = \nu_1 \ln \rho + \ln M(\rho, P) + o(1).$
+
+On the other hand it follows from Lemma?? that $M(\rho, P) = M(r, P) \left( 1 + O\left(\frac{(\rho - r)\varkappa(\nu)}{r}\right) \right) \sim M(r, P)$ if $\varkappa(\nu) \ln(\rho/r) = o(1)$. The second equality of (??) now follows, completing the proof of Theorem ??. $\alpha$-analyticity of soultions for $(??)$ 4 Using the Cauchy method of majorant series, we prove the existence and uniqueness of a solution to (??). \textbf{Theorem 2.} The equation (??) where $p_k(x) = \sum_{m=0}^{\infty} p_{mk} x^{m\alpha}, x \in [0, \rho_k)$ are $\alpha$-analytic, $k \in \{0, \ldots, n-1\}$ with the initial conditions
+
+$y(0) = b_0, \ \mathbb{D}_{\alpha} y(0) = b_1, \dots, \mathbb{D}_{\alpha}^{n-1} y(0) = b_{n-1},$
+
+(1)
+
+has the unique $\alpha$-analytic solution $y(x) = \sum_{m=0}^{\infty} a_m x^{m\alpha}$, $x \in [0, \rho)$, where 
+\[ \rho = \min\{\rho_0, \dots, \rho_{n-1}\}. \]
+ \textbf{Proof of Theorem ??.} In our notation we have the representation for the fractional derivative of a formal solution due to Remark??
+
+
+\[ \mathbb{D}_{\alpha}^{k}y(x) = \sum_{m=0}^{\infty} a_{m+k} \frac{\Gamma((m+k)\alpha+1)}{\Gamma(m\alpha+1)} x^{m\alpha}. \]
+
+
+(2)
+
+
+\newpage
+
+% Page 18
+This yields $\mathbb{D}_{\alpha}^{k}y(0)=a_{k}\Gamma(k\alpha+1)$. Hence, $a_{k}=b_{k}/\Gamma(k\alpha+1), k\in\{0,\ldots,n-1\}$
+
+\begin{itemize}
+  \item Substituting (??) into (??) we obtain
+\end{itemize}
+
+
+\[ \sum_{m=0}^{\infty} a_{m+n} \frac{\Gamma((m+n)\alpha+1)}{\Gamma(m\alpha+1)} x^{m\alpha} \]
+
+
+
+\[ =-\sum_{k=0}^{n-1}\left(\sum_{m=0}^{\infty}p_{mk}x^{m\alpha}\sum_{m=0}^{\infty}a_{m+k}\frac{\Gamma((m+k)\alpha+1)}{\Gamma(m\alpha+1)}x^{m\alpha}\right) \]
+ 
+\[ = -\sum_{m=1}^{m-1} x^{m\alpha} \sum_{m=1}^{m} a_{s+k} \frac{\Gamma((s+k)\alpha+1)}{\Gamma(s\alpha+1)} p_{m-s,k}. \]
+
+
+(3)
+
+Equating the coefficients of the same degree in (??), we write 
+\[ a_{m+n} \frac{\Gamma((m+n)\alpha+1)}{\Gamma(m\alpha+1)} = -\sum_{k=0}^{n-1} \sum_{s=0}^{m} a_{s+k} p_{m-s,k} \frac{\Gamma((s+k)\alpha+1)}{\Gamma(s\alpha+1)}, \quad m \in \mathbb{Z}_+. \]
+
+
+(4)
+
+Let $r \in (0, \rho)$. Then there exists $M > 0$ such that
+
+$|p_{j,k}| \le \frac{M}{n^{j\alpha}}, \quad j \in \mathbb{Z}_+, \ k \in \{0, 1, \dots, n-1\}.$
+
+(5)
+
+\textbf{Lemma 6.} Under the above conditions the following estimate for the coeffi- cients is valid
+
+
+\[ |a_p| \le \beta_p \prod_{i=1}^{p-1} \left( \frac{1}{r^{\alpha}} + \beta_j \right) \]
+
+
+(6)
+
+for some positive sequence $(\beta_p)$ such that $\beta_p \to 0$ as $p \to \infty$, where $\prod c_j := 1$.
+
+$j\in\varnothing$
+
+In particular, $\lim_{n\to\infty} \sqrt[p]{|a_p|} \le r^{-\alpha}$.
+
+Proof of Lemma??. It follows from properties of the Gamma-function that 
+\[ \frac{\Gamma(m\alpha+1)}{\Gamma((m+n)\alpha+1)} \le \frac{M_1}{(m\alpha+1)^{n\alpha}} =: \gamma_m, \quad m \in \mathbb{Z}_+, n \in \mathbb{N} \]
+ and 
+\[ \frac{\Gamma((s+k)\alpha+1)}{\Gamma(s\alpha+1)} \le M_2((s+k)\alpha+1)^{k\alpha} =: \delta_{s,k}, \quad s,k \in \mathbb{Z}_+, n \in \mathbb{N}.  \]
+ (8) The values $\beta_0, \ldots, \beta_{n-1}$ are chosen recursively so that the equality in (??) holds, i.e.
+
+$\beta_0 = |a_0|, \ \beta_1 = |a_1|, \ |a_2| = \beta_2(r^{-\alpha} + \beta_1), \dots, |a_{n-1}| = \beta_{n-1} \prod_{j=1}^{n-2} \left(\frac{1}{r^{\alpha}} + \beta_j\right).$
+
+
+\newpage
+
+% Page 19
+
+\newpage
+
+% Page 20
+Substituting this estimate into (??) we get
+
+
+\[ |a_{m+n}| \le \gamma_m M \sum_{k=0}^{n-1} \delta_{m,k} \prod_{j=1}^{k+m} \left( \frac{1}{r^{\alpha}} + \beta_j \right) \]
+ 
+\[ \leq M_1 M_2 \sum_{k=0}^{n-1} \frac{((m+k)\alpha+1)^{k\alpha}}{(m\alpha+1)^{n\alpha}} \prod_{i=1}^{k+m} \left(\frac{1}{r^{\alpha}} + \beta_j\right) \]
+ $\leq M M_1 M_2 \max_{0 \leq k \leq n-1} \prod_{i=1}^{k+m} \left(\frac{1}{r^{\alpha}} + \beta_j\right) \sum_{k=0}^{n-1} \frac{C}{(m\alpha+1)^{(n-k)\alpha}}$ 
+\[ \leq \frac{nMM_1M_2C}{(m\alpha+1)^{\alpha}} \prod_{j=1}^{m} \left(\frac{1}{r^{\alpha}} + \beta_j\right) \max_{0 \leq k \leq n-1} \prod_{j=m+1}^{k+m} \left(\frac{1}{r^{\alpha}} + \beta_j\right) \]
+ 
+\[ = \frac{nMM_1M_2C}{(m\alpha+1)^{\alpha}} \frac{\prod_{j=1}^{m+n-1} \left(\frac{1}{r^{\alpha}} + \beta_j\right)}{\min_{0 \le k \le n-1} \prod_{j=m+k+1}^{m+n-1} \left(\frac{1}{r^{\alpha}} + \beta_j\right)} = \beta_{m+n} \prod_{j=1}^{m+n-1} \left(\frac{1}{r^{\alpha}} + \beta_j\right), \]
+ where $C = \sup_{m \in \mathbb{Z}_+} \left( \frac{(m+n-1)\alpha+1}{m\alpha+1} \right)^{n-1}$. Since the product in the denominator is uniformly in $m$ bounded from above and separated from zero, the induction step is proved. \textbf{Theorem 3.} If all coefficients $P_j$ of $(??)$ are polynomials, then all $\alpha$- analytic soultions have the form $v(t^{\alpha})$ where v is an entire function of finite order of the growth. \textit{Proof of Theorem} ??. By Theorem ??, there is an entire function v such that $y(t) = v(t^{\alpha})$ is the unique solution to the Cauchy problem (??), (??). By Theorem ??, there exists a set $E \subset [1, \infty)$ of finite logarithmic measure such that
+
+
+\[ \mathcal{D}_{\alpha}^{j}v(z) = (\nu(r,v)\alpha)^{j\alpha} \frac{v(z)}{z^{j}} (1+o(1)), \quad |z| \notin E, \]
+
+
+(10)
+
+where z satisfies $M(|z|, v) = |v(z)|$. Let $c_i z^{d_j}$ be the leading coefficient of $P_i(z), j \in \{0, \ldots, n-1\}$. Substi- tuting (??) into (??) and dividing by $v(z)$ we obtain $(\nu = \nu(|z|, v))$ 
+\[ (1+o(1))\frac{(\nu\alpha)^{n\alpha}}{z^n} + (c_{n-1}+o(1))z^{d_{n-1}}\frac{(\nu\alpha)^{(n-1)\alpha}}{z^{n-1}} + \dots \]
+ 
+\[ +(c_1 + o(1))z^{d_1} \frac{(\nu\alpha)^{\alpha}}{z} + (c_0 + o(1))z^{d_0} = 0 \]
+
+
+or
+
+$(\nu\alpha)^{n\alpha} + (c_{n-1} + o(1))z^{d_{n-1}+1}(\nu\alpha)^{(n-1)\alpha} + \dots$ $+(c_1+o(1))z^{d_1+n-1}(\nu\alpha)^{\alpha}+(c_0+o(1))z^{d_0+n}=0.$
+
+(11)
+
+
+\newpage
+
+% Page 21
+Considering the term $(\nu\alpha)^{\alpha}$ as an unknown variable, by [?, Lemma 1.3.1] we deduce that
+
+$(\nu \alpha)^{\alpha} \le 1 + \max_{0 \le k \le n-1} |c_k + o(1)| r^{d_k + n - k}, \quad r \notin E.$
+
+To finish the proof of Theorem ?? we need one more lemma. \textbf{Lemma 7} ([?, Lemma 1.1.2]). Let $g: (0, +\infty) \to \mathbb{R}$, $h: (0, +\infty) \to \mathbb{R}$ be monotone increasing functions such that $g(r) \leq h(r)$ outside an exceptional set E of finite logarithmic measure. Then, for any $\gamma > 1$, there exists $r_0 > 0$ such that $g(r) \leq h(r^{\gamma})$ holds for all $r > r_0$. Applying this lemma we deduce that $\nu(r,v) = O(r^{\sigma})$ as $r \to \infty$, where $\sigma > \frac{1}{\alpha} \max_{0 \le k \le n-1} (d_k + n - k)$. As a consequence, the order $\sigma(v)$ does not exceed this number. The theorem is proved. \textbf{Theorem 4.} Let $P_j$ be polynomials of degree $d_j = \deg P_j$, $j \in \{0, \ldots, n-1\}$, $p_0 \not\equiv 0$, and $\max_{0 \leq k \leq n-1} \frac{d_k}{n-k} = \frac{d_0}{n}$. Then all non-trivial $\alpha$-analytic solutions u of the equation (??) has the form $u(t) = f(t^{\alpha}), t \geq 0$, where the order of an entire function f is $\rho(f) = \frac{1}{2} \left(1 + \frac{d_0}{n}\right)$. Proof of Theorem ??. First, we show that
+
+
+\paragraph{$<math>\sigma(f) \le \sigma_0 $:} = \textbackslash\{\}frac\{1\}\{\textbackslash\{\}alpha\} \textbackslash\{\}max\_\{0 \textbackslash\{\}le k \textbackslash\{\}le n-1\} \textbackslash\{\}left( \textbackslash\{\}frac\{d\_k\}\{n-k\} + 1 \textbackslash\{\}right).
+
+Suppose the contrary. Then, by (??) there exists $\eta > 0$ and a sequence of positive numbers $(r_n)$ tending to $+\infty$ such that $1 < r_m < r_{m+1}/2$ with $\nu(r_m) \geq r_m^{\sigma_0 + \eta}$. Let $F = \bigcup_{m=1}^{\infty} [r_m, 2r_m]$. Clearly, F has infinite logarithmic measure. Moreover, for $r \in F$, we have that $r \in [r_m, 2r_m]$ for some $m = m(r)$. Since $\nu(r)$ is non-decreasing,
+
+
+\[ \nu(r) \ge \nu(r_m) \ge r_m^{\sigma_0 + \eta} \ge \frac{r^{\sigma_0 + \eta}}{2^{\sigma_0 + \eta}}, \quad r \in F. \]
+
+
+(12)
+
+Therefore, for $r \in F \setminus E$, which is of infinite logarithmic measure, and, in particular, unbounded, we have that (??) holds. Note that for every $j \in \{1, \ldots, n-1\}$ and $\varepsilon > 0$ the following estimates are valid 
+\[ (c_j + o(1))|z|^{d_j + n - j} (\nu \alpha)^{\alpha j} \le (c_j \alpha^{j\alpha} + o(1))r^{d_j + n - j + \alpha j(\sigma_0 + \varepsilon)} \]
+ 
+\[ \leq (c_{i}\alpha^{j\alpha} + o(1))r^{\frac{\alpha(n-j)}{\alpha}\left(\frac{d_{j}}{n-j}+1\right) + \alpha j(\sigma_{0}+\varepsilon)} \leq (c_{i}\alpha^{j\alpha} + o(1))r^{\alpha\sigma_{0}\left(n + \frac{\varepsilon}{\sigma_{0}j}\right)}. \]
+ That is, (??) becomes
+
+$(\nu\alpha)^{n\alpha} + O(r^{\alpha\sigma_0(n + \frac{\varepsilon}{\sigma_0 j})}) = 0, \quad r \in F \setminus E,$
+
+
+\newpage
+
+% Page 22
+which contradicts (??) provided that $\varepsilon \in (0, \eta n)$. Thus, $\sigma(f) \leq \sigma_0$. We now prove the converse inequality. It follows directly from [?, Lemma $4.2$ that
+
+$n - k + d_k + ks < d_0 + ns, \quad k \in \{1, \dots, n\},$
+
+where $\frac{d_0}{n} = \max_{0 \le k \le n-1} \frac{d_k}{n-k}$ for any real $s < \sigma_0 \alpha$. That is $\nu(r) = O(r^{\sigma})$, $\sigma < \sigma_0$ is also impossible, because in this case (??) can be rewritten in the form $(c_0 + o(1))z^{d_0} = 0$. The theorem is proved. References Beghin, L., Caputo, M.: Commutative and associative properties of the Caputo fractional derivative and its generalizing convolution operator. Commun. Nonlinear Sci. Numer. Simulat. 89 105338 (2020)
+
+\section{2 Chikriy, A.A., Matychyn, I.I.: Presentation of solutions of linear systems}
+
+with fractional derivatives in the sense of Riemann-Liouville, Caputo and Miller-Ross. Problems of Control and Informatics (3), 133–143 (2008). (in Russian)
+
+\section{3 Chyzhykov, I., Gundersen, G. G., Heittokangas, J.: Linear differential}
+
+equations and logarithmic derivative estimates. Proc. London Math. Soc. (3) \textbf{86}, 735–754 (2003) [4] Chyzhykov, I., Heittokangas, J., Rättyä, J.: On the finiteness of $\varphi$-order of solutions of linear differential equations in the unit disc. J. d'Analyse Math. \textbf{109} (1), 163–196 (2009) [5] Chyzhykov, I., Heittokangas, J., Rättyä, J.: Sharp logarithmic deriva- tive estimates with applications to ODE's in the unit disc. J. Austr. Math. Soc. 88, 145–167 (2010) [6] Chyzhykov, I.E., Semochko N.S.: On estimates of a fractional counter- part of the logarithmic derivative of a meromorphic function. Mat. Stud. \textbf{39} (1), 107–112 (2013) [7] Chyzhykov, I.E., Semochko N.S.: Generalization of the Wiman-Valiron method for fractional derivatives. Int. J. Appl. Math. 29 (2), 19–30 (2016)
+
+\section{8 Djrbashian, M. M.: Integral Transformations and Representations of}
+
+Functions in a Complex Domain. Nauka, Moscow (1966). (in Russian)
+
+\section{9 Djrbashian, M. M., Nersesian, A. B.: Fractional derivatives and the}
+
+Cauchy problem for differential equations of fractional order. Izv. Akad. Nauk Arm. SSR. Ser. Matem. 3 (1), 3–29 (1968). (in Russian)
+
+
+\newpage
+
+% Page 23
+[10] Gundersen, G. Estimates for the logarithmic derivative of a meromor- phic function, plus similar estimates. J. London Math. Soc. (2) 37, 88–104 (1988)
+
+\section{11 Gundersen, G. G., Steinbart, E. M., Wang, S.: The possible orders}
+
+of solutions of linear differential equations with polynomial coefficients. Trans. Amer. Math. Soc. \textbf{350} (3), 1225–1247 (1998)
+
+\section{12 Hayman, W. K.: The local growth of power series: a survey of the}
+
+Wiman-Valiron method. Canad. Math. Bull. Vol. \textbf{17} (3), 317–358 (1974) [13] Kilbas, A. A., Rivero, M., Rodríguez-Germá, L., Trujillo, J. J.: $\alpha$- Analitic solutions of some linear fractional differential equations with variable coefficients. Appl. Math. Comput. 187, 239–249 (2007) [14] Kilbas, A. A., Srivastava, H. M., Trujillo, J. J.: Theory and Applications of Fractional Differential Equations. Elsevier, Amsterdam (2006). [15] Kiryakova, V.: Generalized Fractional Calculus and Applications. Long- man (Pitman Res. Notes in Math. Ser. 301), Harlow (1994).
+
+\section{16 Kiryakova, V.: Multiindex Mittag-Leffler functions, related Gelfond-}
+
+Leontiev operators and Laplace type integral transforms. Fract. Calc. Appl. Anal. 2 (4), 445–462 (1999) | 17 | Kochubei, A. N.: Fractional differential equations: $\alpha$-entire solutions, regular and irregular singularities, Fract. Calc. Appl. Anal. 12 (2), 135– 158 (2009).
+
+\section{18 Laine, I.: Nevanlinna Theory and Complex Differential Equations. Wal-}
+
+ter de Gruyter, Berlin (1993).
+
+\section{19 Miller, K. S., Ross, B.: An Introduction to the Fractional Calculus}
+
+and Fractional Differential Equations. John Wiley and Sons, New York (1993). [20] Samko, S. G., Kilbas, A. A., Marichev, O. I.: Integrals and Derivatives of Fractional Order and Some of Their Applications. Nauka i Tekhnika, Minsk. (1987). (in Russian)
+
+\section{21 Sheremeta, M. M.: Analytic Functions of Bounded l-index. Mathemat-}
+
+
+\paragraph{ical Studies:} Monograph Series. V.6, VNTL, Lviv. (1999)
+
+\section{22 Valiron G.: Sur les fonctions entiéres d'ordre nul et d'ordre fini et en}
+
+particulier les fonctions à correspondance régulière, Ann. Fac. Sci. Univ. Toulouse. 5, 117–257 (1914)
+
+\section{23 Valiron, G.: Sur le maximum du module des fonctions entiéres. C. R.}
+
+de l'Acad. des sciences. Paris. \textbf{166}, 605-608 (1918)
+
+
+\newpage
+
+% Page 24
+[24] Whitteker, E. T., Watson, G. N.: A Course of Modern Analysis, V. 2. Cambridge. University Press (1927). [25] Wiman, A.: Über den Zusammenhang zwischen dem Maximalbetrage einer analytischen Funktion und dem grössten Gliede der zugehörigen Taylorschen Reihe. Acta Mathematica 37, 305–326 (1914) [26] Wiman, A.: Über den Zusammenhang zwischen dem Maximalbetrage einer analytischen Funktion und dem grössten Betrage bei gegebenem Argumente der Funktion. Acta Mathematica. 41, 1–28 (1916) Address 1: Faculty of Mechanics and Mathematics, Lviv Ivan Franko Na- tional University, Universytets'ka 1, 79000, Lviv, Ukraine Faculty of Mathematics and Computer Sciences, University of Warmia and Mazury in Olsztyn, Słoneczna 54, 10-710 Olsztyn, Poland e-mail: chyzhykov@yahoo.com
+
+
+\newpage
+
+\end{document}

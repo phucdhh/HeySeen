@@ -1,0 +1,298 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{proof_custom}{Proof}
+\renewcommand{\abstractname}{\Large\bfseries Abstract}
+
+
+\begin{document}
+
+
+% Page 1
+\section{PROFINITE COSHEAVES VALUED IN PRO-REGULAR CATEGORIES}
+
+JIACHENG TANG
+
+\begin{abstract}
+We prove that the category of profinite cosheaves valued in a pro-regular category (satisfying mild assumptions) is itself a pro-regular category. As a corollary, we extend Wilkes's cosheaf-bundle equivalence from profinite modules to profinite groups.
+\end{abstract}
+
+\begin{itemize}
+  \item Introduction
+\end{itemize}
+
+Profinite coproducts have been used extensively in the study of profinite groups and graphs (see [?], [?] and [?]). These are coproducts of families $\{A_x\}_{x\in X}$ of profinite groups or modules which are indexed not by a set, but by a profinite space X. There has been recent work that studies these coproducts categorically (see [?], [?], [?] and [?]). In [?], Wilkes shows that profinite coproducts of profinite modules can be equivalently described as global cosections objects of profinite cosheaves valued in the category of profinite modules. The current paper extends the theory from profinite modules to any pro-regular category satisfying mild additional assumptions. Aim and Main Results. Our main result is the following categorical equivalence. Let $C =$ $\mathbf{Pro}(\mathbf{D})$, where $\mathbf{D}$ is a small regular category, and assume that $\mathbf{C}$ satisfies the assumptions before Example ??. Let $CoSh(C)$ be the category of cosheaves valued in $C$ (see Definition ??). Briefly, $CoSh(C)$ has objects pairs $(A, X)$, where X is a profinite space and A is a cosheaf over the topological space X valued in C. We also let $\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}} \hookrightarrow \mathbf{CoSh}(\mathbf{C})$ be the full subcategory consisting of objects $(A, X)$, where X is finite and every costalk $A_x \in \mathbf{C}$ of A is actually in \textbf{D}. Equivalently, $CoSh(C)_{fin} = Fam(D)$ is the free finite coproduct completion of D. Then, we have the following. \textbf{Theorem ??.} With our assumptions, there is an equivalence $CoSh(C) = Pro(CoSh(C)_{fin})$. The theorem makes certain exactness properties of $CoSh(C)$ easy to verify. Corollary ??. If D is also coherent, then so is $CoSh(C)$. In fact, the category $CoSh(C)$ is also regular and extensive under our general assumptions, but these properties are needed to prove Theorem ??, so they are not really corollaries. Another consequence we have is that the profinite coproduct used in the literature is, in some sense, the only way of defining a coproduct indexed by profinite spaces which extends finite coproducts. Corollary ??. The global cosections functor $CoSh(C) \rightarrow C: (A, X) \mapsto A(X)$ commutes with inverse limits. In particular, the global cosections functor $\mathbf{CoSh}(\mathbf{C}) = \mathbf{Pro}(\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}) \to \mathbf{C}$ is the (unique) extension of the functor
+
+$\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}} \to \mathbf{C} \colon (A, X) \mapsto A(X) = \prod A_x.$
+
+$x \in X$
+
+
+\paragraph{Email:} jiacheng.tang@postgrad.manchester.ac.uk; Address: Alan Turing Building, University of Manchester, Manchester, M13 9PY, United Kingdom.
+
+
+\newpage
+
+% Page 2
+Finally, by taking \textbf{D} to be the category of finite groups in the main theorem (so $\mathbf{C} = \mathbf{PGrp}$ is the category of profinite groups), we extend Wilkes's cosheaf-bundle equivalence ([?, Theorem 3.5]) from profinite modules to profinite groups. Let \textbf{Pro} denote the category of profinite spaces and fix $X \in \mathbf{Pro}$. Let $\mathbf{CoSh}(X, \mathbf{PGrp})$ denote the category of cosheaves over X valued in \textbf{PGrp.} Also, let $\mathbf{Grp}(\mathbf{Pro}_{/X})$ denote the category of group objects in the slice category $\mathbf{Pro}_{/X}$. Remark ??. There is an equivalence $CoSh(X, PGrp) = Grp(Pro_{/X})$. Outline of Paper. We will assume basic knowledge of category theory (refer to [?]), sheaf theory (refer to [?]), pro-completions (refer to [?]) and regular categories (refer to [?]). Occasionally, we will use facts about extensive categories (refer to [?]) and profinite groups (refer to [?]). In Section 2, we study the general theory of cosheaves over profinite spaces valued in a category $\mathbf{C}$ where inverse limits commute with finite colimits. Most of this is well known when $\mathbf{C} = \mathbf{Set}^{\mathrm{op}}$, but we were unable to find a reference that includes our setting. In Section 3, we restrict our attention to pro-regular categories $C = Pro(D)$ with mild additional assumptions and prove our main results. Remark: When we write "=" in this paper, we usually mean canonically isomorphic (or equivalent in the case of categories). Convention: Unless otherwise specified, all rings are associative with a 1 but not necessarily commutative. All our categories are locally small and all (co)limits are small. \textbf{Acknowledgements.} The author would like to thank his supervisor Peter Symonds for his constant guidance and Giacomo Tendas for helpful discussions and for reading drafts of this paper.
+
+2. Profinite Cosheaves
+
+In this section, we study categories of cosheaves over profinite spaces. Most of this is well known from (the dual of) usual sheaf theory when the base category is \textbf{Set} op or the opposite of any finite limit theory over \textbf{Set} (such as \textbf{Grp}). The book [?] studies sheaf theory valued in a category satisfying the so-called IPC-property, but our base category C doesn't have to satisfy the dual of the IPC-property. Nevertheless, because our cosheaf condition is particularly simple (see the next definition), it's easy (and useful) to give details below for the convenience of the reader. We recall that we write $\mathbf{Pro} = \mathbf{Pro}(\mathbf{Set}_{\mathrm{fin}})$ for the category of profinite spaces. The important takeaway from this section is the key lemma (Lemma ??), which describes certain inverse limits in the category $CoSh(C)$ of cosheaves valued in $C$. \textbf{Definition 2.1.} Let C be a category with finite coproducts, X be a profinite space and $O_c(X)$ be the poset category of clopen subsets of X. A precosheaf over X valued in C is a functor $A: O_c(X) \to \mathbb{C}$. A precosheaf A over X is a cosheaf if it preserves the initial object and binary disjoint coproducts, i.e. if $A(\emptyset) = 0$, and whenever $U, V \subseteq X$ are disjoint clopen, the natural map $A(U) \coprod A(V) \to A(U \sqcup V)$ is an isomorphism. We will write $\mathbf{PCoSh}(X, \mathbf{C})$ and $\mathbf{CoSh}(X, \mathbf{C})$ for the categories of precosheaves and cosheaves over X respectively. Let CoSh(C) be the Grothendieck construction of the functor
+
+$\mathbf{Pro} \to \mathbf{Cat}, X \mapsto \mathbf{CoSh}(X, \mathbf{C}).$
+
+Spelt out, this means that $CoSh(C)$ is a category with objects pairs $(A, X)$, where $X \in Pro$ and $A \in \mathbf{CoSh}(X, \mathbf{C})$. We will often abuse notation and write A for the pair $(A, X)$ when X is understood. Given two cosheaves $(A, X)$ and $(B, Y)$, a morphism from A to B is a pair $(\varphi, f)$,
+
+
+\newpage
+
+% Page 3
+
+\paragraph{where f:} X \textbackslash\{\}to Y is a continuous map and $\varphi$ is a natural transformation $A \circ f^{-1} \to B$.
+
+$O_c(X)$
+
+
+\[ O_{c}(Y) \xrightarrow{f^{-1}} A \longrightarrow \mathbf{C} \]
+
+
+Let us first point out that the cosheaves defined above are equivalent to usual cosheaves, provided that C has all colimits. This is probably well known and a special case of this is stated on [?, pages 4-5] with a brief explanation. Let $CoSh(X, \mathbb{C})''$ be the full subcategory of the functor category $\mathbf{Fun}(O(X), \mathbf{C})$ containing functors which satisfy the usual cosheaf condition, i.e. whenever $U = \bigcup_i U_i$ is an open cover of an open $U \subseteq X$, the following canonical diagram is a coequaliser:
+
+
+\[ \coprod_{i,j} A(U_i \cap U_j) \Longrightarrow \coprod_i A(U_i) \to A(U). \]
+
+
+Here, $O(X)$ is the poset of open subsets of X. Let $CoSh(X, \mathbb{C})'$ be the full subcategory of $\mathbf{PCoSh}(X, \mathbf{C}) = \mathbf{Fun}(O_c(X), \mathbf{C})$ containing functors which satisfy the cosheaf condition for arbitrary clopen covers $U = \bigcup_i U_i$. Then, we have equivalences
+
+$CoSh(X, \mathbf{C}) = CoSh(X, \mathbf{C})' = CoSh(X, \mathbf{C})''.$
+
+In the following, we will assume that C has all limits and finite colimits, such that inverse limits commute with finite colimits. We now state several properties of $\mathbf{CoSh}(X, \mathbf{C})$. \textbf{Proposition 2.2.} The category $CoSh(X, \mathbb{C})$ is a full subcategory of $PCoSh(X, \mathbb{C})$ closed under all colimits and inverse limits. \textit{Proof.} The cosheaf condition is about finite coproducts in C, which commute with colimits and inverse limits in \textbf{C}. \textbf{Proposition 2.3.} The inclusion $CoSh(X, \mathbb{C}) \hookrightarrow PCoSh(X, \mathbb{C})$ has a right adjoint, denoted by $(-)^{\cosh}$ and called cosheafification. \textit{Proof.} This is analogous to the classical construction of sheafification. For a clopen subset $U\subseteq X$, let $\mathcal{P}(U)$ be the poset category of finite clopen partitions of U. That is, $\mathcal{P}(U)$ has objects partitions $U = \bigsqcup_{i=1}^n U_i$ with $U_i$ clopen, and $\{U_i\} \leq \{U_j\}$ if $\{U_i\}$ is a refinement of $\{U_j\}$. It's easy to see that $\mathcal{P}(U)$ is cofiltered, i.e. codirected.
+
+Given a precosheaf $A$ and $\emptyset \neq U \subseteq X$ clopen, define $A^{\cosh}(U) = \varprojlim_{\{U_i\} \in \mathcal{P}(U)} \coprod_i A(U_i)$. We leave it to the reader to check that this makes $A^{\cosh}$ a precosheaf, i.e. a functor. To see that it is in fact a cosheaf, we simply note that if $U, V \subseteq X$ are disjoint clopen, then $\mathcal{P}(U) \times \mathcal{P}(V) \subseteq \mathcal{P}(U \sqcup V)$ is cofinal, and that inverse limits commute with finite coproducts in C. Finally, suppose B is a cosheaf and we have a map $B \to A$. For $U \subseteq X$ clopen, we need to give a map $B(U) \to A^{\cosh}(U)$ in C, which we take to be the map induced by the maps $B(U) = \coprod_i B(U_i) \to \coprod_i A(U_i)$ for partitions $\{U_i\}$ of $U$. One then verifies that this establishes $(-)^{\cosh}$ as being right adjoint to inclusion. Corollary 2.4. The category $CoSh(X, \mathbb{C})$ has all limits which are computed as cosheafifications of the precosheaf limits. \textbf{Proposition 2.5.} Cosheafification is exact.
+
+3
+
+
+\newpage
+
+% Page 4
+\textit{Proof.} It is certainly left exact, being a right adjoint. It also preserves finite colimits from the construction above and the fact that inverse limits are exact in C. Let $X \in \mathbf{Pro}$. There is a functor $\Delta \colon \mathbf{C} \to \mathbf{PCoSh}(X, \mathbf{C})$, the constant precosheaf functor, which sends an object $c \in \mathbb{C}$ to the precosheaf $U \mapsto c$. Composing this with the cosheafification functor, we obtain a functor $C \to CoSh(X, C)$, still denoted by $\Delta$ and called the \textit{constant} cosheaf functor. \textbf{Proposition 2.6.} The constant cosheaf functor $\Delta \colon \mathbf{C} \to \mathbf{CoSh}(X, \mathbf{C})$ is right adjoint to the global cosections functor $A \mapsto A(X)$. \textit{Proof.} We clearly have $\operatorname{Hom}_{\mathbf{CoSh}(X,\mathbf{C})}(A,\Delta(c)) = \operatorname{Hom}_{\mathbf{PCoSh}(X,\mathbf{C})}(A,\Delta(c)) = \operatorname{Hom}_{\mathbf{C}}(A(X),c).$ Example 2.7.
+
+(i) Suppose X is finite. Then, a cosheaf $A \in \mathbf{CoSh}(X, \mathbf{C})$ is completely determined by the values $A_x = A(\{x\})$ for $x \in X$. The global cosections functor sends A to the finite coproduct $A(X) = \coprod_{x \in X} A_x$. (ii) Suppose $X = I \sqcup \{\infty\}$ is the one-point compactification of a set $I$. Note that the clopen subsets of X are precisely the finite subsets not containing $\infty$ and their complements. Suppose C also has all coproducts. Given a family of objects $\{c_i\}_{i\in I}$ in C, we can define a cosheaf $C \in \mathbf{CoSh}(X, \mathbf{C})$ via $C(\{x\}) = c_x$ if $x \neq \infty$ and $C(U) = \coprod_{j \in U \setminus \{\infty\}} c_j$ if $U$ is a cofinite subset containing $\infty$. The global cosections object of C is the coproduct $C(X) = \coprod_{i \in I} c_i$. (iii) Suppose $X = I \sqcup \{\infty\}$ is still the one-point compactification of a set I, and that finite products and finite coproducts agree in C (e.g. if C is additive). Given a family of objects $\{c_i\}_{i\in I}$ in $\mathbb{C}$, we can define a cosheaf $P\in \mathbf{CoSh}(X,\mathbb{C})$ via $P(\{x\})=c_x$ if $x\neq \infty$ and $P(U) = \prod_{i \in U \setminus \{\infty\}} c_i$ if U is a cofinite subset containing $\infty$. The global cosections object of P is the product $P(X) = \prod_{i \in I} c_i$. Hence, with the right assumptions on C, we see that global cosections functors of profinite cosheaves valued in C capture both products and coproducts in \textbf{C}. Next, we shall study properties of the Grothendieck construction $CoSh(C)$. The following observation is obvious. Proposition 2.8. The functor
+
+$\mathbf{C} \to \mathbf{CoSh}(\mathbf{C}), c \mapsto (c, *)$
+
+is right adjoint to the global cosections functor $(A, X) \mapsto A(X)$. To study limits in $CoSh(C)$, we need the following analogue of [?, Theorem 2']. Note that the following is not exactly the dual of [?, Theorem 2'], but its proof is sufficiently similar that we will omit it. \textbf{Proposition 2.9.} Let I be a small category. Suppose E is a category and $F: E \to Cat$ is a functor such that the following hold:
+
+\begin{itemize}
+  \item The category \textbf{E} has \textbf{I}-limits (i.e. limits of shape \textbf{I}).
+  \item For each object $e \in \mathbf{E}$, the category Fe has I-limits.
+  \item For each morphism $f: e \to e'$ in \textbf{E}, the functor $Ff: Fe \to Fe'$ has a right adjoint.
+\end{itemize}
+
+Then, the Grothendieck construction $\int F$ has \textbf{I}-limits.
+
+
+\newpage
+
+% Page 5
+Our main theorem (Theorem $??$) will show that $CoSh(C)$ is a pro-completion under additional assumptions, so $CoSh(C)$ should have all inverse limits first. \textbf{Proposition 2.10.} The category $CoSh(C)$ has all limits. \textit{Proof.} Recall that $CoSh(C)$ is defined as the Grothendieck construction of the functor
+
+$F \colon \mathbf{Pro} \to \mathbf{Cat}, X \mapsto \mathbf{CoSh}(X, \mathbf{C}).$
+
+Thus, the first bullet point of Proposition ?? is obvious and so is the second point by Corollary ??. For the final point, note that given a map $f: X \to Y$ in \textbf{Pro}, the functor $\mathbf{CoSh}(X, \mathbf{C}) \to \mathbf{CoSh}(X, \mathbf{C})$ $\mathbf{CoSh}(Y, \mathbf{C})$ is simply the direct image functor $f_*: A \mapsto A \circ f^{-1}$. As in (the dual of) usual sheaf theory, it has a right adjoint $f^*$, the inverse image functor, which sends $A \in \mathbf{CoSh}(Y, \mathbf{C})$ to the cosheaf $\left(U \mapsto \varprojlim_{V \supset f(U)} A(V)\right)^{\cosh}$, where $U \subseteq X$ is clopen.
+
+It is useful to know explicitly how inverse limits in $CoSh(C)$ are computed (cf. [?, Theorem 6.5]). Given an inverse system $\{(A_i, X_i)\}$, its inverse limit $(A, X)$ in $\mathbf{CoSh}(\mathbf{C})$ has $X = \varprojlim X_i$, taken in \textbf{Pro}. Let $f_i: X \to X_i$ be the projection maps and $f_i^*: \mathbf{CoSh}(X_i, \mathbf{C}) \to \mathbf{CoSh}(X, \mathbf{C})$ be the inverse image functors. Then, $\{f_i^*(A_i)\}$ naturally forms an inverse system in $\mathbf{CoSh}(X, \mathbf{C})$ and we let $A = \varprojlim f_i^*(A_i)$, taken in $\mathbf{CoSh}(X, \mathbf{C})$. We remind the reader that cosheafification is not needed to compute inverse limits here (see Proposition??). To be more precise, given a map $(f: X_i \to X_j, \varphi: A_i \circ f^{-1} \to A_j)$ in the inverse system, the corresponding transition map $f_i^*(A_i) \to f_i^*(A_j)$ is the cosheafification of
+
+$U \mapsto \left( \varprojlim_{V \supset f_{*}(U)} A_{i}(V) \xrightarrow{\psi} \varprojlim_{W \supset f_{*}(U)} A_{j}(W) \right),$
+
+where $\psi$ is induced by
+
+
+\[ \varprojlim_{V\supseteq f_i(U)} A_i(V) \to A_i(f^{-1}(W)) \xrightarrow{\varphi_W} A_j(W). \]
+
+
+This looks fairly complicated, but if the spaces $X_i$ are finite, then we have an easy description of the inverse limit $(A, X)$. In the following lemma (only), let's write $f_i^*$ to mean the precosheaf inverse image functor. \textbf{Lemma 2.11} (Key Lemma). Suppose $\{(A_i, X_i)\}_{i \in I}$ is an inverse system in $CoSh(C)$ with limit $(A,X)$ and where the $X_i$ are finite. Let $f_i\colon X\to X_i$ be the projection maps. Then, the precosheaf inverse limit $\varprojlim f_i^*(A_i)$ in $\mathbf{PCoSh}(X, \mathbf{C})$ is already a cosheaf. In particular, for $U \subseteq X$ clopen, we have $A(U) = \underline{\lim} A_i(f_i(U))$. \textit{Proof.} First, note that as each $X_i$ is discrete, we have $f_i^*A_i(U) = A_i(f_i(U))$ for each $U \subseteq X$ clopen. Given $U, V \subseteq X$ disjoint, we can use properties of profinite spaces to find a single $j \in I$ such that $U = f_i^{-1} f_j(U)$ and $V = f_i^{-1} f_j(V)$ (cf. [?, Exercise 1.1.15/Lemma 1.1.16]). It's easy to check that if $i \geq j$, then $U = f_i^{-1} f_i(U)$ and $V = f_i^{-1} f_i(V)$. The important point is that $f_i(U)$
+
+
+\newpage
+
+% Page 6
+and $f_i(V)$ are disjoint. Thus, we have
+
+
+\[ \varprojlim_{i} f_{i}^{*} A_{i}(U \sqcup V) = \varprojlim_{i > i} A_{i}(f_{i}(U \sqcup V)) \]
+
+
+
+\[ = \lim_{i > i} A_i(f_i(U) \sqcup f_i(V)) \]
+ 
+\[ = \varprojlim_{i} A_{i}(f_{i}(U)) \coprod \varprojlim_{i} A_{i}(f_{i}(V)) \]
+ 
+\[ = \varprojlim_{i} f_{i}^{*} A_{i}(U) \coprod \varprojlim_{i} f_{i}^{*} A_{i}(V). \]
+
+
+It only remains to note that cosheafification commutes with inverse limits. Given a cosheaf $A \in \mathbf{CoSh}(X, \mathbf{C})$ and $x \in X$, the costalk of $A$ at $x$ is $A_x = \varprojlim_{V \ni x} A(V) \in \mathbf{C}$. In other words, $A_x$ is the inverse image functor $i_x^*$, where $i_x : \{x\} \hookrightarrow X$ is the inclusion map. The costalk functor $(-)_x$: $\mathbf{CoSh}(X, \mathbf{C}) \to \mathbf{C}$ is, of course, right adjoint to the skyscraper cosheaf functor $Sky_x$, i.e. the direct image functor $(i_x)_*$. There are clearly also precosheaf versions of these. We won't need the following two results, but they seem worth stating. Both can be proven by using Yoneda in a standard way. \textbf{Proposition 2.12.} Cosheafification preserves costalks. That is, for $A \in \mathbf{PCoSh}(X, \mathbf{C})$ and $x \in X$, we have $A_x^{\cosh} = A_x$.
+
+\textbf{Proposition 2.13.} Let $(A, X) = \varprojlim (A_i, X_i)$ in $\mathbf{CoSh}(\mathbf{C})$ and $x = (x_i) \in X = \varprojlim X_i$. Then, we have $A_x = \varprojlim (A_i)_{x_i}$. That is, the costalks of an inverse limit in $\mathbf{CoSh}(\mathbf{C})$ are computed "pointwise".
+
+3. Main Theorem
+
+From now on, we shall assume that $C = Pro(D)$ is the pro-completion of a small regular category \textbf{D}. The main aim of this section is to prove our main theorem under suitable assumptions on \textbf{C}. Let $CoSh(C)_{fin}$ be the full subcategory of $CoSh(C)$ consisting of objects $(A, X)$, where X is finite and the costalk $A_x \in \mathbf{D}$ for each $x \in X$. We should think of $\mathbf{CoSh}(\mathbf{C})_{\text{fin}}$ as the subcategory of "finite objects" of $CoSh(C)$. Our goal is the prove the following. Theorem ??. There is an equivalence $CoSh(C) = Pro(CoSh(C)_{fin})$. Our strategy is akin to, but perhaps not identical to, the standard "recognition principle".
+
+\begin{itemize}
+  \item We show that every object of $CoSh(C)$ is an inverse limit of objects in $CoSh(C)_{fin}$
+\end{itemize}
+
+(Lemma ??).
+
+\begin{itemize}
+  \item We show that for $\varprojlim A_i \in \mathbf{CoSh}(\mathbf{C})$ with $A_i \in \mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$ and $B \in \mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$, the
+\end{itemize}
+
+canonical map
+
+$\varinjlim \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}(A_i, B) \to \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}(\varprojlim A_i, B)$
+
+is surjective (Lemma??). Note that the canonical map is clearly injective if the projection maps $\varprojlim A_i \to A_j$ are epic in $\mathbf{CoSh}(\mathbf{C})$.
+
+\begin{itemize}
+  \item We show that if the transition maps of $\{A_i\}$ are epic in $\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$, then the projection
+\end{itemize}
+
+maps are epic in $CoSh(C)$ (Lemma ??).
+
+\begin{itemize}
+  \item Finally, we show that $Pro(CoSh(C)_{fin})$ is regular, so every object can be expressed as
+\end{itemize}
+
+an inverse limit with epic transition maps (Proposition?? and Lemma??).
+
+
+\newpage
+
+% Page 7
+Here are some preliminary facts. We note that C is regular, has all limits and colimits, and that the embedding $\mathbf{D} \hookrightarrow \mathbf{C}$ preserves colimits and finite limits. Moreover, we can view $C = Pro(D)$ as the dual of the full subcategory of left exact functors in $Fun(D, Set)$ and the embedding $C = Pro(D) \hookrightarrow Fun(D, Set)^{op}$ preserves colimits and inverse limits. It follows that inverse limits in C indeed commute with finite colimits, since direct limits in Set commute with finite limits, so the results of Section ?? apply. In particular, inverse limits in C are regular, i.e. they preserve regular epimorphisms. Given a map $\varphi \colon c \to c'$ in $\mathbb{C}$, we will write $\operatorname{Im} \varphi \in \mathbb{C}$ for the image of $\varphi$. Recall, from the definition of regular categories, that every map $\varphi \colon c \to c'$ can be (uniquely) factorised as a regular epimorphism $c \to \operatorname{Im} \varphi$ followed by a monomorphism $\operatorname{Im} \varphi \hookrightarrow c'$. If $b \hookrightarrow c$ is a subobject, we might write $\varphi(b)$ for the image $\operatorname{Im}(b \hookrightarrow c \to c')$. \textbf{Lemma 3.1.} If $c = \lim c_i \in \mathbb{C}$, where $c_i \in \mathbb{C}$, with projection maps $\varphi_i : c \to c_i$ and $b \hookrightarrow c$ is a subobject, then $b = \lim_{n \to \infty} \varphi_i(b)$. In particular, every object of $\mathbf{C}$ can be expressed as an inverse limit with epic projection (and hence transition) maps. \textit{Proof.} The composition $b \to \varprojlim \varphi_i(b) \to \varprojlim c_i = c$ is monic, but the first map is also regular epic since inverse limits are regular. We will now assume in addition that \textbf{D} is closed under subobjects, i.e. if $d \in \mathbf{D}$ and $c \hookrightarrow d$ is a subobject in C, then $c \in \mathbf{D}$. We will also assume that coproducts in C have monic coprojection maps, i.e. every map $c \to c \coprod c'$ is monic. This means in particular that if $A \in \mathbf{CoSh}(X, \mathbf{C})$ and $U\subseteq V$ are clopen, then $A(U)\hookrightarrow A(V)$. Let us give some examples to show that these conditions are not too restrictive.
+
+(i) The category of models of a finite limit theory over a regular base cat-
+
+Example 3.2. egory is itself regular, by [?, Theorem 5.11]. Thus, since \textbf{Set} is regular, so are the categories \textbf{Grp} of groups, \textbf{Ab} of abelian groups, $\mathbf{Set}(G)$ of G-sets (for a fixed group G) and $\mathbf{Mod}(R)$ of R-modules (for a fixed ring R). Alternatively, $\mathbf{Ab}$ and $\mathbf{Mod}(R)$ are regular because they are abelian. (ii) A full subcategory of a regular category which is closed under finite limits and coequalis- ers is itself regular. Thus, the category $\mathbf{Set}_{\mathrm{fin}}$ of finite sets is regular, and so are the categories $\mathbf{Grp}_{\mathrm{fin}}$, $\mathbf{Ab}_{\mathrm{fin}}$, $\mathbf{Set}(G)_{\mathrm{fin}}^{\mathrm{abs}}$ and $\mathbf{Mod}(R)_{\mathrm{fin}}^{\mathrm{abs}}$ by the property in ??. The abbre- viation "abs" stands for "abstract" and is a reminder that no topology is involved so far. (iii) Let G be a profinite group and consider the category $\mathbf{Pro}(G)$ of profinite G-spaces. We note that $\mathbf{Pro}(G) = \mathbf{Pro}(\mathbf{Set}(G)_{\mathrm{fin}})$, where $\mathbf{Set}(G)_{\mathrm{fin}}$ is the category of finite G- sets, but where the action of $G$ is still continuous. There is no obvious way to express $\mathbf{Set}(G)_{\mathrm{fin}}$ as models of a finite limit theory, since we need to remember the topology of G. Nevertheless, we observe that $\mathbf{Set}(G)_{\text{fin}}$ is a full subcategory of $\mathbf{Set}(G)_{\text{fin}}^{\text{abs}}$ which is closed under finite limits and coequalisers, so it is in fact regular. Similarly, for a profinite ring R, the category $\mathbf{Mod}(R)_{\text{fin}}$ of finite (discrete topological) R-modules is regular. (iv) From the examples above, we see that the following small regular categories are all candidates for \textbf{D}: $\mathbf{Set}_{fin}$, $\mathbf{Grp}_{fin}$, $\mathbf{Ab}_{fin}$, $\mathbf{Set}(G)_{fin}$ (for a fixed profinite group $G$) and $\mathbf{Mod}(R)_{\mathrm{fin}}$ (for a fixed profinite ring R). The corresponding pro-completion C is the category \textbf{Pro} of profinite spaces, \textbf{PGrp} of profinite groups, \textbf{PAb} of profinite abelian groups, $\mathbf{Pro}(G)$ of profinite G-spaces and $\mathbf{PMod}(R)$ of profinite R-modules, respectively. In all cases, \textbf{D} is closed under subobjects (since it contains literally the finite objects of C), and coproducts in C have monic coprojections.
+
+
+\newpage
+
+% Page 8
+\textbf{Proposition 3.3.} The category $CoSh(C)_{fin}$, and hence $Pro(CoSh(C)_{fin})$, are regular. \textit{Proof.} It is convenient to identify $CoSh(C)_{fin}$ with the category $Fam(D)$ of finite families of objects in \textbf{D} and view it as a full subcategory of $Fam(C)$. Let us first show that $Fam(C)$ is regular. It certainly has finite limits which are computed on fibres (i.e. costalks). It also has all coequalisers (cf. [?, Theorem 2]), but we will only describe here the coequaliser C of the kernel pair of a map $(\varphi, f): (A, X) \to (B, Y)$. The index set of C is $\operatorname{Im} f \subseteq Y$. For $y \in \operatorname{Im} f$, the fibre $C_y$ is given by $C_y = \operatorname{Im}(\coprod_{x \in f^{-1}(y)} A_x \to B_y) \hookrightarrow B_y$. We have used the fact that $\operatorname{Fam}(\mathbf{C})$ is locally distributive (see [?, Proposition 2.4 and Corollary 4.9]). It can be easily verified from this description that $Fam(C)$ is indeed regular. To finish the proof, we only need to note that the subcategory $\mathbf{Fam}(\mathbf{D}) \hookrightarrow \mathbf{Fam}(\mathbf{C})$ is closed under finite limits and coequalisers of kernel pairs, since $\mathbf{D} \hookrightarrow \mathbf{C}$ is closed under finite limits and subobjects. The following is analogous to [?, Theorem 5.3.4]. \textbf{Lemma 3.4.} Every cosheaf $(A, X) \in \mathbf{CoSh}(\mathbf{C})$ can be written as an inverse limit of cosheaves in $CoSh(C)_{fin}$. \textit{Proof.} First, write $X = \varprojlim_{i \in I} X_i$ ($X_i$ finite), with projection maps $f_i : X \to X_i$ and transi- tion maps $f_{ii'}: X_i \to X_{i'}$, and also write $A(X) = \varprojlim_{i \in I} d_i$ $(d_i \in \mathbf{D})$, with projection maps $\varphi_i \colon A(X) \to d_i$ and transition maps $\varphi_{ij'} \colon d_i \to d_{i'}$. Consider the directed poset $I \times J$. For $(i,j) \in I \times J$, define $X_{i,j} = X_i$ and $A_{i,j}(x_i) = \varphi_j(A(f_i^{-1}(x_i))) \hookrightarrow d_j$, where $x_i \in X_i$. It is then clear that the $\{(A_{i,j}, X_{i,j})\}$ form an inverse system in $\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$ over $I \times J$ and that $X = \varprojlim_{I \times I} X_{i,j}$. Observe that for $i \geq i'$ and $j \geq j'$, the transition map $A_{i,j} \to A_{i',j'}$ is just the map induced by $\varphi_{ii'}: \varphi_i(A(f_{i'}^{-1}(x_{i'}))) \to \varphi_{i'}(A(f_{i'}^{-1}(x_{i'}))).$ We claim that $(A, X) = \varprojlim_{I \times I} (A_{i,j}, X_i)$. Consider the map $A \to \varprojlim_{I \times I} A_{i,j}$ in $\mathbf{CoSh}(\mathbf{C})$ (which in fact lives in the non-full subcategory $\mathbf{CoSh}(X,\mathbf{C})$) induced by $\varphi_j\colon A(f_i^{-1}(x_i))\to$ $\varphi_i(A(f_i^{-1}(x_i))),$ where $x_i \in X_i$. In view of Lemma ??, it suffices to show that for each $U \subseteq X$ clopen, the component $A(U) \to \varprojlim_{I \times I} A_{i,j}(f_i(U))$ is an isomorphism. Pick $i' \in I$ such that for each $i \geq i'$, we have $U = f_i^{-1} f_i(U)$ (cf. the proof of Lemma ??). Now, consider the cofinal subset $S = \{i \in I : i \geq i'\} \times J \subseteq I \times J$. By Lemma ??, we have
+
+
+\[ \varprojlim_{S} A_{i,j}(f_i(U)) = \varprojlim_{i > i'} \varprojlim_{j} \coprod_{x \in f_i(U)} \varphi_j(A(f_i^{-1}(x_i))) \]
+
+
+
+\[  \varprojlim_{i \ge i'} \coprod_{x_i \in f_i(U)} \varprojlim_j \varphi_j(A(f_i^{-1}(x_i)))  \]
+ 
+\[  \lim_{i \ge i'} \prod_{x_i \in f_i(U)} A(f_i^{-1}(x_i))  \]
+ 
+\[ = \lim_{i > i'} A(U) \]
+
+
+A(U),
+
+which completes the proof. For the next lemma, we need the following description of epimorphisms in $CoSh(C)_{fin}$. A map $(\varphi, f): (A, X) \to (B, Y)$ in $\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$ is epic if and only if $f: X \to Y$ is surjective and for
+
+
+\newpage
+
+% Page 9
+each $y \in Y$, the map $\coprod_{x \in f^{-1}(y)} A_x \to B_y$ is epic in $\mathbf{C} = \mathbf{Pro}(\mathbf{D})$. Note that $\coprod_{x \in f^{-1}(y)} A_x$ may not be in \textbf{D}. \textbf{Lemma 3.5.} Let $(A, X) = \varprojlim (A_i, X_i)$ in $\mathbf{CoSh}(\mathbf{C})$, where $(A_i, X_i) \in \mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$. If the tran- sition maps of $\{(A_i, X_i)\}$ are epic in $\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$, then the projection maps $(A, X) \to (A_j, X_j)$ are epic in $CoSh(C)$. \textit{Proof.} Let $f_i: X \to X_i$ be the projection maps and $f_{ij}: X_i \to X_j$ be the transition maps. Note that they are all surjective by the paragraph above the lemma. To prove the lemma, suppose two compositions
+
+$(A,X) \stackrel{(\varphi_j,f_j)}{\longrightarrow} (A_j,X_j) \stackrel{(\alpha,g)}{\Longrightarrow} (B,Y)$
+
+in $\mathbf{CoSh}(\mathbf{C})$ are equal. By Lemma ??, we may assume that $(B,Y) \in \mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$. It is clear that $g=h$, so it only remains to show that for each $y\in Y$, the maps $\coprod_{x_j\in g^{-1}(y)}A_j(x_j)\rightrightarrows B_y$ are the same. This would be true if we can show that for each $x_j \in X_j$, the map $A(f_i^{-1}(x_j)) \to A_j(x_j)$ in C is epic. By Lemma ??, we have $A(f_j^{-1}(x_j)) = \varprojlim A_i(f_i(f_j^{-1}(x_j))) = \varprojlim_{i>j} A_i(f_{ij}^{-1}(x_j))$, noting that $f_i(f_i^{-1}(x_j)) = f_{ij}^{-1}(x_j)$ since $f_i : X \to X_i$ is surjective. The map $A(f_i^{-1}(x_j)) \to A_j(x_j)$ is the inverse limit of the maps $\{A_i(f_{ij}^{-1}(x_j)) \to A_j(x_j)\}_{i \geq j}$, each of which is epic by the paragraph above the lemma. Finally, we recall that inverse limits in C are exact. \textbf{Lemma 3.6.} Every map $(\varphi, g)$: $\varprojlim_{i \in I} (A_i, X_i) \to (B, Y)$ in $\mathbf{CoSh}(\mathbf{C})$, where the $(A_i, X_i)$ and $(B,Y)$ are in $CoSh(C)_{fin}$, factors through a component $(A_i,X_i)$. \textit{Proof.} Let $(A, X) = \varprojlim (A_i, X_i)$ and let $f_i : X \to X_i$ be the projection maps. We will first prove the lemma in the case where the projections $f_i$ are surjective. By Lemma ??, for each $y \in Y$, we have $A(g^{-1}(y)) = \varprojlim A_i(f_i(g^{-1}(y)))$. As $B(y) \in \mathbf{D}$, the map
+
+$A(g^{-1}(y)) = \underline{\lim} A_i(f_i(g^{-1}(y))) \to B(y)$
+
+in C factors through a component $\psi_y \colon A_j(f_j(g^{-1}(y))) \to B(y)$. Since Y is finite, we can pick a single j that works for every $y \in Y$. Moreover, we can assume that we have picked j such that the map $g: X \to Y$ factors through $h: X_j \to Y$. Observe that $f_j(g^{-1}(y)) = h^{-1}(y)$ for each $y \in Y$, since $f_i$ is surjective. Define a map $\psi \colon A_i \circ h^{-1} \to B$ in $\mathbf{CoSh}(Y, \mathbf{C})$ as follows. For $y \in Y$, the component $A_j(h^{-1}(y)) \to B(y)$ is simply $\psi_y$. It is then obvious that $(\psi, h): (A_j, X_j) \to (B, Y)$ is the factorisation we want. Next, we deal with the general case, where the $f_i$ might not be surjective. We first claim that $(A, X) = \underline{\lim}(A_i, \operatorname{Im} f_i)$. Indeed, the composition
+
+$(A, X) \to \underline{\lim}(A_i, \operatorname{Im} f_i) \to \underline{\lim}(A_i, X_i) = (A, X)$
+
+is the identity, so the second map is split epic, but it is also easily verified to be monic in $CoSh(C)$. By what we have proven above, the map $(\varphi, g)$: $(A, X) = \varprojlim (A_i, \operatorname{Im} f_i) \to (B, Y)$ factors through a component $(A_j, \operatorname{Im} f_j)$. It only remains to note that the map $(A, X) \to (A_j, \operatorname{Im} f_j)$ factors through some $(A_k, X_k)$ with $k \geq j$. Theorem 3.7. The canonical map $\mathbf{Pro}(\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}) \to \mathbf{CoSh}(\mathbf{C})$ is an equivalence. \textit{Proof.} First, it is obvious that for $\varprojlim(A_i, X_i) \in \mathbf{CoSh}(\mathbf{C})$ with epic projection maps and $(B,Y) \in \mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$, where $(A_i,X_i) \in \mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}$, the canonical map 
+\[ \varinjlim \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}((A_i, X_i), (B, Y)) \to \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}(\varprojlim (A_i, X_i), (B, Y)) \]
+
+
+
+\newpage
+
+% Page 10
+is injective, and hence bijective by Lemma??. By Lemma??, this holds if the transition maps of $\{A_i, X_i\}$ are epic in $\mathbf{CoSh}(\mathbf{C})_{\text{fin}}$. By Proposition ?? and Lemma ??, there is a functor $\mathbf{Pro}(\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}) \to \mathbf{CoSh}(\mathbf{C})$ which is essentially surjective. Let $\{(A_i, X_i)\}_i, \{(B_j, Y_j)\}_j \in \mathbf{Pro}(\mathbf{CoSh}(\mathbf{C})_{fin})$. By Proposition ?? and Lemma ??, we can assume that the transition maps of $\{(A_i, X_i)\}_i$ are epic. Then, we have bijections $\operatorname{Hom}_{\mathbf{Pro}(\mathbf{CoSh}(\mathbf{C})_{\operatorname{fin}})}(\varprojlim A_i, \varprojlim B_j) = \varprojlim_j \varinjlim_i \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})_{\operatorname{fin}}}(A_i, B_j)$
+
+
+\[ = \varprojlim_{j} \varinjlim_{i} \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}(A_{i}, B_{j}) \]
+ 
+\[ = \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}(\underline{\lim} A_i, \underline{\lim} B_j), \]
+
+
+which show fully faithfulness and complete the proof of the theorem. The above theorem makes it easy to verify exactness properties of $CoSh(C)$ which are closed under pro-completions. As an illustration, we have the following. Corollary 3.8. The category $CoSh(C)$ is regular and extensive. If D is also coherent, then so is $CoSh(C)$. \textit{Proof.} We note that being regular/extensive/coherent with finite coproducts are closed under pro-completions (see [?]). The first claim was shown in Proposition ?? and its proof. It is also easy to check that if \textbf{D} is coherent, then so is $CoSh(C)_{fin} = Fam(D)$, since limits in $Fam(D)$ are computed on fibres. The following is analogous to [?, Proposition 5.1.7]. Corollary 3.9. The global cosections functor $CoSh(C) \rightarrow C: (A, X) \mapsto A(X)$ commutes with inverse limits. That is, if $(A, X) = \underline{\lim}(A_i, X_i)$ in $\mathbf{CoSh}(\mathbf{C})$, then $A(X) = \underline{\lim} A_i(X_i)$. In particular, the global cosections functor $\mathbf{CoSh}(\mathbf{C}) = \mathbf{Pro}(\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}}) \to \mathbf{C} = \mathbf{Pro}(\mathbf{D})$ is the (unique) extension of the functor
+
+$\mathbf{CoSh}(\mathbf{C})_{\mathrm{fin}} \to \mathbf{C} \colon (A, X) \mapsto A(X) = \coprod A_x.$
+
+$x \in X$
+
+\textit{Proof.} For $d \in \mathbf{D}$, we have natural isomorphisms
+
+$\operatorname{Hom}_{\mathbf{C}}(\varprojlim A_i(X_i), d) = \varinjlim \operatorname{Hom}_{\mathbf{C}}(A_i(X_i), d)$
+
+= $\lim_{\mathbf{CoSh}(\mathbf{C})} ((A_i, X_i), (d, *))$ 
+\[ = \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}(\varprojlim(A_i, X_i), (d, *)) \]
+ $= \operatorname{Hom}_{\mathbf{CoSh}(\mathbf{C})}((A, X), (d, *))$ $= \operatorname{Hom}_{\mathbf{C}}(A(X), d),$
+
+so we are done by Yoneda.
+
+(i) The main conceptual point of Corollary ?? is that in any pro-regular
+
+Remark 3.10. category $C = Pro(D)$ (satisfying our default assumptions), there is a canonical way of defining a "profinite coproduct". More precisely, we should think of an object $(A, X) \in$ $CoSh(C)$ as a family of objects $A_x \in C$ continuously indexed by the profinite space X, where $A_x$ is the costalk of A at x. The global cosections functor $(A,X) \mapsto A(X)$ is exactly extending the finite coproduct functor $\{A_x\}_{x\in X}\mapsto \coprod_{x\in X}A_x$.
+
+10
+
+
+\newpage
+
+% Page 11
+(ii) Recall from usual sheaf theory that there is an equivalence between sheaves and étale bundles. Suppose $\mathbf{D} = \mathbf{Set}_{\mathrm{fin}}$ is the category of finite sets and $\mathbf{C} = \mathbf{Pro}(\mathbf{D})$ is the category of profinite spaces. By Theorem ??, we have the following equivalence between "profinite cosheaves" and "profinite bundles" $\mathbf{CoSh(Pro)} = \mathbf{Pro}(\mathbf{CoSh(Pro)}_{\mathrm{fin}}) = \mathbf{Pro}(\mathbf{Fun(2, Set}_{\mathrm{fin}})) = \mathbf{Fun(2, Pro)},$ where \textbf{2} is the interval category. This restricts to an equivalence
+
+$\mathbf{CoSh}(X, \mathbf{Pro}) = \mathbf{Pro}_{/X}$
+
+for every $X \in \mathbf{Pro}$. Concretely, the functor from left to right sends a cosheaf $A \in \mathbf{CoSh}(X, \mathbf{Pro})$ to $\bigsqcup_{x\in X} A_x \to X$, where $A_x$ is the costalk of A at x and $\bigsqcup_{x\in X} A_x \subseteq A(X) \times X$ has the subspace topology, which is profinite. The functor from right to left sends a bundle $p \colon E \to X$ to the cosheaf $U \mapsto p^{-1}(U)$. (iii) Similarly, suppose $\mathbf{D} = \mathbf{Grp}_{\mathrm{fin}}$ is the category of finite groups and $\mathbf{C} = \mathbf{Pro}(\mathbf{D})$ is the category of profinite groups. By Theorem ?? and the group analogue of [?, Corollary $[2.13]$, we see that the category $\mathbf{CoSh}(\mathbf{PGrp})$ of "profinite cosheaves of profinite groups" is equivalent to the category of "profinite bundles of profinite groups", as defined in [?, Section 5.1]. This restricts to an equivalence
+
+$\mathbf{CoSh}(X, \mathbf{PGrp}) = \mathbf{Grp}(\mathbf{Pro}_{/X})$
+
+for every $X \in \mathbf{Pro}$. If R is a profinite ring and $\mathbf{D} = \mathbf{Mod}(R)_{\text{fin}}$ is the category of finite (discrete topologi- cal) R-modules, then we recover the equivalence of cosheaves and bundles in [?, Theorem 3.5|. We want to point out that [?, Theorem 3.8] is proven from the perspective of bundles instead of cosheaves. The commutativity of the diagrams in [?, Theorem 3.8] required proof, but it is obvious from the perspective of cosheaves. (iv) The equivalence
+
+$CoSh(X, PGrp) = Grp(Pro_{/X}) = Grp(CoSh(X, Pro))$ from combining ?? and ?? is trickier than it first looks. For example, products in $CoSh(X, Pro)$ require cosheafification, so for a group object $G \in Grp(CoSh(X, Pro))$, its cosections $G(U)$ do not have to be profinite groups. On the other hand, products in $\mathbf{Pro}_{/X}$ are just pullbacks over X in $\mathbf{Pro}$, so the costalks $G_x$ are profinite groups. Put differently, the forgetful functor $CoSh(X, PGrp) \rightarrow CoSh(X, Pro)$ is induced by the forgetful functor $\mathbf{PGrp} \to \mathbf{Pro}$ costalkwise, not cosectionwise. As a concrete example, consider the terminal object $T \in \mathbf{CoSh}(X, \mathbf{PGrp})$, which has trivial cosections and costalks, i.e. $T(U) = *$ and $T_x = *$. Forgetting the group structures on costalks, we get the terminal object of $\mathbf{Pro}_{/X}$, i.e. the object $X \to X$, which then corresponds to the cosheaf $T' \in \mathbf{CoSh}(X, \mathbf{Pro})$ defined by $T'(U) = U$. Observe that the cosections object U indeed does not need to be a profinite group.
+
+\section*{REFERENCES}
+
+[1] Dan Haran. On closed subgroups of free products of profinite groups. Proceedings of the London Mathematical Society, 3(2):266–298, 1987. [2] Oleg Vladimirovich Mel'nikov. Subgroups and the homology of free products of profinite groups. Izv. Akad. Nauk SSSR Ser. Mat., 53(1):97–120, 1989. [3] Luis Ribes. Profinite graphs and groups, volume 66. Springer, 2017.
+
+11
+
+
+\newpage
+
+% Page 12
+[4] Gareth Wilkes. Pontryagin duality and sheaves of profinite modules. Journal of Algebra, 2025. [5] Marco Boggi. Lannes' T-functor and mod-p cohomology of profinite groups. Journal of Algebra, 2026. [6] Jiacheng Tang. Profinite direct sums with applications to profinite groups of type $\Phi_R$. Bulletin of the London Mathematical Society, 2025. [7] Jiacheng Tang. Coproducts internal to profinite spaces. arXiv preprint arXiv:2511.05425, 2025. [8] Saunders Mac Lane. Categories for the working mathematician, volume 5. Springer Science \& Business Media, 2013. [9] Saunders Mac Lane and Ieke Moerdijk. Sheaves in geometry and logic: A first introduction to topos theory. Springer Science \& Business Media, 2012. [10] Masaki Kashiwara and Pierre Schapira. Categories and sheaves. Springer, 2006. [11] Michael Barr. Exact categories. Springer, 1971. [12] Aurelio Carboni, Stephen Lack, and Robert FC Walters. Introduction to extensive and distributive categories. Journal of Pure and Applied Algebra, 84(2):145–158, 1993. [13] Luis Ribes and Pavel Zalesskii. Profinite groups. Springer, 2000. [14] Andrzej Tarlecki, Rod M Burstall, and Joseph A Goguen. Some fundamental algebraic tools for the semantics of computation: Part 3. indexed categories. Theoretical Computer Science, 91(2):239–264, 1991. [15] Fernando Lucatelli Nunes and Matthijs Vákár. Monoidal closure of Grothendieck constructions via $\Sigma$- tractable monoidal structures and dialectica formulas. Theory Appl. Categ., 2025. [16] Pierre-Alain Jacquin and Zurab Janelidze. On stability of exactness properties under the pro-completion. Advances in Mathematics, 377:107484, 2021.
+
+12
+
+
+\newpage
+
+\end{document}

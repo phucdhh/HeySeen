@@ -1,0 +1,100 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{proof_custom}{Proof}
+\renewcommand{\abstractname}{\Large\bfseries Abstract}
+
+
+\begin{document}
+
+
+% Page 1
+\section{NON-ISOMORPHISM OF REDUCED FREE GROUP}
+
+$C^*$-ALGEBRAS
+
+DAVID GAO AND SRIVATSAV KUNNAWALKAM ELAYAVALLI ABSTRACT. Using a new approach involving embedding spaces in II\textsubscript{1} factors with plenty of freely independent Haar unitaries, we prove that $C_r^*(\mathbb{F}_n) \ncong$ $C_r^*(\mathbb{F}_m)$ for $n \neq m$. This recovers the seminal result of Pimsner and Voiculescu with a short new proof.
+
+For Julia Jing, David Gao's sister and best friend.
+
+\begin{itemize}
+  \item Introduction
+\end{itemize}
+
+In 1982, Pimsner and Voiculescu [?] proved that $K_1(C_r^*(\mathbb{F}_n)) = \mathbb{Z}^n$. As a conse- quence of this, one has that $C_r^*(\mathbb{F}_n) \ncong C_r^*(\mathbb{F}_m)$ whenever $n \neq m$, now a cornerstone result in $C^*$-algebra theory. However, outside of this (and the work of Cuntz [?] that also accessed $K_1$), to our knowledge no conceptually different proof of this result has since appeared in the literature. In this paper we slightly rectify this situation. Our approach is to instead work in the \textit{embedding space}, i.e the space of all embeddings of a $C^*$-algebra A into a $II_1$ factor M, equipped with the pointwise operator norm topology. The novelty in our proof is that working inside II\textsubscript{1} factors automatically grants us lots of flexibility as there are many projections available. A key restriction on the $II_1$ factor M is that it has the property that for any separable subset $N \subset M$ there is a Haar unitary freely independent from $W^*(N)$. This is possible in ultrapowers [?], or say in the free group factor $L(\mathbb{F}_I)$ for I uncountable. We can then avail the 1971 result of Araki, Smith and Smith [?] which computes the fundamental group of the unitary groups of $II_1$ factors in the operator norm topology. We remark that our proof does not involve or directly compute any K- theory and is therefore conceptually distinct from Pimsner-Voiculescu's or Cuntz's proofs. However, we do not claim that our proof completely avoids any K-theoretic undertones whatsoever, since we are working with paths up to homotopy, albeit in different settings. We also remark that our proof is timely as it is motivated by the recent circle of ideas around free groups, $C^*$-free independence in ultrapowers, $II_1$ factors, and contractibility [?, ?, ?, ?]. \textbf{Acknowledgements.} This work was done during the Brin Mathematics Research Center workshop "Recent Developments in Operator Algebras" during February 4- 6, 2026. We are extremely grateful for the stimulating environment offered by the center. We thank Adrian Ioana, Greg Patchell and Chris Schafhauser for helpful conversations. We also thank Dan Voiculescu and Narutaka Ozawa for a helpful exchange.
+
+
+\newpage
+
+% Page 2
+\section{D. GAO AND S. KUNNAWALKAM ELAYAVALLI}
+
+2. Proof of main result
+
+We fix a $II_1$ factor M satisfying the condition that, given any separable $N \subset M$, there is a Haar unitary $u \in M$ freely independent from $W^*(N)$. By repeating the procedure, we see that this implies the a priori stronger condition that, for any separable $N \subset M$, there is a sequence of Haar unitaries $u_n \in M$ freely independent from $W^*(N)$ and each other. An example of such an M can be given by $M = L(\mathbb{F}_I)$ for any uncountable index set $I$. Whenever we are regarding a subset of $M$ as a topological space, the topology shall always be the operator-norm topology unless indicated otherwise. Whenever we raise a topological space to some power, e.g. $M^{I}$, we shall understand the space as being equipped with the product topology. When $n = \infty$, by an index k satisfying $1 \le k \le n$, we shall understand it as k ranging over all positive integers, without $\infty$. \textbf{Definition 2.1.} For a $C^*$-algebra A, let $\text{Emb}(A, M)$ be the space of all embeddings $A \to M$, equipped with the pointwise operator-norm convergence topology, i.e., the topology induced by the collection of metrics $d_a(\pi_1, \pi_2) = \|\pi_1(a) - \pi_2(a)\|_{\infty}$ with a ranging over elements of $A$. The following is basic but we still include it for the reader. \textbf{Lemma 2.2.} Let $\{a_i\}_{i\in I}$ be a set of generators of A. Then the map $\iota: Emb(A, M) \ni$ $\pi \mapsto (\pi(a_i))_{i \in I} \in M^I$ is a topological embedding. \textit{Proof.} $\iota$ is clearly continuous. We need to show it is a topological embedding, i.e., we need to show that if a net $\pi_{\lambda} \in \text{Emb}(A, M)$ and $\pi \in \text{Emb}(A, M)$ satisfy $\pi_{\lambda}(a_i) \to \pi(a_i)$, then $\pi_{\lambda}(a) \to \pi(a)$ for all $a \in A$. Indeed, let $\varepsilon > 0$. Then as $a \in A$ and $\{a_i\}_{i \in I}$ generates A, there exists a noncommutative polynomial P s.t.
+
+$||P(\{a_i\}_{i\in I}) - a||_{\infty} < \varepsilon$. Since a polynomial is continuous in its variables, we have, for large $\lambda$, $||P(\{\pi_{\lambda}(a_i)\}_{i\in I}) - P(\{\pi(a_i)\}_{i\in I})||_{\infty} < \varepsilon$. Thus, for large $\lambda$, $\|\pi_{\lambda}(a) - \pi(a)\|_{\infty}$ $\leq \|\pi_{\lambda}(a - P(\{a_i\}_{i \in I}))\|_{\infty} + \|P(\{\pi_{\lambda}(a_i)\}_{i \in I}) - P(\{\pi(a_i)\}_{i \in I})\|_{\infty} + \|\pi(P(\{a_i\}_{i \in I} - a))\|_{\infty}$ $<3\varepsilon$. The claim follows. \textbf{Remark 2.3.} We note that, by the same argument, the above map is also a topological embedding if $\text{Emb}(A, M)$ is instead equipped with the pointwise SOT- convergence topology and $M$ is equipped with SOT. Now, fix $A = C_r^*(\mathbb{F}_n)$ for some $2 \le n \le \infty$. Let the free generators of $\mathbb{F}_n$ be denoted by $\{g_k\}_{1\leq k\leq n}$. Define the map $\text{Emb}(A,M)\ni \pi\mapsto (\pi(g_k))_{1\leq k\leq n}\in U(M)^n$, which, by Lemma ??, is a topological embedding. Thus, we shall regard $\text{Emb}(A, M)$ as a subspace of $U(M)^n$ through this embedding. We need the following lemma: \textbf{Lemma 2.4.} For any separable $K \subset U(M)^n$, there exists a homotopy $\varphi : K \times$ $[0,1] \rightarrow U(M)^n \ s.t.,$ (1) $\varphi(\cdot,0)$ is the inclusion map $K\subset U(M)^n$; (2) $\varphi(K,1) \subset Emb(A,M)$;
+
+
+\newpage
+
+% Page 3
+NON-ISOMORPHISM OF REDUCED FREE GROUP $C^*$-ALGEBRAS (3) If $\vec{u} \in K \cap Emb(A, M)$, then $\varphi(\vec{u}, t) \in Emb(A, M)$ for all $t \in [0, 1]$. \textit{Proof.} Since K is separable, there exist Haar unitaries $\{u_k, v_k\}_{1 \le k \le n}$ which are freely independent from $W^*(K)$ and each other. By taking logarithms, we shall write $u_k = e^{iA_k}$ for some self-adjoint $A_k \in \{u_k\}''$ and $v_k = e^{iB_k}$ for some self- adjoint $B_k \in \{v_k\}''$. Now, define
+
+$\varphi((x_k)_{1 \le k \le n}, t) = (e^{itA_k} x_k e^{itB_k})_{1 \le k \le n}.$
+
+It is easy to check that this is continuous and $\varphi(\vec{x},0) = \vec{x}$. Since A has unique trace, $(x_k)_{1 \le k \le n} \in \text{Emb}(A, M)$ iff $x_k$ are freely independent Haar unitaries. Using this and that $A_k, B_k$ are freely independent from $W^*(K)$ as well as each other, it easily follows $\varphi(K,1) \subset \text{Emb}(A,M)$ and $\varphi(K \cap \text{Emb}(A,M),[0,1]) \subset \text{Emb}(A,M)$. The following is an easy lemma from topology: \textbf{Lemma 2.5.} Suppose we have an inclusion of spaces $X \subset Y$. Suppose for any compact subset $K \subset Y$, there exists a homotopy $\varphi_K : K \times [0,1] \to Y$ s.t., (1) $\varphi_K(\cdot,0)$ is the inclusion map $K\subset Y$; (2) $\varphi_K(K,1) \subset X$; (3) If $p \in K \cap X$, then $\varphi_K(p,t) \in K$ for all $t \in [0,1]$. Then the inclusion map $X \subset Y$ is a weak homotopy equivalence. \textit{Proof.} We first show the natural map $\pi_k(X) \to \pi_k(Y)$ is injective. Indeed, assume $[f] \in \pi_k(X)$ is s.t. $f \sim \text{const in } Y$. Let $\phi: S^k \times [0,1] \to Y$ be a homotopy from $f$ to a constant map. Then consider the homotopy $\phi': S^k \times [0,2] \to X$,
+
+
+\[ \phi'(p,t) = \begin{cases} \varphi_{\operatorname{Ran}(\phi)}(f(p),t) &, \text{ if } t < 1\\ \varphi_{\operatorname{Ran}(\phi)}(\phi(p,t-1),1) &, \text{ if } t > 1 \end{cases}. \]
+
+
+Then $\phi'$ is a homotopy from f to a constant map within X, whence $[f] = 0$. To show surjectivity, we first note that, for any $p \in Y$, $\varphi_{\{p\}}(p,\cdot)$ is a path from p to a point in X. Hence, $\pi_0(X) \to \pi_0(Y)$ is surjective. Therefore, for $k \geq 1$, for $[f] \in \pi_k(Y)$, we may assume $f(b) \in X$ where $b \in S^k$ is the base point. Then $\varphi_{\operatorname{Ran}(f)}(f(\cdot),t)$ is a homotopy from f to a map $S^k \to X$. While the basepoints might be different, we simply note that $\varphi_{\text{Ran}(f)}(f(b),\cdot)$ is a path in X from $f(b)$ to $\varphi_{\operatorname{Ran}(f)}(f(b),1).$ Combining Lemma ?? and Lemma ??, we obtain the following: Corollary 2.6. The inclusion $Emb(A, M) \subset U(M)^n$ is a weak homotopy equiva- lence. Recall the following results from [?]: Theorem 2.7.
+
+
+\newpage
+
+% Page 4
+\section{D. GAO AND S. KUNNAWALKAM ELAYAVALLI}
+
+(1) (Theorem 2.8 of [?]) We say a loop in $U(M)$ based at $x \in U(M)$ is a simple loop if it is of the form $[0,1] \ni t \mapsto xe^{2\pi itS} \in U(M)$ for some self-adjoint $S \in M$ with $\sigma(S) \subset \mathbb{Z}$. Then every loop based at x is homotopy equivalent to a concatenation of simple loops. Moreover, $\pi_1(U(M)) \ni [t \mapsto xe^{2\pi itS}] \mapsto$ $\tau(S) \in \mathbb{R}$ extends to an isomorphism between $\pi_1(U(M))$ and (the additive group) of $\mathbb{R}$. (2) (Theorem 3.2 and the proof of Theorem 3.3 of [?]) There exists a universal constant $\delta \in (0,1)$ satisfying the following: Given a loop $f:[0,1] \to U(M)$, whenever $0 = t_0 < t_1 < \cdots < t_n = 1$ is a division of [0, 1] for which $||f(s)-$ $|f(t)||_{\infty} < \delta$ as long as $s, t \in [t_{j-1}, t_j]$ for some $1 \le j \le n$, we may define $I_{\delta}(f) = \sum_{i=1}^{n} \tau(\log(f(t_{j-1})^*f(t_j)))$ (where log is the principal branch of logarithm). Then $I_{\delta}(f)$ is independent of the choice of the division and is a complete homotopy invariant. In fact, $\pi_1(U(M)) \ni [f] \mapsto \frac{1}{2\pi i} I_{\delta}(f) \in \mathbb{R}$ is the same isomorphism as the isomorphism in part (1). Let us now assume, for some $2 \leq n, m \leq \infty, A = C_r^*(\mathbb{F}_n) \cong C_r^*(\mathbb{F}_m)$. Immediately, per Corollary ??, we have $U(M)^n$ and $U(M)^m$ have the same fundamental group. Since $\pi_1(U(M)) = \mathbb{R}$, we have $\pi_1(U(M)^n) = \mathbb{R}^n$ and $\pi_1(U(M)^m) = \mathbb{R}^m$. However, $\mathbb{R}^n \cong \mathbb{R}^m$ as additive groups for all $m, n$, so this does not immediately yields $m = n$. But, we have the following: \textbf{Theorem 2.8.} Assume $n < \infty$. Then the isomorphism $\mathbb{R}^n \cong \mathbb{R}^m$ yielded from the above consideration is continuous w.r.t. the product topologies. \textit{Proof.} Per the conditions on M, we may choose projections $p_s^k \in M$ for each $1 \le k \le n \text{ and } s \in [0,1] \text{ s.t. } \tau(p_s^k) = s \text{ for all } k \text{ and } s; \text{ the map } [0,1] \ni s \mapsto p_s^k \in M$ is SOT-continuous for all k; and $p_s^k$ is freely independent from $p_{s'}^{k'}$ for all k, k', s, and s', whenever $k \neq k'$. We may further choose freely independent Haar unitaries $x_j$ for $1 \leq j \leq n$ that are also freely independent from all $p_s^k$. Consider the map $f: [0,1] \times [0,1]^n \to U(M)^n$ defined by
+
+
+\[ f(t,(s_k)_{1 \le k \le n}) = (x_k e^{2\pi i t p_{s_k}^k})_{1 \le k \le n}. \]
+
+
+It is easy to see that f is SOT-continuous. Moreover, write $f_{\vec{s}}$ for $f(\cdot, \vec{s})$. Then $f_{\vec{s}}$ are all continuous loops in the operator-norm topology. We also note that the range of f is in $\text{Emb}(A, M)$. Per part (1) of Theorem ?? and Corollary ??, $[f_{\vec{s}}] =$ $\vec{s} \in \mathbb{R}^n = \pi_1(\text{Emb}(A, M)).$ Now, let $\iota$ be the map that identifies $\text{Emb}(A, M)$ regarded as a subset of $U(M)^n$, and $\operatorname{Emb}(A, M)$ regarded as a subset of $U(M)^m$. Note that $\iota$ is a homeomorphism w.r.t. the operator-norm topology and, per Remark ??, SOT. Hence, $\iota \circ f : [0,1] \times [0,1]^n \to \mathbb{R}$ $U(M)^m$ is SOT-continuous. In addition, fix $1 \leq j \leq m$ and let $\delta$ be the universal constant given by part (2) of Theorem ??. Examining the definition of $\iota$, it is easy to see that it is uniformly continuous in the sense that there exists $\varepsilon > 0$ s.t. whenever $\vec{x}, \vec{y} \in \text{Emb}(A, M)$ regarded as a subset of $U(M)^n$, and $||x_k - y_k||_{\infty} < \varepsilon$ for all $1 \le k \le n$, we have $\|\iota(\vec{x})_j - \iota(\vec{y})_j\|_{\infty} < \delta$. Note that
+
+$||x_k e^{2\pi i t p_{s_k}^k} - x_k e^{2\pi i t' p_{s_k}^k}||_{\infty} \le 2\pi |t - t'|$
+
+
+\newpage
+
+% Page 5
+NON-ISOMORPHISM OF REDUCED FREE GROUP $C^*$-ALGEBRAS for all $t, t', \vec{s}$, and $k$. Thus, there is a division $0 = t_0 < t_1 < \cdots < t_d = 1$, independent of $\vec{s} \in [0,1]^n$, s.t.
+
+$\|[\iota \circ f_{\vec{s}}(t)]_j - [\iota \circ f_{\vec{s}}(t')]_j\|_{\infty} < \delta$
+
+whenever $t, t' \in [t_{\eta-1}, t_{\eta}]$ for some $1 \leq \eta \leq d$. This implies, for any $\vec{s} \in [0, 1]^n$,
+
+
+\[ I_{\delta}([\iota \circ f_{\vec{s}}]_{j}) = \sum_{\eta=1}^{d} \tau(\log([\iota \circ f_{\vec{s}}(t_{\eta-1})]_{j}^{*}[\iota \circ f_{\vec{s}}(t_{\eta})]_{j})). \]
+
+
+But then $\vec{s} \mapsto I_{\delta}([\iota \circ f_{\vec{s}}]_j)$ is continuous. By part (2) of Theorem ??, this implies the isomorphism $\mathbb{R}^n \cong \mathbb{R}^m$ is continuous w.r.t. the product topologies when restricted to $[0,1]^n$, so in particular continuous at 0. Since the isomorphism is as additive groups, it must be continuous everywhere, as desired. Since continuous additive maps $\mathbb{R}^n \to \mathbb{R}^m$ must be $\mathbb{R}$-linear and $\mathbb{R}^n \ncong \mathbb{R}^m$ as $\mathbb{R}$-linear spaces whenever $n \neq m$, we immediately obtain: Corollary 2.9. If $C_r^*(\mathbb{F}_n) \cong C_r^*(\mathbb{F}_m)$ for $2 \leq n, m \leq \infty$, then $n = m$.
+
+DEPARTMENT OF MATHEMATICAL SCIENCES, UCSD, 9500 GILMAN DR, LA JOLLA, CA 92092, USA Email address: weg002@ucsd.edu URL: https://sites.google.com/ucsd.edu/david-gao
+
+DEPARTMENT OF MATHEMATICS, UMD, KIRWAN HALL, CAMPUS DRIVE, MD 20770, USA Email address: sriva@umd.edu URL: https://sites.google.com/view/srivatsavke/home
+
+
+\newpage
+
+\end{document}
